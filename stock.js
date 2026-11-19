@@ -159,5 +159,7 @@ window.STOCK = [
   { codigo: "RC086", nombre: "Vestido Strapless Volados", categoria: "Vestidos", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC086.jpg",
     descripcion: "Vestido negro strapless de tela elastizada, cuerpo entallado y falda con dos volados. Talle único." },
   { codigo: "RC087", nombre: "Vestido Tul Chocolate", categoria: "Vestidos", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC087.jpg",
-    descripcion: "Vestido strapless de tul chocolate con frunces que marcan la figura y falda con dos volados. Talle único." }
+    descripcion: "Vestido strapless de tul chocolate con frunces que marcan la figura y falda con dos volados. Talle único." },
+  { codigo: "RC088", nombre: "Top Encaje Pañuelo", categoria: "Tops", precio: 22000, talles: ["Único"], nuevo: true, foto: "RC088.jpg",
+    descripcion: "Top de encaje chocolate en capas con corte pañuelo en punta y tiras finas para atar al cuello y en la espalda. Talle único." }
 ];
