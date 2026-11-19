@@ -81,5 +81,8 @@ window.STOCK = [
     variantes: ["Chocolate", "Negro"],
     descripcion: "Musculosa satinada de breteles finos con encaje en el escote en V y en el ruedo. Delicada y femenina, sola o debajo de un blazer." },
   { codigo: "RC057", nombre: "Remera Hecha para Más", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC057.jpg",
-    descripcion: "Remera corta a rayas blancas y celestes, cuello en rosa y estampa “Hecha para más – Efesios 2:10” con moños y estrellas. Talle único S/M." }
+    descripcion: "Remera corta a rayas blancas y celestes, cuello en rosa y estampa “Hecha para más – Efesios 2:10” con moños y estrellas. Talle único S/M." },
+  { codigo: "RC058", nombre: "Chaleco Sastre", categoria: "Chalecos", precio: 48000, talles: ["3","4"], nuevo: true, foto: "RC058.jpg",
+    variantes: ["Marrón", "Negro"],
+    descripcion: "Chaleco sastrero largo con escote en V, botones al frente, bolsillos de ribete y forro interior. Elegante para la oficina o con jean." }
 ];
