@@ -43,5 +43,7 @@ window.STOCK = [
     descripcion: "Camisaco oversize con tachas plateadas en los bolsillos, botones metálicos y bordes desflecados. Ideal para usar abierto como abrigo liviano." },
   { codigo: "RC042", nombre: "Blusa Victoria", categoria: "Blusas", precio: 47000, talles: ["Único"], nuevo: true, foto: "RC042.jpg",
     variantes: ["Chocolate", "Blanco"],
-    descripcion: "Blusa romántica con volados en el escote y al frente, puntillas caladas, alforzas, mangas abullonadas con volado y peplum en la cintura." }
+    descripcion: "Blusa romántica con volados en el escote y al frente, puntillas caladas, alforzas, mangas abullonadas con volado y peplum en la cintura." },
+  { codigo: "RC043", nombre: "Top Luna", categoria: "Tops", precio: 23000, talles: [], nuevo: true, foto: "RC043.jpg", oculto: true,
+    descripcion: "Top halter color crudo en tela satinada, con cuello volcado y lazo para atar en la nuca." }
 ];
