@@ -57,5 +57,7 @@ window.STOCK = [
     descripcion: "Top marrón de breteles finos con puntilla crochet en el escote, cintura con panal elastizado, cordón trenzado y volado." },
   { codigo: "RC048", nombre: "Top Siena", categoria: "Tops", precio: 46000, talles: ["Único"], nuevo: true, foto: "RC048.jpg",
     fotosExtra: ["RC048-espalda.jpg"],
-    descripcion: "Top halter satinado color chocolate con cuello volcado, corte pañuelo con puntilla de encaje en las puntas y espalda abierta con lazo y tiritas cruzadas. Talle único: se ajusta en la espalda y va de S a XL." }
+    descripcion: "Top halter satinado color chocolate con cuello volcado, corte pañuelo con puntilla de encaje en las puntas y espalda abierta con lazo y tiritas cruzadas. Talle único: se ajusta en la espalda y va de S a XL." },
+  { codigo: "RC049", nombre: "Top Gitana", categoria: "Tops", precio: 36500, talles: ["Único"], nuevo: true, foto: "RC049.jpg",
+    descripcion: "Top chocolate escote bote con volado, cuerpo de panal elastizado y volado en la cintura. Talle único: por su elastizado va de S a XL." }
 ];
