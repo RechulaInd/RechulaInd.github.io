@@ -161,5 +161,10 @@ window.STOCK = [
   { codigo: "RC087", nombre: "Vestido Tul Chocolate", categoria: "Vestidos", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC087.jpg",
     descripcion: "Vestido strapless de tul chocolate con frunces que marcan la figura y falda con dos volados. Talle único." },
   { codigo: "RC088", nombre: "Top Encaje Pañuelo", categoria: "Tops", precio: 22000, talles: ["Único"], nuevo: true, foto: "RC088.jpg",
-    descripcion: "Top de encaje chocolate en capas con corte pañuelo en punta y tiras finas para atar al cuello y en la espalda. Talle único." }
+    descripcion: "Top de encaje chocolate en capas con corte pañuelo en punta y tiras finas para atar al cuello y en la espalda. Talle único." },
+  { codigo: "RC089", nombre: "Short Pollera Encaje", categoria: "Shorts", precio: 35500, talles: ["38 al 40"], nuevo: true, foto: "RC089-negro.jpg",
+    fotosExtra: ["RC089-gris.jpg"],
+    variantes: ["Negro", "Gris"],
+    fotosVariante: { "Negro": "RC089-negro.jpg", "Gris": "RC089-gris.jpg" },
+    descripcion: "Short pollera cruzado con borde de encaje de pestañas. Por fuera parece pollera y por dentro tiene short. Va del talle 38 al 40. (El top y la cartera de la foto no están incluidos)." }
 ];
