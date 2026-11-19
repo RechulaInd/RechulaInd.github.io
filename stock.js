@@ -139,5 +139,7 @@ window.STOCK = [
   { codigo: "RC078", nombre: "Remera More Amor", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC078.jpg",
     descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste y estampa “More amor por favor” en celeste con labios rojos." },
   { codigo: "RC079", nombre: "Vestido Encaje Halter", categoria: "Vestidos", precio: 38000, talles: ["Único"], nuevo: true, foto: "RC079.jpg",
-    descripcion: "Vestido halter de encaje blanco con escote en V, volados en capas y ruedo asimétrico. Disponible solo en blanco (el chocolate de la foto está agotado). Talle único." }
+    descripcion: "Vestido halter de encaje blanco con escote en V, volados en capas y ruedo asimétrico. Disponible solo en blanco (el chocolate de la foto está agotado). Talle único." },
+  { codigo: "RC080", nombre: "Musculosa Puntilla", categoria: "Tops", precio: 21000, talles: ["S"], nuevo: true, foto: "RC080.jpg",
+    descripcion: "Musculosa blanca de encaje con volados en capas, escote en V con puntilla y breteles finos. Talle único S." }
 ];
