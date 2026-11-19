@@ -126,5 +126,10 @@ window.STOCK = [
   { codigo: "RC073", nombre: "Blusa Algodón de Azúcar", categoria: "Blusas", precio: 35500, talles: ["L"], nuevo: true, foto: "RC073.jpg",
     descripcion: "Blusa blanca sin mangas con frunces en capas, puntilla calada en los hombros y botón en la espalda. Fresca y romántica." },
   { codigo: "RC074", nombre: "Top Medianoche", categoria: "Tops", precio: 19500, talles: ["L"], nuevo: true, foto: "RC074.jpg",
-    descripcion: "Top halter negro de tela texturizada con volados finos, escote en V profundo y lazo para atar en la nuca." }
+    descripcion: "Top halter negro de tela texturizada con volados finos, escote en V profundo y lazo para atar en la nuca." },
+  { codigo: "RC075", nombre: "Baby Tee Ciudades", categoria: "Remeras", precio: 14000, talles: ["Único"], nuevo: true, foto: "RC075-newyork.jpg",
+    fotosExtra: ["RC075-boston.jpg"],
+    variantes: ["New York blanca", "New York negra", "Boston blanca", "Boston negra"],
+    fotosVariante: { "New York blanca": "RC075-newyork.jpg", "New York negra": "RC075-newyork.jpg", "Boston blanca": "RC075-boston.jpg", "Boston negra": "RC075-boston.jpg" },
+    descripcion: "Baby tee de algodón entallada con estampa estilo college. Dos diseños, New York y Boston, en blanco o negro. Talle único." }
 ];
