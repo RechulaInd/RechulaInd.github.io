@@ -114,5 +114,8 @@ window.STOCK = [
     descripcion: "Chaleco con bordado de flores en relieve, detalles de brillos en el pecho, escote en V, botones de madera y espalda tejida calada." },
   { codigo: "RC069", nombre: "Remera Volados Calados", categoria: "Remeras", precio: 33000, talles: ["M/L"], nuevo: true, foto: "RC069.jpg",
     variantes: ["Blanco", "Negro"],
-    descripcion: "Remera de algodón con cuello redondo y mangas volado de bordado inglés con borde festoneado. Talle M/L." }
+    descripcion: "Remera de algodón con cuello redondo y mangas volado de bordado inglés con borde festoneado. Talle M/L." },
+  { codigo: "RC070", nombre: "Body Nadador", categoria: "Bodys", precio: 18500, talles: ["S"], nuevo: true, foto: "RC070.jpg",
+    variantes: ["Crudo", "Beige"],
+    descripcion: "Body de morley con cuello redondo, sisas americanas y broche abajo. Disponible en crudo y beige (el chocolate de la foto está agotado). Talle único S." }
 ];
