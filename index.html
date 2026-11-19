@@ -106,6 +106,13 @@
   .club-in:before{content:"♡";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--card);padding:0 10px;color:var(--gold)}
   .club h2{font-family:var(--serif);font-weight:500;font-size:28px;color:var(--deep)}
   .club p{color:var(--soft);font-size:14px;line-height:1.55;margin:10px 0 20px;font-weight:300}
+  .garden{padding:34px 0 0;background:var(--bg)}
+  .garden-in{max-width:760px;margin:0 auto}
+  .garden svg{display:block;width:100%;height:auto}
+  .gcap{text-align:center;font-family:var(--serif);font-style:italic;color:var(--soft);font-size:15px;padding:12px 18px 0}
+  .gcap span{font-family:var(--sans);font-style:normal;font-size:11.5px;letter-spacing:.12em;color:var(--gold);margin-left:4px}
+  @keyframes bloom{from{transform:scale(0)}to{transform:scale(1)}}
+  .fl-new{animation:bloom 1.2s cubic-bezier(.3,1.6,.5,1) both;animation-delay:.4s}
   footer{text-align:center;padding:34px 18px 44px;color:var(--soft);font-size:12.5px}
   footer img{height:74px;display:block;margin:0 auto 12px;opacity:.9}
   footer a{color:var(--deep)}
@@ -221,6 +228,13 @@
   <div class="sbtns" id="sbtns"></div>
 </section>
 
+<section class="garden" id="jardin" hidden>
+  <div class="garden-in">
+    <svg id="gardenSvg" viewBox="0 46 400 84" preserveAspectRatio="xMidYMax meet" aria-hidden="true"></svg>
+    <p class="gcap">Nuestro jardín ♡ <span id="gcount"></span></p>
+  </div>
+</section>
+
 <footer id="foot"></footer>
 <div class="pill" id="pill" role="complementary"><button class="go" id="pillGo"><b>♡</b> Sumate a la comunidad</button><button class="cl" id="pillX" aria-label="Cerrar">×</button></div>
 
@@ -229,7 +243,7 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261119232408"></script>
+<script src="stock.js?v=20261119232519"></script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
@@ -394,6 +408,45 @@
     $("seguir").onclick=close;
   }
   $("bagBtn").onclick = openBag;
+
+  // Jardín: cada visita suma una flor (cuenta una vez por persona por día)
+  (async function garden(){
+    const NS = "rechulaind", KEY = "visitas", base = `https://api.counterapi.dev/v1/${NS}/${KEY}`;
+    let today = new Date().toISOString().slice(0,10), counted = false;
+    try { counted = localStorage.getItem("rechula-visita") === today; } catch(e){}
+    let n = 0;
+    try {
+      const ctl = new AbortController(); setTimeout(()=>ctl.abort(), 6000);
+      const r = await fetch(counted ? base + "/" : base + "/up", {signal: ctl.signal});
+      const j = await r.json(); n = +j.count || 0;
+      if (!counted) try { localStorage.setItem("rechula-visita", today); } catch(e){}
+    } catch(e) { return; }
+    if (!n) return;
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const cols = ["#DDB4AC","#FFFBF6","#B58A52","#E9C9C1","#F3E3DE","#C98F86"];
+    const show = Math.min(n, 400);
+    let out = `<defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9B79A"/><stop offset="1" stop-color="#7F9271"/></linearGradient></defs>
+      <path d="M0 78 Q50 62 100 74 T200 70 T300 74 T400 66 V130 H0 Z" fill="#C5D0B8"/>
+      <path d="M0 92 Q60 80 120 90 T240 86 T400 84 V130 H0 Z" fill="url(#gg)"/>`;
+    for (let i = 0; i < 70; i++) { const x = rnd()*400, y = 84 + rnd()*40, hgt = 5 + rnd()*7;
+      out += `<path d="M${x.toFixed(1)} ${y.toFixed(1)} q${(rnd()*4-2).toFixed(1)} -${hgt/2} ${(rnd()*4-2).toFixed(1)} -${hgt.toFixed(1)}" stroke="#6E8461" stroke-width="1.2" fill="none" stroke-linecap="round"/>`; }
+    const fl = [];
+    for (let i = 0; i < show; i++) {
+      const x = 6 + rnd()*388, y = 80 + rnd()*44, s = (0.55 + rnd()*0.5) * (y/110), c = cols[Math.floor(rnd()*cols.length)], st = 8 + rnd()*10, rot = rnd()*60;
+      fl.push({x,y,s,c,st,rot,newest: i === show-1 && !counted});
+    }
+    fl.sort((a,b)=>a.y-b.y);
+    for (const f of fl) {
+      const petals = [0,72,144,216,288].map(a=>`<ellipse cx="0" cy="-4.2" rx="2.6" ry="4.2" fill="${f.c}" stroke="rgba(74,48,41,.18)" stroke-width=".5" transform="rotate(${a})"/>`).join("");
+      out += `<g transform="translate(${f.x.toFixed(1)} ${f.y.toFixed(1)})">
+        <path d="M0 0 q-2 -${(f.st/2).toFixed(1)} 0 -${f.st.toFixed(1)}" stroke="#6E8461" stroke-width="1.1" fill="none"/>
+        <ellipse cx="2.5" cy="-${(f.st/2).toFixed(1)}" rx="2.6" ry="1.2" fill="#7F9271" transform="rotate(-30 2.5 -${(f.st/2).toFixed(1)})"/>
+        <g transform="translate(0 -${f.st.toFixed(1)}) scale(${f.s.toFixed(2)}) rotate(${f.rot.toFixed(0)})"><g class="${f.newest?"fl-new":""}">${petals}<circle r="2.2" fill="#B58A52"/></g></g></g>`;
+    }
+    $("gardenSvg").innerHTML = out;
+    $("gcount").textContent = n.toLocaleString("es-AR") + (n === 1 ? " flor" : " flores");
+    $("jardin").hidden = false;
+  })();
 
   let tt; function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1800); }
 
