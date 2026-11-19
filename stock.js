@@ -79,5 +79,7 @@ window.STOCK = [
     descripcion: "Baby tee de algodón entallada, manga corta y osito bordado al frente. Un básico canchero para combinar con todo." },
   { codigo: "RC056", nombre: "Musculosa Satén", categoria: "Tops", precio: 38500, talles: ["S","M","L","XL"], nuevo: true, foto: "RC056.jpg",
     variantes: ["Chocolate", "Negro"],
-    descripcion: "Musculosa satinada de breteles finos con encaje en el escote en V y en el ruedo. Delicada y femenina, sola o debajo de un blazer." }
+    descripcion: "Musculosa satinada de breteles finos con encaje en el escote en V y en el ruedo. Delicada y femenina, sola o debajo de un blazer." },
+  { codigo: "RC057", nombre: "Remera Hecha para Más", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC057.jpg",
+    descripcion: "Remera corta a rayas blancas y celestes, cuello en rosa y estampa “Hecha para más – Efesios 2:10” con moños y estrellas. Talle único S/M." }
 ];
