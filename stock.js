@@ -28,5 +28,7 @@ window.STOCK = [
     descripcion: "Vestido camisero midi rosa con cuello, botones dorados, bolsillos al frente, cintura con lazo ajustable y volado en el ruedo." },
   { codigo: "RC037", nombre: "Body Esencial", categoria: "Bodys", precio: 15800, talles: ["M/L"], nuevo: true, foto: "RC037.jpg",
     variantes: ["Negro", "Celeste", "Chocolate"],
-    descripcion: "Body de morley con escote en V, manga corta y broche abajo. Un básico que combina con todo." }
+    descripcion: "Body de morley con escote en V, manga corta y broche abajo. Un básico que combina con todo." },
+  { codigo: "RC038", nombre: "Blusa Azahar", categoria: "Blusas", precio: 39000, talles: ["L"], nuevo: true, foto: "RC038.jpg",
+    descripcion: "Blusa sin mangas blanca con bordado de flores en relieve, cuello mao y botones de presilla con perlas." }
 ];
