@@ -21,5 +21,7 @@ window.STOCK = [
   { codigo: "RC033", nombre: "Pantalón Oliva", categoria: "Pantalones", precio: 33500, talles: ["XXL"], nuevo: true, foto: "RC032-033.jpg",
     descripcion: "Pantalón ancho verde oliva (el de adelante en la foto) con bordados blancos y guarda étnica en la botamanga. Cintura con elástico atrás, botón y bolsillos." },
   { codigo: "RC034", nombre: "Camisola Duna", categoria: "Blusas", precio: 13500, talles: ["L"], nuevo: true, foto: "RC034.jpg",
-    descripcion: "Camisola de lino color nude con escote en V, frunce en la cintura y mangas amplias con vuelo." }
+    descripcion: "Camisola de lino color nude con escote en V, frunce en la cintura y mangas amplias con vuelo." },
+  { codigo: "RC035", nombre: "Conjunto Canela", categoria: "Conjuntos", precio: 66000, talles: ["M"], nuevo: true, foto: "RC035.jpg",
+    descripcion: "Conjunto de dos piezas color camel: top corset de breteles finos con botones y pantalón ancho con cintura elastizada." }
 ];
