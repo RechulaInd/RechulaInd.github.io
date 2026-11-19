@@ -90,5 +90,8 @@ window.STOCK = [
     descripcion: "Camisola satinada de breteles finos regulables, con encaje de pestañas en el escote, cruzado al frente y en el ruedo asimétrico. Talle único M/L." },
   { codigo: "RC060", nombre: "Vestido Aurora", categoria: "Vestidos", precio: 44000, talles: ["M/L"], nuevo: true, foto: "RC060.jpg",
     variantes: ["Blanco", "Chocolate"],
-    descripcion: "Remera larga o vestido corto, se usa de las dos formas. Satinado, de breteles finos regulables, con encaje de pestañas cruzado al frente y ruedo asimétrico. Talle único M/L." }
+    descripcion: "Remera larga o vestido corto, se usa de las dos formas. Satinado, de breteles finos regulables, con encaje de pestañas cruzado al frente y ruedo asimétrico. Talle único M/L." },
+  { codigo: "RC061", nombre: "Musculosa Básica", categoria: "Tops", precio: 18500, talles: ["M"], nuevo: true, foto: "RC061.jpg", oculto: true,
+    variantes: ["Azul petróleo", "Chocolate", "Topo"],
+    descripcion: "Musculosa de algodón con escote redondo amplio y calce entallado. Un básico para combinar con todo." }
 ];
