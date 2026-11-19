@@ -15,5 +15,5 @@ window.STOCK = [
     variantes: ["Leopardo clásico", "Leopardo tostado"],
     descripcion: "Top escote en V profundo con puntilla de encaje negro. Elegí entre dos estampas: leopardo clásico (izquierda) o leopardo tostado (derecha)." },
   { codigo: "RC031", nombre: "Conjunto Margarita", categoria: "Conjuntos", precio: 67500, talles: ["M"], nuevo: true, foto: "RC031.jpg",
-    descripcion: "Conjunto de dos piezas en bordado calado de flores color beige: chaleco con botones y parte de abajo al tono." }
+    descripcion: "Conjunto de dos piezas en bordado calado de flores color beige: chaleco con botones y short al tono." }
 ];
