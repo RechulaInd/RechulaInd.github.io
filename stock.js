@@ -65,5 +65,8 @@ window.STOCK = [
     descripcion: "Top corsetero de encaje con breteles finos regulables, copas marcadas, botones al frente y terminación de pestañas. Talle único S/M." },
   { codigo: "RC051", nombre: "Remera Alondra", categoria: "Remeras", precio: 28000, talles: ["M/L"], nuevo: true, foto: "RC051.jpg",
     variantes: ["Chocolate", "Beige"],
-    descripcion: "Remera de morley con escote en V y mangas volado de tejido calado. Talle M/L." }
+    descripcion: "Remera de morley con escote en V y mangas volado de tejido calado. Talle M/L." },
+  { codigo: "RC052", nombre: "Musculosa Caramelo", categoria: "Tops", precio: 36500, talles: ["Único"], nuevo: true, foto: "RC052.jpg",
+    variantes: ["Celeste con bordó", "Rosa con rojo"],
+    descripcion: "Musculosa tejida a rayas verticales con cuello y sisas en punto elástico. Disponible en celeste con bordó (la del medio) y rosa con rojo (la de la derecha)." }
 ];
