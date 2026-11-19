@@ -91,7 +91,7 @@ window.STOCK = [
   { codigo: "RC060", nombre: "Vestido Aurora", categoria: "Vestidos", precio: 44000, talles: ["M/L"], nuevo: true, foto: "RC060.jpg",
     variantes: ["Blanco", "Chocolate"],
     descripcion: "Remera larga o vestido corto, se usa de las dos formas. Satinado, de breteles finos regulables, con encaje de pestañas cruzado al frente y ruedo asimétrico. Talle único M/L." },
-  { codigo: "RC061", nombre: "Musculosa Básica", categoria: "Tops", precio: 18500, talles: ["M"], nuevo: true, foto: "RC061.jpg", oculto: true,
+  { codigo: "RC061", nombre: "Musculosa Básica", categoria: "Tops", precio: 18500, talles: ["M"], nuevo: true, foto: "RC061.jpg",
     variantes: ["Azul petróleo", "Chocolate", "Topo"],
-    descripcion: "Musculosa de algodón con escote redondo amplio y calce entallado. Un básico para combinar con todo." }
+    descripcion: "Musculosa de algodón con escote redondo amplio, calce entallado y estampa “AI-GENERATED” en letras blancas al frente." }
 ];
