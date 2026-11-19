@@ -19,5 +19,7 @@ window.STOCK = [
   { codigo: "RC032", nombre: "Pantalón Caramelo", categoria: "Pantalones", precio: 33500, talles: ["XL"], nuevo: true, foto: "RC032-033.jpg",
     descripcion: "Pantalón ancho color caramelo (el de atrás en la foto) con bordados blancos y guarda étnica en la botamanga. Cintura con elástico atrás, botón y bolsillos." },
   { codigo: "RC033", nombre: "Pantalón Oliva", categoria: "Pantalones", precio: 33500, talles: ["XXL"], nuevo: true, foto: "RC032-033.jpg",
-    descripcion: "Pantalón ancho verde oliva (el de adelante en la foto) con bordados blancos y guarda étnica en la botamanga. Cintura con elástico atrás, botón y bolsillos." }
+    descripcion: "Pantalón ancho verde oliva (el de adelante en la foto) con bordados blancos y guarda étnica en la botamanga. Cintura con elástico atrás, botón y bolsillos." },
+  { codigo: "RC034", nombre: "Camisola Duna", categoria: "Blusas", precio: 13500, talles: ["L"], nuevo: true, foto: "RC034.jpg",
+    descripcion: "Camisola de lino color nude con escote en V, frunce en la cintura y mangas amplias con vuelo." }
 ];
