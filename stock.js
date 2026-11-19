@@ -166,5 +166,8 @@ window.STOCK = [
     fotosExtra: ["RC089-gris.jpg"],
     variantes: ["Negro", "Gris"],
     fotosVariante: { "Negro": "RC089-negro.jpg", "Gris": "RC089-gris.jpg" },
-    descripcion: "Short pollera cruzado con borde de encaje de pestañas. Por fuera parece pollera y por dentro tiene short. Va del talle 38 al 40. (El top y la cartera de la foto no están incluidos)." }
+    descripcion: "Short pollera cruzado con borde de encaje de pestañas. Por fuera parece pollera y por dentro tiene short. Va del talle 38 al 40. (El top y la cartera de la foto no están incluidos)." },
+  { codigo: "RC090", nombre: "Short Volados Finos", categoria: "Shorts", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC090.jpg",
+    variantes: ["Chocolate", "Blanco", "Negro"],
+    descripcion: "Short corto elastizado con textura de volados finitos en todo el cuerpo. Cómodo y canchero. Talle único." }
 ];
