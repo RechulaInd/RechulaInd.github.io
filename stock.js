@@ -37,5 +37,8 @@ window.STOCK = [
   { codigo: "RC040", nombre: "Blusa Camelia", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC040-chocolate.jpg",
     variantes: ["Chocolate", "Crudo"],
     fotosVariante: { "Chocolate": "RC040-chocolate.jpg", "Crudo": "RC040-crudo.jpg" },
-    descripcion: "Blusa de manga larga en tela texturizada, con gran cuello volado, cascada de volados al frente y lazo para atar." }
+    descripcion: "Blusa de manga larga en tela texturizada, con gran cuello volado, cascada de volados al frente y lazo para atar." },
+  { codigo: "RC041", nombre: "Camisaco Roca", categoria: "Camisacos", precio: 52000, talles: ["1/2"], nuevo: true, foto: "RC041.jpg",
+    variantes: ["Beige", "Blanco"],
+    descripcion: "Camisaco oversize con tachas plateadas en los bolsillos, botones metálicos y bordes desflecados. Ideal para usar abierto como abrigo liviano." }
 ];

@@ -192,7 +192,7 @@
 
   // Filtros
   const cats = ["Todo","Nuevos ingresos", ...[...new Set(ALL.map(p=>p.categoria))]];
-  const ORD = ["XS","S","S/M","M","M/L","L","L/XL","XL","XXL","XXXL","Único"];
+  const ORD = ["1/2","2/3","XS","S","S/M","M","M/L","L","L/XL","XL","XXL","XXXL","Único"];
   const rank = t => isNaN(+t) ? 1000 + (ORD.indexOf(t)<0 ? 99 : ORD.indexOf(t)) : +t;
   const sizes = [...new Set(ALL.flatMap(p=>p.talles))].sort((a,b)=>rank(a)-rank(b));
   let fCat = "Todo", fSize = null;
