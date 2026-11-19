@@ -84,6 +84,12 @@
   .step p{font-size:14px;color:var(--soft);font-weight:300;line-height:1.45}
   .fab{position:fixed;right:16px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.22);text-decoration:none}
   .fab svg{width:30px;height:30px;fill:#fff}
+  .pill{position:fixed;left:14px;bottom:24px;z-index:30;display:flex;align-items:center;max-width:calc(100% - 100px);background:var(--deep);color:#F7F1E9;border-radius:999px;box-shadow:0 6px 18px rgba(74,48,41,.28);transform:translateY(120px);opacity:0;transition:.4s ease}
+  .pill.on{transform:none;opacity:1}
+  .pill button{color:inherit}
+  .pill .go{padding:12px 6px 12px 16px;font-size:12.5px;font-weight:500;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pill .go b{color:var(--rose);font-weight:500}
+  .pill .cl{width:34px;height:34px;margin-right:4px;border-radius:50%;font-size:17px;line-height:1;opacity:.75;flex:none}
   .social{background:var(--deep);color:#F7F1E9;padding:40px 18px;text-align:center}
   .social h2{font-family:var(--serif);font-weight:500;font-size:28px}
   .social p{font-size:13.5px;opacity:.85;margin:8px 0 22px;font-weight:300}
@@ -211,13 +217,14 @@
 </section>
 
 <footer id="foot"></footer>
+<div class="pill" id="pill" role="complementary"><button class="go" id="pillGo"><b>♡</b> Sumate a la comunidad</button><button class="cl" id="pillX" aria-label="Cerrar">×</button></div>
 <a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"></a>
 
 <div class="veil" id="veil"></div>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261119164154"></script>
+<script src="stock.js?v=20261119164333"></script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
@@ -243,6 +250,18 @@
   if (C.tiktok) sb.push(`<a class="sbtn" href="https://www.tiktok.com/@${esc(C.tiktok)}" target="_blank" rel="noopener">${ICON.tt} TikTok @${esc(C.tiktok)}</a>`);
   $("sbtns").innerHTML = sb.join("");
   if (C.formularioComunidad) { $("comunidad").hidden = false; $("clubBtn").href = C.formularioComunidad; }
+  // Botón flotante "Sumate a la comunidad" (se puede cerrar y no vuelve a aparecer en ese celu por 7 días)
+  if (C.grupoWhatsapp || C.formularioComunidad) {
+    let hide = false; try { hide = Date.now() < +(localStorage.getItem("rechula-pill")||0); } catch(e){}
+    if (!hide) setTimeout(()=>$("pill").classList.add("on"), 1800);
+    $("pillX").onclick = () => { $("pill").classList.remove("on"); try{ localStorage.setItem("rechula-pill", Date.now()+7*864e5); }catch(e){} };
+    $("pillGo").onclick = () => open(`<div class="bag"><h2>Sumate a la comunidad ♡</h2>
+      <p class="sub">Enterate primero de los ingresos, looks y promos exclusivas.</p>
+      ${C.grupoWhatsapp?`<a class="cta wa" href="${esc(C.grupoWhatsapp)}" target="_blank" rel="noopener">Unirme al grupo de WhatsApp</a>`:""}
+      ${C.formularioComunidad?`<a class="cta ghost" href="${esc(C.formularioComunidad)}" target="_blank" rel="noopener">Dejar mis datos y recibir sorpresas</a>`:""}
+      ${C.instagram?`<a class="cta ghost" href="https://www.instagram.com/${esc(C.instagram)}/" target="_blank" rel="noopener">Seguinos en Instagram</a>`:""}
+      </div>`);
+  }
   $("foot").innerHTML = `<img src="logo.png" alt="">Re Chula · Indumentaria femenina`;
 
   // Ilustración provisoria hasta que haya foto
