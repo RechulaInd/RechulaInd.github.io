@@ -95,5 +95,7 @@ window.STOCK = [
     variantes: ["Azul petróleo", "Chocolate", "Topo"],
     descripcion: "Musculosa de algodón con escote redondo amplio, calce entallado y estampa “AI-GENERATED” en letras blancas al frente." },
   { codigo: "RC062", nombre: "Kimono Marfil", categoria: "Kimonos", precio: 24000, talles: ["L"], nuevo: true, foto: "RC062.jpg",
-    descripcion: "Kimono liviano color marfil con bordados y calados verticales, mangas 3/4 y lazo para atar al costado. Ideal sobre un básico o la malla." }
+    descripcion: "Kimono liviano color marfil con bordados y calados verticales, mangas 3/4 y lazo para atar al costado. Ideal sobre un básico o la malla." },
+  { codigo: "RC063", nombre: "Blusa Bordado Inglés", categoria: "Blusas", precio: 48000, talles: ["L/XL"], nuevo: true, foto: "RC063.jpg",
+    descripcion: "Blusa larga blanca de bordado inglés, cuello camisero con escote en V, mangas largas con puño y ruedo festoneado. Talle L/XL." }
 ];
