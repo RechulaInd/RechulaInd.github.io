@@ -70,5 +70,8 @@ window.STOCK = [
     variantes: ["Celeste con bordó", "Rosa con rojo"],
     descripcion: "Musculosa tejida a rayas verticales con cuello y sisas en punto elástico. Disponible en celeste con bordó (la del medio) y rosa con rojo (la de la derecha)." },
   { codigo: "RC053", nombre: "Remera Marinera", categoria: "Remeras", precio: 21000, talles: ["S"], nuevo: true, foto: "RC053.jpg",
-    descripcion: "Remera tipo polo a rayas chocolate y crudo, con cuello camisero en contraste, escote en V y frunce al costado. Calce entallado." }
+    descripcion: "Remera tipo polo a rayas chocolate y crudo, con cuello camisero en contraste, escote en V y frunce al costado. Calce entallado." },
+  { codigo: "RC054", nombre: "Musculosa Tachas", categoria: "Tops", precio: 33000, talles: ["M"], nuevo: true, foto: "RC054.jpg",
+    variantes: ["Gris azulado", "Verde salvia"],
+    descripcion: "Musculosa de algodón con tachas metálicas en el cuello y las sisas, y ruedo redondeado. Tono lavado, ideal para un look canchero." }
 ];
