@@ -131,5 +131,11 @@ window.STOCK = [
     fotosExtra: ["RC075-boston.jpg"],
     variantes: ["New York blanca", "New York negra", "Boston blanca", "Boston negra"],
     fotosVariante: { "New York blanca": "RC075-newyork.jpg", "New York negra": "RC075-newyork.jpg", "Boston blanca": "RC075-boston.jpg", "Boston negra": "RC075-boston.jpg" },
-    descripcion: "Baby tee de algodón entallada con estampa estilo college. Dos diseños, New York y Boston, en blanco o negro. Talle único." }
+    descripcion: "Baby tee de algodón entallada con estampa estilo college. Dos diseños, New York y Boston, en blanco o negro. Talle único." },
+  { codigo: "RC076", nombre: "Remera Amore", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC076.jpg",
+    descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste y estampa “Amore” en rojo sobre rayas azules." },
+  { codigo: "RC077", nombre: "Remera Bord de la Mer", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC077.jpg",
+    descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste, estampa de rayas azules con corazón rojo y la frase “je veux lire un roman au bord de la mer”." },
+  { codigo: "RC078", nombre: "Remera More Amor", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC078.jpg",
+    descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste y estampa “More amor por favor” en celeste con labios rojos." }
 ];
