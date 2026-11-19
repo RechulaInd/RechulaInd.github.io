@@ -146,5 +146,8 @@ window.STOCK = [
     descripcion: "Top de encaje marfil con escote drapeado y ruedo asimétrico en punta. Liviano y sensual, ideal con un bralette debajo. Talle único S." },
   { codigo: "RC082", nombre: "Pollera Volados", categoria: "Polleras", precio: 17000, talles: ["Único"], nuevo: true, foto: "RC082.jpg",
     variantes: ["Negro", "Blanco", "Camel"],
-    descripcion: "Pollera corta de tela texturizada con dos volados y cintura alta elastizada. Sin short abajo. Talle único: va hasta un talle 42 de pantalón." }
+    descripcion: "Pollera corta de tela texturizada con dos volados y cintura alta elastizada. Sin short abajo. Talle único: va hasta un talle 42 de pantalón." },
+  { codigo: "RC083", nombre: "Vestido Halter Volados", categoria: "Vestidos", precio: 29000, talles: ["Único"], nuevo: true, foto: "RC083.jpg",
+    variantes: ["Blanco", "Chocolate"],
+    descripcion: "Vestido corto halter de tela texturizada, escote en V profundo, lazo en la nuca y falda con volados en capas. Talle único: va de M a XL." }
 ];
