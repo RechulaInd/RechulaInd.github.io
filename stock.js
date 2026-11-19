@@ -117,5 +117,7 @@ window.STOCK = [
     descripcion: "Remera de algodón con cuello redondo y mangas volado de bordado inglés con borde festoneado. Talle M/L." },
   { codigo: "RC070", nombre: "Body Nadador", categoria: "Bodys", precio: 18500, talles: ["S"], nuevo: true, foto: "RC070.jpg",
     variantes: ["Crudo", "Beige"],
-    descripcion: "Body de morley con cuello redondo, sisas americanas y broche abajo. Disponible en crudo y beige (el chocolate de la foto está agotado). Talle único S." }
+    descripcion: "Body de morley con cuello redondo, sisas americanas y broche abajo. Disponible en crudo y beige (el chocolate de la foto está agotado). Talle único S." },
+  { codigo: "RC071", nombre: "Blusa Noche", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC071.jpg",
+    descripcion: "Blusa negra sin mangas con bordado de flores y lentejuelas plateadas, encaje de pestañas en los hombros, escote en V y lazo en la espalda." }
 ];
