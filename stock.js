@@ -122,5 +122,7 @@ window.STOCK = [
     descripcion: "Blusa negra sin mangas con bordado de flores y lentejuelas plateadas, encaje de pestañas en los hombros, escote en V y lazo en la espalda." },
   { codigo: "RC072", nombre: "Blusa Enredadera", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC072.jpg",
     variantes: ["Blanco", "Chocolate"],
-    descripcion: "Blusa sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros." }
+    descripcion: "Blusa sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros." },
+  { codigo: "RC073", nombre: "Blusa Algodón de Azúcar", categoria: "Blusas", precio: 35500, talles: ["L"], nuevo: true, foto: "RC073.jpg",
+    descripcion: "Blusa blanca sin mangas con frunces en capas, puntilla calada en los hombros y botón en la espalda. Fresca y romántica." }
 ];
