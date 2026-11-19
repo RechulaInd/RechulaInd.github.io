@@ -55,7 +55,7 @@ window.STOCK = [
     descripcion: "Top chocolate de breteles finos regulables, volado en el escote, lazo al frente y peplum en la cintura." },
   { codigo: "RC047", nombre: "Top Nogal", categoria: "Tops", precio: 28000, talles: ["L"], nuevo: true, foto: "RC047.jpg",
     descripcion: "Top marrón de breteles finos con puntilla crochet en el escote, cintura con panal elastizado, cordón trenzado y volado." },
-  { codigo: "RC048", nombre: "Top Siena", categoria: "Tops", precio: 46000, talles: ["L"], nuevo: true, foto: "RC048.jpg",
+  { codigo: "RC048", nombre: "Top Siena", categoria: "Tops", precio: 46000, talles: ["Único"], nuevo: true, foto: "RC048.jpg",
     fotosExtra: ["RC048-espalda.jpg"],
-    descripcion: "Top halter satinado color chocolate con cuello volcado, corte pañuelo con puntilla de encaje en las puntas y espalda abierta con lazo y tiritas cruzadas." }
+    descripcion: "Top halter satinado color chocolate con cuello volcado, corte pañuelo con puntilla de encaje en las puntas y espalda abierta con lazo y tiritas cruzadas. Talle único: se ajusta en la espalda y va de S a XL." }
 ];
