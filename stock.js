@@ -40,5 +40,8 @@ window.STOCK = [
     descripcion: "Blusa de manga larga en tela texturizada, con gran cuello volado, cascada de volados al frente y lazo para atar." },
   { codigo: "RC041", nombre: "Camisaco Roca", categoria: "Camisacos", precio: 52000, talles: ["1/2"], nuevo: true, foto: "RC041.jpg",
     variantes: ["Beige", "Blanco"],
-    descripcion: "Camisaco oversize con tachas plateadas en los bolsillos, botones metálicos y bordes desflecados. Ideal para usar abierto como abrigo liviano." }
+    descripcion: "Camisaco oversize con tachas plateadas en los bolsillos, botones metálicos y bordes desflecados. Ideal para usar abierto como abrigo liviano." },
+  { codigo: "RC042", nombre: "Blusa Victoria", categoria: "Blusas", precio: 47000, talles: ["Único"], nuevo: true, foto: "RC042.jpg",
+    variantes: ["Chocolate", "Blanco"],
+    descripcion: "Blusa romántica con volados en el escote y al frente, puntillas caladas, alforzas, mangas abullonadas con volado y peplum en la cintura." }
 ];
