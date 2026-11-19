@@ -23,5 +23,7 @@ window.STOCK = [
   { codigo: "RC034", nombre: "Camisola Duna", categoria: "Blusas", precio: 13500, talles: ["L"], nuevo: true, foto: "RC034.jpg",
     descripcion: "Camisola de lino color nude con escote en V, frunce en la cintura y mangas amplias con vuelo." },
   { codigo: "RC035", nombre: "Conjunto Canela", categoria: "Conjuntos", precio: 66000, talles: ["M"], nuevo: true, foto: "RC035.jpg",
-    descripcion: "Conjunto de dos piezas color camel: top corset de breteles finos con botones y pantalón ancho con cintura elastizada." }
+    descripcion: "Conjunto de dos piezas color camel: top corset de breteles finos con botones y pantalón ancho con cintura elastizada." },
+  { codigo: "RC036", nombre: "Vestido Rosa Mosqueta", categoria: "Vestidos", precio: 39000, talles: ["L"], nuevo: true, foto: "RC036.jpg",
+    descripcion: "Vestido camisero midi rosa con cuello, botones dorados, bolsillos al frente, cintura con lazo ajustable y volado en el ruedo." }
 ];
