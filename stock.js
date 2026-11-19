@@ -141,5 +141,7 @@ window.STOCK = [
   { codigo: "RC079", nombre: "Vestido Encaje Halter", categoria: "Vestidos", precio: 38000, talles: ["Único"], nuevo: true, foto: "RC079.jpg",
     descripcion: "Vestido halter de encaje blanco con escote en V, volados en capas y ruedo asimétrico. Disponible solo en blanco (el chocolate de la foto está agotado). Talle único." },
   { codigo: "RC080", nombre: "Musculosa Puntilla", categoria: "Tops", precio: 21000, talles: ["S"], nuevo: true, foto: "RC080.jpg",
-    descripcion: "Musculosa blanca de encaje con volados en capas, escote en V con puntilla y breteles finos. Talle único S." }
+    descripcion: "Musculosa blanca de encaje con volados en capas, escote en V con puntilla y breteles finos. Talle único S." },
+  { codigo: "RC081", nombre: "Top Marfil Asimétrico", categoria: "Tops", precio: 23500, talles: ["S"], nuevo: true, foto: "RC081.jpg",
+    descripcion: "Top de encaje marfil con escote drapeado y ruedo asimétrico en punta. Liviano y sensual, ideal con un bralette debajo. Talle único S." }
 ];
