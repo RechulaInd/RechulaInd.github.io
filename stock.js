@@ -93,5 +93,7 @@ window.STOCK = [
     descripcion: "Remera larga o vestido corto, se usa de las dos formas. Satinado, de breteles finos regulables, con encaje de pestañas cruzado al frente y ruedo asimétrico. Talle único M/L." },
   { codigo: "RC061", nombre: "Musculosa Básica", categoria: "Tops", precio: 18500, talles: ["M"], nuevo: true, foto: "RC061.jpg",
     variantes: ["Azul petróleo", "Chocolate", "Topo"],
-    descripcion: "Musculosa de algodón con escote redondo amplio, calce entallado y estampa “AI-GENERATED” en letras blancas al frente." }
+    descripcion: "Musculosa de algodón con escote redondo amplio, calce entallado y estampa “AI-GENERATED” en letras blancas al frente." },
+  { codigo: "RC062", nombre: "Kimono Marfil", categoria: "Kimonos", precio: 24000, talles: ["L"], nuevo: true, foto: "RC062.jpg",
+    descripcion: "Kimono liviano color marfil con bordados y calados verticales, mangas 3/4 y lazo para atar al costado. Ideal sobre un básico o la malla." }
 ];
