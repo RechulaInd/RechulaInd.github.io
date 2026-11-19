@@ -137,5 +137,7 @@ window.STOCK = [
   { codigo: "RC077", nombre: "Remera Bord de la Mer", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC077.jpg",
     descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste, estampa de rayas azules con corazón rojo y la frase “je veux lire un roman au bord de la mer”." },
   { codigo: "RC078", nombre: "Remera More Amor", categoria: "Remeras", precio: 17000, talles: ["S/M"], nuevo: true, foto: "RC078.jpg",
-    descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste y estampa “More amor por favor” en celeste con labios rojos." }
+    descripcion: "Remera tipo baby tee pero un poco más ancha, a rayas blancas y rosas con cuello celeste y estampa “More amor por favor” en celeste con labios rojos." },
+  { codigo: "RC079", nombre: "Vestido Encaje Halter", categoria: "Vestidos", precio: 38000, talles: ["Único"], nuevo: true, foto: "RC079.jpg",
+    descripcion: "Vestido halter de encaje blanco con escote en V, volados en capas y ruedo asimétrico. Disponible solo en blanco (el chocolate de la foto está agotado). Talle único." }
 ];
