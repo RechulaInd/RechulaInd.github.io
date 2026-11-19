@@ -15,5 +15,9 @@ window.STOCK = [
     variantes: ["Leopardo clásico", "Leopardo tostado"],
     descripcion: "Top escote en V profundo con puntilla de encaje negro. Elegí entre dos estampas: leopardo clásico (izquierda) o leopardo tostado (derecha)." },
   { codigo: "RC031", nombre: "Conjunto Margarita", categoria: "Conjuntos", precio: 67500, talles: ["M"], nuevo: true, foto: "RC031.jpg",
-    descripcion: "Conjunto de dos piezas en bordado calado de flores color beige: chaleco con botones y short al tono." }
+    descripcion: "Conjunto de dos piezas en bordado calado de flores color beige: chaleco con botones y short al tono." },
+  { codigo: "RC032", nombre: "Pantalón Caramelo", categoria: "Pantalones", precio: 33500, talles: ["XL"], nuevo: true, foto: "RC032-033.jpg",
+    descripcion: "Pantalón ancho color caramelo (el de atrás en la foto) con bordados blancos y guarda étnica en la botamanga. Cintura con elástico atrás, botón y bolsillos." },
+  { codigo: "RC033", nombre: "Pantalón Oliva", categoria: "Pantalones", precio: 33500, talles: ["XXL"], nuevo: true, foto: "RC032-033.jpg",
+    descripcion: "Pantalón ancho verde oliva (el de adelante en la foto) con bordados blancos y guarda étnica en la botamanga. Cintura con elástico atrás, botón y bolsillos." }
 ];

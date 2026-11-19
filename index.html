@@ -191,7 +191,9 @@
 
   // Filtros
   const cats = ["Todo","Nuevos ingresos", ...[...new Set(ALL.map(p=>p.categoria))]];
-  const sizes = [...new Set(ALL.flatMap(p=>p.talles))].sort((a,b)=>(+a||0)-(+b||0)||String(a).localeCompare(b));
+  const ORD = ["XS","S","M","L","XL","XXL","XXXL","Único"];
+  const rank = t => isNaN(+t) ? 1000 + (ORD.indexOf(t)<0 ? 99 : ORD.indexOf(t)) : +t;
+  const sizes = [...new Set(ALL.flatMap(p=>p.talles))].sort((a,b)=>rank(a)-rank(b));
   let fCat = "Todo", fSize = null;
   function drawFilters(){
     $("cats").innerHTML = cats.map(c=>`<button class="chip ${c===fCat?"on":""}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
