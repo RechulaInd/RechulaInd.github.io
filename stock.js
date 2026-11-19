@@ -149,5 +149,8 @@ window.STOCK = [
     descripcion: "Pollera corta de tela texturizada con dos volados y cintura alta elastizada. Sin short abajo. Talle único: va hasta un talle 42 de pantalón." },
   { codigo: "RC083", nombre: "Vestido Halter Volados", categoria: "Vestidos", precio: 29000, talles: ["Único"], nuevo: true, foto: "RC083.jpg",
     variantes: ["Blanco", "Chocolate"],
-    descripcion: "Vestido corto halter de tela texturizada, escote en V profundo, lazo en la nuca y falda con volados en capas. Talle único: va de M a XL." }
+    descripcion: "Vestido corto halter de tela texturizada, escote en V profundo, lazo en la nuca y falda con volados en capas. Talle único: va de M a XL." },
+  { codigo: "RC084", nombre: "Vestido Esencial", categoria: "Vestidos", precio: 24500, talles: ["Único"], nuevo: true, foto: "RC084.jpg",
+    variantes: ["Blanco", "Negro"],
+    descripcion: "Vestido corto entallado de tela suave con escote cuadrado, breteles anchos y frunce al costado que estiliza la cintura. Talle único: va de S a L." }
 ];
