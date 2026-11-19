@@ -108,5 +108,8 @@ window.STOCK = [
     variantes: ["Negro", "Crudo"],
     descripcion: "Blusa sin mangas de tela texturizada a rayas, cuello camisero y botones al frente. Liviana y fácil de combinar." },
   { codigo: "RC067", nombre: "Blusa Nube", categoria: "Blusas", precio: 47600, talles: ["M"], nuevo: true, foto: "RC067.jpg",
-    descripcion: "Blusa blanca de bordado inglés con paneles de encaje calado, volados ondulados en los hombros, botones al frente y ruedo festoneado." }
+    descripcion: "Blusa blanca de bordado inglés con paneles de encaje calado, volados ondulados en los hombros, botones al frente y ruedo festoneado." },
+  { codigo: "RC068", nombre: "Chaleco Margaritas", categoria: "Chalecos", precio: 41000, talles: ["M"], nuevo: true, foto: "RC068.jpg",
+    variantes: ["Blanco", "Crudo"],
+    descripcion: "Chaleco con bordado de flores en relieve, detalles de brillos en el pecho, escote en V, botones de madera y espalda tejida calada." }
 ];
