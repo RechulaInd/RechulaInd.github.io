@@ -32,6 +32,7 @@
   .orn{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:16px auto 0;max-width:260px;font-size:13px}
   .orn:before,.orn:after{content:"";flex:1;height:1px;background:var(--gold);opacity:.55}
   .kick{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500}
+  .howlink{display:inline-block;margin-top:14px;font-size:12.5px;letter-spacing:.06em;color:var(--deep);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
   .hero p{color:var(--soft);font-size:14.5px;margin-top:12px;font-weight:300;line-height:1.55}
 
   /* Filtros */
@@ -66,6 +67,10 @@
   .how{background:#EFE2D7;border-top:1px solid var(--line);padding:40px 18px}
   .how-in{max-width:1100px;margin:0 auto}
   .how h2{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--deep);text-align:center;margin-bottom:24px}
+  .vid{max-width:340px;margin:0 auto 26px;position:relative;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 10px 30px rgba(74,48,41,.18)}
+  .vid:after{content:"";position:absolute;inset:8px;border:1px solid rgba(181,138,82,.55);border-radius:12px;pointer-events:none}
+  .vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
+  .how .sub{text-align:center;color:var(--soft);font-size:14px;margin:-14px 0 20px;font-weight:300}
   .steps{display:grid;gap:14px}
   @media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
   .step{background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--line)}
@@ -138,6 +143,7 @@
   <h1>Prendas que te hacen sentir <em>re linda</em></h1>
   <div class="orn">♡</div>
   <p>Elegí tus favoritas y escribinos por WhatsApp.<br>Te asesoramos con el talle y el look.</p>
+  <a class="howlink" href="#como-comprar">▶ ¿Primera vez? Mirá cómo comprar</a>
 </section>
 
 <section class="filters">
@@ -148,9 +154,11 @@
 
 <main class="grid" id="grid"></main>
 
-<section class="how">
+<section class="how" id="como-comprar">
   <div class="how-in">
     <h2>¿Cómo comprar?</h2>
+    <p class="sub">Mirá el video y en un minuto sabés todo ♡</p>
+    <div class="vid"><video src="video/como-comprar.mp4" poster="video/como-comprar.jpg" controls playsinline preload="metadata"></video></div>
     <div class="steps">
       <div class="step"><b>1</b><h3>Elegí tus prendas</h3><p>Tocá la prenda, elegí el talle y sumala a tu selección.</p></div>
       <div class="step"><b>2</b><h3>Escribinos por WhatsApp</h3><p>Se arma el mensaje con todo lo que elegiste. Solo tenés que enviarlo.</p></div>
