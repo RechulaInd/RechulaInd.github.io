@@ -52,5 +52,7 @@ window.STOCK = [
     variantes: ["Crudo con rayas chocolate", "Chocolate con rayas crudo"],
     descripcion: "Chaleco tejido calado a rayas, escote en V y botones carey. Liviano, ideal para media estación." },
   { codigo: "RC046", nombre: "Top Cacao", categoria: "Tops", precio: 23500, talles: ["L"], nuevo: true, foto: "RC046.jpg",
-    descripcion: "Top chocolate de breteles finos regulables, volado en el escote, lazo al frente y peplum en la cintura." }
+    descripcion: "Top chocolate de breteles finos regulables, volado en el escote, lazo al frente y peplum en la cintura." },
+  { codigo: "RC047", nombre: "Top Nogal", categoria: "Tops", precio: 28000, talles: ["L"], nuevo: true, foto: "RC047.jpg",
+    descripcion: "Top marrón de breteles finos con puntilla crochet en el escote, cintura con panal elastizado, cordón trenzado y volado." }
 ];
