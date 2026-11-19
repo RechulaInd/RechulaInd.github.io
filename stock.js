@@ -119,5 +119,8 @@ window.STOCK = [
     variantes: ["Crudo", "Beige"],
     descripcion: "Body de morley con cuello redondo, sisas americanas y broche abajo. Disponible en crudo y beige (el chocolate de la foto está agotado). Talle único S." },
   { codigo: "RC071", nombre: "Blusa Noche", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC071.jpg",
-    descripcion: "Blusa negra sin mangas con bordado de flores y lentejuelas plateadas, encaje de pestañas en los hombros, escote en V y lazo en la espalda." }
+    descripcion: "Blusa negra sin mangas con bordado de flores y lentejuelas plateadas, encaje de pestañas en los hombros, escote en V y lazo en la espalda." },
+  { codigo: "RC072", nombre: "Blusa Enredadera", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC072.jpg",
+    variantes: ["Blanco", "Chocolate"],
+    descripcion: "Blusa sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros." }
 ];
