@@ -100,5 +100,8 @@ window.STOCK = [
     descripcion: "Blusa larga blanca de bordado inglés, cuello camisero con escote en V, mangas largas con puño y ruedo festoneado. Talle L/XL." },
   { codigo: "RC064", nombre: "Blusa Vichy", categoria: "Blusas", precio: 49500, talles: ["L"], nuevo: true, foto: "RC064.jpg",
     variantes: ["Celeste", "Negro"],
-    descripcion: "Blusa de cuadrillé vichy con frunces elastizados en el cuerpo, mangas volado y peplum. Fresca y romántica." }
+    descripcion: "Blusa de cuadrillé vichy con frunces elastizados en el cuerpo, mangas volado y peplum. Fresca y romántica." },
+  { codigo: "RC065", nombre: "Blusa Rayada", categoria: "Blusas", precio: 49500, talles: ["Único"], nuevo: true, foto: "RC065.jpg",
+    variantes: ["Chocolate", "Azul"],
+    descripcion: "Blusa a rayas finas con escote en V y lazo, manga corta, frunces elastizados en el cuerpo y volado en la cintura." }
 ];
