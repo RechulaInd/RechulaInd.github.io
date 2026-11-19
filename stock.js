@@ -45,5 +45,7 @@ window.STOCK = [
     variantes: ["Chocolate", "Blanco"],
     descripcion: "Blusa romántica con volados en el escote y al frente, puntillas caladas, alforzas, mangas abullonadas con volado y peplum en la cintura." },
   { codigo: "RC043", nombre: "Top Luna", categoria: "Tops", precio: 23000, talles: [], nuevo: true, foto: "RC043.jpg", oculto: true,
-    descripcion: "Top halter color crudo en tela satinada, con cuello volcado y lazo para atar en la nuca." }
+    descripcion: "Top halter color crudo en tela satinada, con cuello volcado y lazo para atar en la nuca." },
+  { codigo: "RC044", nombre: "Remera Maldivas", categoria: "Remeras", precio: 21000, talles: ["L"], nuevo: true, foto: "RC044.jpg",
+    descripcion: "Remera blanca sin mangas, estampa de estrella de mar en tono caramelo con apliques de perlas y la frase “Maldives, my next destination”." }
 ];
