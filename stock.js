@@ -152,5 +152,8 @@ window.STOCK = [
     descripcion: "Vestido corto halter de tela texturizada, escote en V profundo, lazo en la nuca y falda con volados en capas. Talle único: va de M a XL." },
   { codigo: "RC084", nombre: "Vestido Esencial", categoria: "Vestidos", precio: 24500, talles: ["Único"], nuevo: true, foto: "RC084.jpg",
     variantes: ["Blanco", "Negro"],
-    descripcion: "Vestido corto entallado de tela suave con escote cuadrado, breteles anchos y frunce al costado que estiliza la cintura. Talle único: va de S a L." }
+    descripcion: "Vestido corto entallado de tela suave con escote cuadrado, breteles anchos y frunce al costado que estiliza la cintura. Talle único: va de S a L." },
+  { codigo: "RC085", nombre: "Short Ondas", categoria: "Shorts", precio: 47000, talles: ["36 al 40"], nuevo: true, foto: "RC085.jpg",
+    variantes: ["Negro", "Chocolate", "Blanco"],
+    descripcion: "Short con volados en capas y puntillas caladas, tela con líneas onduladas de hilo dorado y cintura elastizada. Talle único: va del 36 al 40." }
 ];
