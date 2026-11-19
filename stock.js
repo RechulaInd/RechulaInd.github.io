@@ -111,5 +111,8 @@ window.STOCK = [
     descripcion: "Blusa blanca de bordado inglés con paneles de encaje calado, volados ondulados en los hombros, botones al frente y ruedo festoneado." },
   { codigo: "RC068", nombre: "Chaleco Margaritas", categoria: "Chalecos", precio: 41000, talles: ["M"], nuevo: true, foto: "RC068.jpg",
     variantes: ["Blanco", "Crudo"],
-    descripcion: "Chaleco con bordado de flores en relieve, detalles de brillos en el pecho, escote en V, botones de madera y espalda tejida calada." }
+    descripcion: "Chaleco con bordado de flores en relieve, detalles de brillos en el pecho, escote en V, botones de madera y espalda tejida calada." },
+  { codigo: "RC069", nombre: "Remera Volados Calados", categoria: "Remeras", precio: 33000, talles: ["M/L"], nuevo: true, foto: "RC069.jpg",
+    variantes: ["Blanco", "Negro"],
+    descripcion: "Remera de algodón con cuello redondo y mangas volado de bordado inglés con borde festoneado. Talle M/L." }
 ];
