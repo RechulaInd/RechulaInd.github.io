@@ -87,5 +87,8 @@ window.STOCK = [
     descripcion: "Chaleco sastrero largo con escote en V, botones al frente, bolsillos de ribete y forro interior. Elegante para la oficina o con jean." },
   { codigo: "RC059", nombre: "Camisola Encaje", categoria: "Blusas", precio: 43000, talles: ["M/L"], nuevo: true, foto: "RC059.jpg",
     variantes: ["Blanco", "Chocolate"],
-    descripcion: "Camisola satinada de breteles finos regulables, con encaje de pestañas en el escote, cruzado al frente y en el ruedo asimétrico. Talle único M/L." }
+    descripcion: "Camisola satinada de breteles finos regulables, con encaje de pestañas en el escote, cruzado al frente y en el ruedo asimétrico. Talle único M/L." },
+  { codigo: "RC060", nombre: "Vestido Aurora", categoria: "Vestidos", precio: 44000, talles: ["M/L"], nuevo: true, foto: "RC060.jpg",
+    variantes: ["Blanco", "Chocolate"],
+    descripcion: "Remera larga o vestido corto, se usa de las dos formas. Satinado, de breteles finos regulables, con encaje de pestañas cruzado al frente y ruedo asimétrico. Talle único M/L." }
 ];
