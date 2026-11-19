@@ -157,5 +157,7 @@ window.STOCK = [
     variantes: ["Negro", "Chocolate", "Blanco"],
     descripcion: "Short con volados en capas y puntillas caladas, tela con líneas onduladas de hilo dorado y cintura elastizada. Talle único: va del 36 al 40." },
   { codigo: "RC086", nombre: "Vestido Strapless Volados", categoria: "Vestidos", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC086.jpg",
-    descripcion: "Vestido negro strapless de tela elastizada, cuerpo entallado y falda con dos volados. Talle único." }
+    descripcion: "Vestido negro strapless de tela elastizada, cuerpo entallado y falda con dos volados. Talle único." },
+  { codigo: "RC087", nombre: "Vestido Tul Chocolate", categoria: "Vestidos", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC087.jpg",
+    descripcion: "Vestido strapless de tul chocolate con frunces que marcan la figura y falda con dos volados. Talle único." }
 ];
