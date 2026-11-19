@@ -84,5 +84,8 @@ window.STOCK = [
     descripcion: "Remera corta a rayas blancas y celestes, cuello en rosa y estampa “Hecha para más – Efesios 2:10” con moños y estrellas. Talle único S/M." },
   { codigo: "RC058", nombre: "Chaleco Sastre", categoria: "Chalecos", precio: 48000, talles: ["3","4"], nuevo: true, foto: "RC058.jpg",
     variantes: ["Marrón", "Negro"],
-    descripcion: "Chaleco sastrero largo con escote en V, botones al frente, bolsillos de ribete y forro interior. Elegante para la oficina o con jean." }
+    descripcion: "Chaleco sastrero largo con escote en V, botones al frente, bolsillos de ribete y forro interior. Elegante para la oficina o con jean." },
+  { codigo: "RC059", nombre: "Camisola Encaje", categoria: "Blusas", precio: 43000, talles: ["M/L"], nuevo: true, foto: "RC059.jpg",
+    variantes: ["Blanco", "Chocolate"],
+    descripcion: "Camisola satinada de breteles finos regulables, con encaje de pestañas en el escote, cruzado al frente y en el ruedo asimétrico. Talle único M/L." }
 ];
