@@ -3,6 +3,8 @@
 // nuevo (true = aparece en "Nuevos ingresos"), agotado / oculto (true = no se muestra), foto (archivo de imagen, opcional)
 window.CONFIG = {
   descuento: 15,          // % de descuento en efectivo o transferencia
+  cuotas: 0,              // cuotas sin interés (0 = no se muestran)
+  linkDePago: false,      // true = muestra "Pagá con link de pago"
   redondeo: 0,            // 0 = sin redondeo (el precio con descuento queda exacto)
   whatsapp: "5493813341164",         // número con código de país, sin + ni espacios. Ej: 5493511234567
   tiktok: "rechula.ind",
