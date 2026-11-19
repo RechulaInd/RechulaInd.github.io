@@ -31,7 +31,7 @@ window.STOCK = [
     descripcion: "Body de morley con escote en V, manga corta y broche abajo. Un básico que combina con todo." },
   { codigo: "RC038", nombre: "Blusa Azahar", categoria: "Blusas", precio: 39000, talles: ["L"], nuevo: true, foto: "RC038.jpg",
     descripcion: "Blusa sin mangas blanca con bordado de flores en relieve, cuello mao y botones de presilla con perlas." },
-  { codigo: "RC039", nombre: "Musculosa Brisa", categoria: "Tops", precio: 16000, talles: [], nuevo: true, foto: "RC039.jpg", oculto: true,
+  { codigo: "RC039", nombre: "Musculosa Brisa", categoria: "Tops", precio: 16000, talles: ["L"], nuevo: true, foto: "RC039.jpg",
     variantes: ["Topo", "Celeste", "Chocolate"],
     descripcion: "Musculosa de morley con escote redondo y push up incluido. Cómoda, ajustada y lista para usar sola o debajo de un blazer." },
   { codigo: "RC040", nombre: "Blusa Camelia", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC040-chocolate.jpg",
@@ -44,8 +44,11 @@ window.STOCK = [
   { codigo: "RC042", nombre: "Blusa Victoria", categoria: "Blusas", precio: 47000, talles: ["Único"], nuevo: true, foto: "RC042.jpg",
     variantes: ["Chocolate", "Blanco"],
     descripcion: "Blusa romántica con volados en el escote y al frente, puntillas caladas, alforzas, mangas abullonadas con volado y peplum en la cintura." },
-  { codigo: "RC043", nombre: "Top Luna", categoria: "Tops", precio: 23000, talles: [], nuevo: true, foto: "RC043.jpg", oculto: true,
+  { codigo: "RC043", nombre: "Top Luna", categoria: "Tops", precio: 23000, talles: ["L"], nuevo: true, foto: "RC043.jpg",
     descripcion: "Top halter color crudo en tela satinada, con cuello volcado y lazo para atar en la nuca." },
   { codigo: "RC044", nombre: "Remera Maldivas", categoria: "Remeras", precio: 21000, talles: ["L"], nuevo: true, foto: "RC044.jpg",
-    descripcion: "Remera blanca sin mangas, estampa de estrella de mar en tono caramelo con apliques de perlas y la frase “Maldives, my next destination”." }
+    descripcion: "Remera blanca sin mangas, estampa de estrella de mar en tono caramelo con apliques de perlas y la frase “Maldives, my next destination”." },
+  { codigo: "RC045", nombre: "Chaleco Bombón", categoria: "Chalecos", precio: 31000, talles: ["L"], nuevo: true, foto: "RC045.jpg",
+    variantes: ["Crudo con rayas chocolate", "Chocolate con rayas crudo"],
+    descripcion: "Chaleco tejido calado a rayas, escote en V y botones carey. Liviano, ideal para media estación." }
 ];
