@@ -88,6 +88,10 @@
   .det .ph{border-radius:0;aspect-ratio:1/1;max-height:46vh;width:100%}
   @media(min-width:820px){.det .ph{aspect-ratio:4/5;max-height:none}}
   .det-body{padding:22px 22px 26px}
+  .thumbs{display:flex;gap:8px;padding:10px 22px 0}
+  .thumbs button{width:54px;height:66px;border-radius:8px;overflow:hidden;border:1px solid var(--line);padding:0;opacity:.6}
+  .thumbs button.on{opacity:1;border-color:var(--gold)}
+  .thumbs img{width:100%;height:100%;object-fit:cover;display:block}
   .det-body .name{font-size:28px}
   .prices{margin:12px 0 18px;padding:14px;border:1px solid var(--line);border-radius:12px}
   .prices .r{display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
@@ -244,7 +248,8 @@
     let vari = hasV && p.variantes.length===1 ? p.variantes[0] : null;
     let talle = p.talles.length===1 ? p.talles[0] : (fSize && p.talles.includes(fSize) ? fSize : null);
     open(`<div class="det">
-      <div class="ph" id="dPh">${pic(p, vari)}</div>
+      <div><div class="ph" id="dPh">${pic(p, vari)}</div>
+      ${p.fotosExtra&&p.fotosExtra.length?`<div class="thumbs" id="dTh">${[p.foto,...p.fotosExtra].map((f,n)=>`<button class="${n?"":"on"}" data-f="${esc(f)}" aria-label="Ver foto ${n+1}"><img src="fotos/${esc(f)}" alt=""></button>`).join("")}</div>`:""}</div>
       <div class="det-body">
         <div class="code">${esc(p.codigo)} · ${esc(p.categoria)}</div>
         <div class="name">${esc(p.nombre)}</div>
@@ -261,6 +266,7 @@
         <button class="cta dark" id="add">Sumar a mi selección</button>
         <a class="cta wa" id="wa" href="#" target="_blank" rel="noopener" style="margin-top:10px">Lo quiero · WhatsApp</a>
       </div></div>`);
+    if ($("dTh")) $("dTh").onclick = e => { const b=e.target.closest("[data-f]"); if(!b) return; $("dPh").innerHTML=`<img src="fotos/${esc(b.dataset.f)}" alt="${esc(p.nombre)}">`; [...$("dTh").children].forEach(c=>c.classList.toggle("on",c===b)); };
     const ready = () => talle && (!hasV || vari);
     const need = () => !talle ? "Elegí un talle primero" : "Elegí la estampa primero";
     const upd = () => { $("wa").href = ready() ? waLink([line(p,talle,vari)]) : "#"; };
