@@ -143,5 +143,8 @@ window.STOCK = [
   { codigo: "RC080", nombre: "Musculosa Puntilla", categoria: "Tops", precio: 21000, talles: ["S"], nuevo: true, foto: "RC080.jpg",
     descripcion: "Musculosa blanca de encaje con volados en capas, escote en V con puntilla y breteles finos. Talle único S." },
   { codigo: "RC081", nombre: "Top Marfil Asimétrico", categoria: "Tops", precio: 23500, talles: ["S"], nuevo: true, foto: "RC081.jpg",
-    descripcion: "Top de encaje marfil con escote drapeado y ruedo asimétrico en punta. Liviano y sensual, ideal con un bralette debajo. Talle único S." }
+    descripcion: "Top de encaje marfil con escote drapeado y ruedo asimétrico en punta. Liviano y sensual, ideal con un bralette debajo. Talle único S." },
+  { codigo: "RC082", nombre: "Pollera Volados", categoria: "Polleras", precio: 17000, talles: ["Único"], nuevo: true, foto: "RC082.jpg",
+    variantes: ["Negro", "Blanco", "Camel"],
+    descripcion: "Pollera corta de tela texturizada con dos volados y cintura alta elastizada. Sin short abajo. Talle único: va hasta un talle 42 de pantalón." }
 ];
