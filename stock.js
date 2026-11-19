@@ -7,7 +7,7 @@ window.CONFIG = {
   whatsapp: "5493813341164",         // número con código de país, sin + ni espacios. Ej: 5493511234567
   tiktok: "rechula.ind",
   instagram: "",          // usuario de Instagram sin @
-  grupoWhatsapp: "",      // link de invitación al grupo de WhatsApp
+  grupoWhatsapp: "https://chat.whatsapp.com/K8UAiZUdiZx6OAdvadSvY1",      // link de invitación al grupo de WhatsApp
   formularioComunidad: "" // link del formulario de Google para la comunidad
 };
 
