@@ -1,6 +1,6 @@
 // STOCK DE RE CHULA
 // Para cada prenda: código, nombre, categoría, precio de lista, talles disponibles,
-// nuevo (true = aparece en "Nuevos ingresos"), agotado (true = no se muestra), foto (archivo de imagen, opcional)
+// nuevo (true = aparece en "Nuevos ingresos"), agotado / oculto (true = no se muestra), foto (archivo de imagen, opcional)
 window.CONFIG = {
   descuento: 15,          // % de descuento en efectivo o transferencia
   redondeo: 0,            // 0 = sin redondeo (el precio con descuento queda exacto)
@@ -30,5 +30,8 @@ window.STOCK = [
     variantes: ["Negro", "Celeste", "Chocolate"],
     descripcion: "Body de morley con escote en V, manga corta y broche abajo. Un básico que combina con todo." },
   { codigo: "RC038", nombre: "Blusa Azahar", categoria: "Blusas", precio: 39000, talles: ["L"], nuevo: true, foto: "RC038.jpg",
-    descripcion: "Blusa sin mangas blanca con bordado de flores en relieve, cuello mao y botones de presilla con perlas." }
+    descripcion: "Blusa sin mangas blanca con bordado de flores en relieve, cuello mao y botones de presilla con perlas." },
+  { codigo: "RC039", nombre: "Musculosa Brisa", categoria: "Tops", precio: 16000, talles: [], nuevo: true, foto: "RC039.jpg", oculto: true,
+    variantes: ["Topo", "Celeste", "Chocolate"],
+    descripcion: "Musculosa de morley con escote redondo y push up incluido. Cómoda, ajustada y lista para usar sola o debajo de un blazer." }
 ];

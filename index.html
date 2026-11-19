@@ -165,7 +165,7 @@
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
-  const ALL = (window.STOCK||[]).filter(p => !p.agotado);
+  const ALL = (window.STOCK||[]).filter(p => !p.agotado && !p.oculto && p.talles && p.talles.length);
   const $ = id => document.getElementById(id);
   const money = n => "$" + Math.round(n).toLocaleString("es-AR");
   const cash = p => { let v = p.precio * (1 - C.descuento/100); if (C.redondeo>0) v = Math.floor(v/C.redondeo)*C.redondeo; return Math.round(v); };
