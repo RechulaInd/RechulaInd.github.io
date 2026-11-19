@@ -106,5 +106,7 @@ window.STOCK = [
     descripcion: "Blusa a rayas finas con escote en V y lazo, manga corta, frunces elastizados en el cuerpo y volado en la cintura." },
   { codigo: "RC066", nombre: "Blusa Textura", categoria: "Blusas", precio: 28000, talles: ["Único"], nuevo: true, foto: "RC066.jpg",
     variantes: ["Negro", "Crudo"],
-    descripcion: "Blusa sin mangas de tela texturizada a rayas, cuello camisero y botones al frente. Liviana y fácil de combinar." }
+    descripcion: "Blusa sin mangas de tela texturizada a rayas, cuello camisero y botones al frente. Liviana y fácil de combinar." },
+  { codigo: "RC067", nombre: "Blusa Nube", categoria: "Blusas", precio: 47600, talles: ["M"], nuevo: true, foto: "RC067.jpg",
+    descripcion: "Blusa blanca de bordado inglés con paneles de encaje calado, volados ondulados en los hombros, botones al frente y ruedo festoneado." }
 ];
