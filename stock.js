@@ -174,5 +174,7 @@ window.STOCK = [
     variantes: ["Chocolate", "Blanco", "Negro"],
     descripcion: "Short corto elastizado con textura de volados finitos en todo el cuerpo. Cómodo y canchero. Talle único." },
   { codigo: "RC091", nombre: "Camisaco Cuero Negro", categoria: "Camisacos", precio: 34000, talles: ["38","40"], nuevo: true, foto: "RC091.jpg",
-    descripcion: "Camisaco corto de cuero ecológico negro con cuello camisero, botones a presión, bolsillos con solapa y puños anchos. Ideal para usar abierto como campera." }
+    descripcion: "Camisaco corto de cuero ecológico negro con cuello camisero, botones a presión, bolsillos con solapa y puños anchos. Ideal para usar abierto como campera." },
+  { codigo: "RC092", nombre: "Short Bordado Marfil", categoria: "Shorts", precio: 35000, talles: ["Único"], nuevo: true, foto: "RC092.jpg",
+    descripcion: "Short marfil con bordado de flores en relieve, ruedo festoneado y cintura elastizada con cordón y borlas. Talle único: va hasta el 40." }
 ];
