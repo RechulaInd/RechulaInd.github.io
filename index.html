@@ -183,8 +183,9 @@
     Faldas:"M74 56 L126 56 L152 190 L48 190 Z",
     Abrigos:"M68 44 L100 60 L132 44 L162 70 L152 190 L112 190 L100 80 L88 190 L48 190 L38 70 Z"
   };
-  function pic(p){
-    if (p.foto) return `<img src="fotos/${esc(p.foto)}" alt="${esc(p.nombre)}" loading="lazy">`;
+  function pic(p, v){
+    const f = (v && p.fotosVariante && p.fotosVariante[v]) || p.foto;
+    if (f) return `<img src="fotos/${esc(f)}" alt="${esc(p.nombre)}" loading="lazy">`;
     const d = shapes[p.categoria] || shapes.Tops, c = p.color || "#DDB4AC";
     return `<svg viewBox="0 0 200 250" aria-hidden="true"><rect width="200" height="250" fill="#EFE5D8"/><circle cx="160" cy="40" r="70" fill="${c}" opacity=".18"/><g transform="translate(0,20)"><path d="${d}" fill="${c}"/><path d="${d}" fill="none" stroke="#4A3029" stroke-opacity=".12" stroke-width="2"/></g></svg>`;
   }
@@ -243,7 +244,7 @@
     let vari = hasV && p.variantes.length===1 ? p.variantes[0] : null;
     let talle = p.talles.length===1 ? p.talles[0] : (fSize && p.talles.includes(fSize) ? fSize : null);
     open(`<div class="det">
-      <div class="ph">${pic(p)}</div>
+      <div class="ph" id="dPh">${pic(p, vari)}</div>
       <div class="det-body">
         <div class="code">${esc(p.codigo)} · ${esc(p.categoria)}</div>
         <div class="name">${esc(p.nombre)}</div>
@@ -263,7 +264,7 @@
     const ready = () => talle && (!hasV || vari);
     const need = () => !talle ? "Elegí un talle primero" : "Elegí la estampa primero";
     const upd = () => { $("wa").href = ready() ? waLink([line(p,talle,vari)]) : "#"; };
-    if (hasV) $("dVars").onclick = e => { const b=e.target.closest("[data-v]"); if(!b) return; vari=b.dataset.v; $("hint").textContent=""; [...$("dVars").children].forEach(c=>c.classList.toggle("on",c.dataset.v===vari)); upd(); };
+    if (hasV) $("dVars").onclick = e => { const b=e.target.closest("[data-v]"); if(!b) return; vari=b.dataset.v; $("hint").textContent=""; if(p.fotosVariante) $("dPh").innerHTML=pic(p,vari); [...$("dVars").children].forEach(c=>c.classList.toggle("on",c.dataset.v===vari)); upd(); };
     upd();
     $("dSizes").onclick = e => { const b=e.target.closest("[data-t]"); if(!b) return; talle=b.dataset.t; $("hint").textContent=""; [...$("dSizes").children].forEach(c=>c.classList.toggle("on",c.dataset.t===talle)); upd(); };
     $("add").onclick = () => {
@@ -279,7 +280,7 @@
     if(!items.length){ open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Todavía no sumaste prendas. Tocá una prenda para elegir tu talle.</p><button class="cta ghost" id="seguir">Ver prendas</button></div>`); $("seguir").onclick=close; return; }
     const tl = items.reduce((s,i)=>s+i.p.precio,0), tc = items.reduce((s,i)=>s+cash(i.p),0);
     open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Revisá y envianos el pedido por WhatsApp.</p>
-      ${items.map((i,n)=>`<div class="item"><div class="ph">${pic(i.p)}</div><div class="grow"><div class="name">${esc(i.p.nombre)}</div><small>${esc(i.p.codigo)}${i.variante?` · ${esc(i.variante)}`:""} · Talle ${esc(i.talle)} · ${money(cash(i.p))}</small></div><button class="rm" data-n="${n}">Quitar</button></div>`).join("")}
+      ${items.map((i,n)=>`<div class="item"><div class="ph">${pic(i.p,i.variante)}</div><div class="grow"><div class="name">${esc(i.p.nombre)}</div><small>${esc(i.p.codigo)}${i.variante?` · ${esc(i.variante)}`:""} · Talle ${esc(i.talle)} · ${money(cash(i.p))}</small></div><button class="rm" data-n="${n}">Quitar</button></div>`).join("")}
       <div class="tot"><span>Total precio de lista</span><span>${money(tl)}</span></div>
       <div class="tot big"><span>Efectivo o transferencia</span><span>${money(tc)}</span></div>
       <a class="cta wa" href="${waLink(items.map(i=>line(i.p,i.talle,i.variante)))}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>

@@ -33,5 +33,9 @@ window.STOCK = [
     descripcion: "Blusa sin mangas blanca con bordado de flores en relieve, cuello mao y botones de presilla con perlas." },
   { codigo: "RC039", nombre: "Musculosa Brisa", categoria: "Tops", precio: 16000, talles: [], nuevo: true, foto: "RC039.jpg", oculto: true,
     variantes: ["Topo", "Celeste", "Chocolate"],
-    descripcion: "Musculosa de morley con escote redondo y push up incluido. Cómoda, ajustada y lista para usar sola o debajo de un blazer." }
+    descripcion: "Musculosa de morley con escote redondo y push up incluido. Cómoda, ajustada y lista para usar sola o debajo de un blazer." },
+  { codigo: "RC040", nombre: "Blusa Camelia", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC040-chocolate.jpg",
+    variantes: ["Chocolate", "Crudo"],
+    fotosVariante: { "Chocolate": "RC040-chocolate.jpg", "Crudo": "RC040-crudo.jpg" },
+    descripcion: "Blusa de manga larga en tela texturizada, con gran cuello volado, cascada de volados al frente y lazo para atar." }
 ];
