@@ -76,5 +76,8 @@ window.STOCK = [
     descripcion: "Musculosa de algodón con tachas metálicas en el cuello y las sisas, y ruedo redondeado. Tono lavado, ideal para un look canchero." },
   { codigo: "RC055", nombre: "Baby Tee Osito", categoria: "Remeras", precio: 18000, talles: ["L"], nuevo: true, foto: "RC055.jpg",
     variantes: ["Blanco", "Crudo", "Chocolate", "Negro"],
-    descripcion: "Baby tee de algodón entallada, manga corta y osito bordado al frente. Un básico canchero para combinar con todo." }
+    descripcion: "Baby tee de algodón entallada, manga corta y osito bordado al frente. Un básico canchero para combinar con todo." },
+  { codigo: "RC056", nombre: "Musculosa Satén", categoria: "Tops", precio: 38500, talles: ["S","M","L","XL"], nuevo: true, foto: "RC056.jpg",
+    variantes: ["Chocolate", "Negro"],
+    descripcion: "Musculosa satinada de breteles finos con encaje en el escote en V y en el ruedo. Delicada y femenina, sola o debajo de un blazer." }
 ];
