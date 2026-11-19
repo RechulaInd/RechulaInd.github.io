@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Re Chula · Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F1E9; --card:#FFFBF6; --ink:#24211F; --soft:#7b6760; --line:#E6D8C8;
+    --rose:#DDB4AC; --gold:#B58A52; --deep:#4A3029;
+    --serif:"Playfair Display", Georgia, serif; --sans:"Montserrat", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased}
+  button{font-family:inherit;color:inherit;cursor:pointer;border:none;background:none}
+
+  /* Barra superior */
+  .promo{background:var(--deep);color:#F7F1E9;text-align:center;font-size:12.5px;letter-spacing:.06em;padding:8px 12px}
+  header{position:sticky;top:0;z-index:20;background:rgba(247,241,233,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo img{height:66px;width:auto;display:block}
+  .bag-btn{position:relative;display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:500;letter-spacing:.1em;color:var(--deep);border-color:var(--deep)!important;text-transform:uppercase;padding:9px 14px;border:1px solid var(--ink);border-radius:999px;white-space:nowrap}
+  .bag-btn .n{background:var(--rose);color:var(--deep);font-weight:600;border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;font-size:11px;padding:0 6px}
+
+  /* Portada */
+  .hero{max-width:1100px;margin:0 auto;padding:34px 18px 12px;text-align:center}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,7vw,54px);line-height:1.12;color:var(--deep)}
+  .hero h1 em{color:var(--gold)}
+  .orn{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:16px auto 0;max-width:260px;font-size:13px}
+  .orn:before,.orn:after{content:"";flex:1;height:1px;background:var(--gold);opacity:.55}
+  .kick{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500}
+  .hero p{color:var(--soft);font-size:14.5px;margin-top:12px;font-weight:300;line-height:1.55}
+
+  /* Filtros */
+  .filters{max-width:1100px;margin:0 auto;padding:16px 18px 6px}
+  .row{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+  .row::-webkit-scrollbar{display:none}
+  .chip{flex:none;padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;background:var(--card);transition:.15s}
+  .chip.on{background:var(--deep);color:#F7F1E9;border-color:var(--deep)}
+  .lbl{font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin:6px 2px 8px}
+  .size{width:44px;height:44px;padding:0;display:grid;place-items:center}
+
+  /* Grilla */
+  .grid{max-width:1100px;margin:0 auto;padding:10px 18px 60px;display:grid;grid-template-columns:repeat(2,1fr);gap:22px 14px}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:34px 22px}}
+  @media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+  .card{text-align:left;display:block;width:100%}
+  .ph{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#EFE5D8}
+  .card .ph:after{content:"";position:absolute;inset:8px;border:1px solid rgba(181,138,82,.55);border-radius:9px;pointer-events:none}
+  .ph img,.ph svg{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+  .card:hover .ph img,.card:hover .ph svg{transform:scale(1.03)}
+  .tag{position:absolute;top:16px;left:16px;background:rgba(255,251,246,.94);color:var(--deep);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
+  .info{padding:10px 2px 0}
+  .code{font-size:10px;letter-spacing:.18em;color:var(--gold);font-weight:500}
+  .name{font-family:var(--serif);font-size:19px;font-weight:500;margin:3px 0 6px;line-height:1.2;color:var(--deep)}
+  .p-list{font-size:12.5px;color:var(--soft)}
+  .p-cash{font-size:16px;font-weight:600;color:var(--deep);margin-top:1px}
+  .p-cash span{font-size:10.5px;font-weight:500;color:var(--gold);margin-left:4px;letter-spacing:.02em}
+  .sizes-mini{font-size:12px;color:var(--soft);margin-top:4px}
+  .empty{grid-column:1/-1;text-align:center;color:var(--soft);padding:50px 0;font-size:15px}
+
+  /* Cómo comprar */
+  .how{background:#EFE2D7;border-top:1px solid var(--line);padding:40px 18px}
+  .how-in{max-width:1100px;margin:0 auto}
+  .how h2{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--deep);text-align:center;margin-bottom:24px}
+  .steps{display:grid;gap:14px}
+  @media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--line)}
+  .step b{font-family:var(--serif);font-size:30px;color:var(--gold);font-weight:500;display:block;line-height:1}
+  .step h3{font-size:15px;font-weight:600;margin:8px 0 4px}
+  .step p{font-size:14px;color:var(--soft);font-weight:300;line-height:1.45}
+  footer{text-align:center;padding:34px 18px 44px;color:var(--soft);font-size:12.5px}
+  footer img{height:74px;display:block;margin:0 auto 12px;opacity:.9}
+  footer a{color:var(--deep)}
+
+  /* Ventanas */
+  .veil{position:fixed;inset:0;background:rgba(40,25,22,.45);z-index:40;opacity:0;pointer-events:none;transition:.25s}
+  .veil.on{opacity:1;pointer-events:auto}
+  .sheet{position:fixed;z-index:50;left:0;right:0;bottom:0;max-height:92vh;overflow:auto;background:var(--card);border-radius:22px 22px 0 0;transform:translateY(105%);transition:transform .3s ease}
+  .sheet.on{transform:none}
+  @media(min-width:820px){.sheet{left:50%;right:auto;bottom:50%;width:780px;border-radius:22px;transform:translate(-50%,60%);opacity:0;pointer-events:none}.sheet.on{transform:translate(-50%,50%);opacity:1;pointer-events:auto}}
+  .x{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,253,250,.95);font-size:20px;z-index:2}
+  .det{display:grid}
+  @media(min-width:820px){.det{grid-template-columns:1fr 1fr}}
+  .det .ph{border-radius:0;aspect-ratio:1/1;max-height:46vh;width:100%}
+  @media(min-width:820px){.det .ph{aspect-ratio:4/5;max-height:none}}
+  .det-body{padding:22px 22px 26px}
+  .det-body .name{font-size:28px}
+  .prices{margin:12px 0 18px;padding:14px;border:1px solid var(--line);border-radius:12px}
+  .prices .r{display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
+  .prices .r+.r{margin-top:6px}
+  .prices .big{font-size:22px;font-weight:600;color:var(--deep)}
+  .prices .r span:first-child{color:var(--soft)}
+  .badge{display:inline-block;background:#F3E3DE;color:var(--deep);font-style:normal;font-weight:600;font-size:11px;padding:3px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+  .cta{display:block;width:100%;text-align:center;padding:15px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;text-decoration:none}
+  .cta.dark{background:transparent;border:1px solid var(--deep);color:var(--deep)}
+  .cta.wa{background:var(--deep);color:#F7F1E9}
+  .cta.ghost{border:1px solid var(--deep);color:var(--deep);margin-top:10px}
+  .cta[disabled]{opacity:.35;cursor:not-allowed}
+  .hint{font-size:12.5px;color:#a0524a;min-height:18px;margin:8px 0}
+
+  /* Bolsa */
+  .bag{padding:24px 20px 26px}
+  .bag h2{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--deep);margin-bottom:4px}
+  .bag .sub{color:var(--soft);font-size:13.5px;margin-bottom:16px}
+  .item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+  .item .ph{width:62px;flex:none;border-radius:10px}
+  .item .grow{flex:1}
+  .item .name{font-size:17px;margin:0}
+  .item small{color:var(--soft);font-size:12.5px}
+  .rm{font-size:12px;color:var(--soft);text-decoration:underline}
+  .tot{display:flex;justify-content:space-between;margin:16px 0 4px;font-size:14px}
+  .tot.big{font-size:18px;font-weight:600;color:var(--deep);margin-bottom:18px}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--deep);color:#fff;padding:11px 18px;border-radius:999px;font-size:13.5px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<div class="promo" id="promo"></div>
+
+<header>
+  <div class="bar">
+    <div class="logo"><img src="logo.png" alt="Re Chula Indumentaria"></div>
+    <button class="bag-btn" id="bagBtn" aria-label="Ver mi selección">Mi selección <span class="n" id="bagN">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="kick">Catálogo online</div>
+  <h1>Prendas que te hacen sentir <em>re linda</em></h1>
+  <div class="orn">♡</div>
+  <p>Elegí tus favoritas y escribinos por WhatsApp.<br>Te asesoramos con el talle y el look.</p>
+</section>
+
+<section class="filters">
+  <div class="row" id="cats"></div>
+  <div class="lbl">Talle</div>
+  <div class="row" id="sizes"></div>
+</section>
+
+<main class="grid" id="grid"></main>
+
+<section class="how">
+  <div class="how-in">
+    <h2>¿Cómo comprar?</h2>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Elegí tus prendas</h3><p>Tocá la prenda, elegí el talle y sumala a tu selección.</p></div>
+      <div class="step"><b>2</b><h3>Escribinos por WhatsApp</h3><p>Se arma el mensaje con todo lo que elegiste. Solo tenés que enviarlo.</p></div>
+      <div class="step"><b>3</b><h3>Coordinamos pago y entrega</h3><p id="howPay"></p></div>
+    </div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+
+<div class="veil" id="veil"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast"></div>
+
+<script src="stock.js"></script>
+<script>
+(function(){
+  const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
+  const ALL = (window.STOCK||[]).filter(p => !p.agotado);
+  const $ = id => document.getElementById(id);
+  const money = n => "$" + Math.round(n).toLocaleString("es-AR");
+  const cash = p => { let v = p.precio * (1 - C.descuento/100); if (C.redondeo>0) v = Math.floor(v/C.redondeo)*C.redondeo; return Math.round(v); };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  $("promo").textContent = `♡ ${C.descuento}% OFF pagando en efectivo o transferencia ♡`;
+  $("howPay").textContent = `Pagando en efectivo o transferencia tenés ${C.descuento}% de descuento sobre el precio de lista.`;
+  $("foot").innerHTML = `<img src="logo.png" alt="">Re Chula · Indumentaria femenina` + (C.tiktok ? ` · <a href="https://www.tiktok.com/@${esc(C.tiktok)}" target="_blank" rel="noopener">TikTok @${esc(C.tiktok)}</a>` : "");
+
+  // Ilustración provisoria hasta que haya foto
+  const shapes = {
+    Vestidos:"M80 40 Q100 52 120 40 L128 70 L120 88 L150 200 L50 200 L80 88 L72 70 Z",
+    Tops:"M70 60 Q100 74 130 60 L160 82 L148 104 L132 96 L132 170 L68 170 L68 96 L52 104 L40 82 Z",
+    Pantalones:"M66 40 L134 40 L142 200 L110 200 L100 90 L90 200 L58 200 Z",
+    Faldas:"M74 56 L126 56 L152 190 L48 190 Z",
+    Abrigos:"M68 44 L100 60 L132 44 L162 70 L152 190 L112 190 L100 80 L88 190 L48 190 L38 70 Z"
+  };
+  function pic(p){
+    if (p.foto) return `<img src="fotos/${esc(p.foto)}" alt="${esc(p.nombre)}" loading="lazy">`;
+    const d = shapes[p.categoria] || shapes.Tops, c = p.color || "#DDB4AC";
+    return `<svg viewBox="0 0 200 250" aria-hidden="true"><rect width="200" height="250" fill="#EFE5D8"/><circle cx="160" cy="40" r="70" fill="${c}" opacity=".18"/><g transform="translate(0,20)"><path d="${d}" fill="${c}"/><path d="${d}" fill="none" stroke="#4A3029" stroke-opacity=".12" stroke-width="2"/></g></svg>`;
+  }
+
+  // Filtros
+  const cats = ["Todo","Nuevos ingresos", ...[...new Set(ALL.map(p=>p.categoria))]];
+  const sizes = [...new Set(ALL.flatMap(p=>p.talles))].sort((a,b)=>(+a||0)-(+b||0)||String(a).localeCompare(b));
+  let fCat = "Todo", fSize = null;
+  function drawFilters(){
+    $("cats").innerHTML = cats.map(c=>`<button class="chip ${c===fCat?"on":""}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+    $("sizes").innerHTML = sizes.map(s=>`<button class="chip size ${s===fSize?"on":""}" data-s="${esc(s)}">${esc(s)}</button>`).join("");
+  }
+  $("cats").onclick = e => { const b=e.target.closest("[data-c]"); if(!b) return; fCat=b.dataset.c; drawFilters(); drawGrid(); };
+  $("sizes").onclick = e => { const b=e.target.closest("[data-s]"); if(!b) return; fSize = fSize===b.dataset.s?null:b.dataset.s; drawFilters(); drawGrid(); };
+
+  function drawGrid(){
+    const list = ALL.filter(p => (fCat==="Todo" || (fCat==="Nuevos ingresos" ? p.nuevo : p.categoria===fCat)) && (!fSize || p.talles.includes(fSize)));
+    $("grid").innerHTML = list.length ? list.map(p=>`
+      <button class="card" data-k="${esc(p.codigo)}">
+        <div class="ph">${pic(p)}${p.nuevo?'<span class="tag">Nuevo</span>':""}</div>
+        <div class="info">
+          <div class="code">${esc(p.codigo)}</div>
+          <div class="name">${esc(p.nombre)}</div>
+          <div class="p-list">Lista ${money(p.precio)}</div>
+          <div class="p-cash">${money(cash(p))}<span>efectivo / transf.</span></div>
+          <div class="sizes-mini">${p.talles.length>1?"Talles":"Talle"} ${p.talles.map(esc).join(" · ")}</div>
+        </div>
+      </button>`).join("") : `<div class="empty">No hay prendas con ese filtro por ahora 💗</div>`;
+  }
+  $("grid").onclick = e => { const b=e.target.closest("[data-k]"); if(b) openItem(b.dataset.k); };
+
+  // Bolsa
+  let bag = [];
+  try { bag = JSON.parse(localStorage.getItem("rechula-bag")||"[]").filter(i=>ALL.some(p=>p.codigo===i.codigo && p.talles.includes(i.talle))); } catch(e){ bag=[]; }
+  const saveBag = () => { try{ localStorage.setItem("rechula-bag", JSON.stringify(bag)); }catch(e){} $("bagN").textContent = bag.length; };
+  saveBag();
+
+  function waLink(lines){
+    const txt = "Hola Re Chula! 👋 Me interesa:\n" + lines.join("\n") + "\n¿Está disponible?";
+    return "https://wa.me/" + (C.whatsapp||"") + "?text=" + encodeURIComponent(txt);
+  }
+  const line = (p,t,v) => `• ${p.codigo} ${p.nombre}${v?` (${v})`:""} – talle ${t} – lista ${money(p.precio)} / efectivo o transf. ${money(cash(p))}`;
+
+  // Ventana
+  const veil=$("veil"), sheet=$("sheet");
+  function open(html){ sheet.innerHTML = `<button class="x" id="x" aria-label="Cerrar">×</button>` + html; veil.classList.add("on"); sheet.classList.add("on"); sheet.scrollTop=0; $("x").onclick=close; }
+  function close(){ veil.classList.remove("on"); sheet.classList.remove("on"); }
+  veil.onclick = close;
+  document.addEventListener("keydown", e => { if(e.key==="Escape") close(); });
+
+  function openItem(k){
+    const p = ALL.find(x=>x.codigo===k); if(!p) return;
+    const hasV = !!(p.variantes&&p.variantes.length);
+    let vari = hasV && p.variantes.length===1 ? p.variantes[0] : null;
+    let talle = p.talles.length===1 ? p.talles[0] : (fSize && p.talles.includes(fSize) ? fSize : null);
+    open(`<div class="det">
+      <div class="ph">${pic(p)}</div>
+      <div class="det-body">
+        <div class="code">${esc(p.codigo)} · ${esc(p.categoria)}</div>
+        <div class="name">${esc(p.nombre)}</div>
+        ${p.descripcion?`<p style="color:var(--soft);font-size:14.5px;line-height:1.5;font-weight:300">${esc(p.descripcion)}</p>`:""}
+        <div class="prices">
+          <div class="r"><span>Precio de lista</span><span>${money(p.precio)}</span></div>
+          <div class="r"><span>Efectivo o transferencia <i class="badge">${C.descuento}% OFF</i></span><span class="big">${money(cash(p))}</span></div>
+        </div>
+        ${p.variantes&&p.variantes.length?`<div class="lbl">Elegí tu estampa</div>
+        <div class="row" id="dVars" style="flex-wrap:wrap">${p.variantes.map(v=>`<button class="chip" data-v="${esc(v)}">${esc(v)}</button>`).join("")}</div>`:""}
+        <div class="lbl">Elegí tu talle</div>
+        <div class="row" id="dSizes" style="flex-wrap:wrap">${p.talles.map(t=>`<button class="chip size ${t===talle?"on":""}" data-t="${esc(t)}">${esc(t)}</button>`).join("")}</div>
+        <div class="hint" id="hint"></div>
+        <button class="cta dark" id="add">Sumar a mi selección</button>
+        <a class="cta wa" id="wa" href="#" target="_blank" rel="noopener" style="margin-top:10px">Lo quiero · WhatsApp</a>
+      </div></div>`);
+    const ready = () => talle && (!hasV || vari);
+    const need = () => !talle ? "Elegí un talle primero" : "Elegí la estampa primero";
+    const upd = () => { $("wa").href = ready() ? waLink([line(p,talle,vari)]) : "#"; };
+    if (hasV) $("dVars").onclick = e => { const b=e.target.closest("[data-v]"); if(!b) return; vari=b.dataset.v; $("hint").textContent=""; [...$("dVars").children].forEach(c=>c.classList.toggle("on",c.dataset.v===vari)); upd(); };
+    upd();
+    $("dSizes").onclick = e => { const b=e.target.closest("[data-t]"); if(!b) return; talle=b.dataset.t; $("hint").textContent=""; [...$("dSizes").children].forEach(c=>c.classList.toggle("on",c.dataset.t===talle)); upd(); };
+    $("add").onclick = () => {
+      if(!ready()){ $("hint").textContent=need(); return; }
+      if(!bag.some(i=>i.codigo===p.codigo && i.talle===talle && (i.variante||null)===vari)) bag.push({codigo:p.codigo, talle, variante:vari});
+      saveBag(); close(); toast("Sumado a tu selección ✓");
+    };
+    $("wa").onclick = e => { if(!ready()){ e.preventDefault(); $("hint").textContent=need(); } };
+  }
+
+  function openBag(){
+    const items = bag.map(i=>({...i, p:ALL.find(p=>p.codigo===i.codigo)})).filter(i=>i.p);
+    if(!items.length){ open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Todavía no sumaste prendas. Tocá una prenda para elegir tu talle.</p><button class="cta ghost" id="seguir">Ver prendas</button></div>`); $("seguir").onclick=close; return; }
+    const tl = items.reduce((s,i)=>s+i.p.precio,0), tc = items.reduce((s,i)=>s+cash(i.p),0);
+    open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Revisá y envianos el pedido por WhatsApp.</p>
+      ${items.map((i,n)=>`<div class="item"><div class="ph">${pic(i.p)}</div><div class="grow"><div class="name">${esc(i.p.nombre)}</div><small>${esc(i.p.codigo)}${i.variante?` · ${esc(i.variante)}`:""} · Talle ${esc(i.talle)} · ${money(cash(i.p))}</small></div><button class="rm" data-n="${n}">Quitar</button></div>`).join("")}
+      <div class="tot"><span>Total precio de lista</span><span>${money(tl)}</span></div>
+      <div class="tot big"><span>Efectivo o transferencia</span><span>${money(tc)}</span></div>
+      <a class="cta wa" href="${waLink(items.map(i=>line(i.p,i.talle,i.variante)))}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+      <button class="cta ghost" id="seguir">Seguir mirando</button></div>`);
+    sheet.querySelectorAll(".rm").forEach(b=>b.onclick=()=>{ const it=items[+b.dataset.n]; bag=bag.filter(x=>!(x.codigo===it.codigo&&x.talle===it.talle&&(x.variante||null)===(it.variante||null))); saveBag(); openBag(); });
+    $("seguir").onclick=close;
+  }
+  $("bagBtn").onclick = openBag;
+
+  let tt; function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1800); }
+
+  drawFilters(); drawGrid();
+})();
+</script>
+</body>
+</html>
