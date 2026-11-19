@@ -73,5 +73,8 @@ window.STOCK = [
     descripcion: "Remera tipo polo a rayas chocolate y crudo, con cuello camisero en contraste, escote en V y frunce al costado. Calce entallado." },
   { codigo: "RC054", nombre: "Musculosa Tachas", categoria: "Tops", precio: 33000, talles: ["M"], nuevo: true, foto: "RC054.jpg",
     variantes: ["Gris azulado", "Verde salvia"],
-    descripcion: "Musculosa de algodón con tachas metálicas en el cuello y las sisas, y ruedo redondeado. Tono lavado, ideal para un look canchero." }
+    descripcion: "Musculosa de algodón con tachas metálicas en el cuello y las sisas, y ruedo redondeado. Tono lavado, ideal para un look canchero." },
+  { codigo: "RC055", nombre: "Baby Tee Osito", categoria: "Remeras", precio: 18000, talles: ["L"], nuevo: true, foto: "RC055.jpg",
+    variantes: ["Blanco", "Crudo", "Chocolate", "Negro"],
+    descripcion: "Baby tee de algodón entallada, manga corta y osito bordado al frente. Un básico canchero para combinar con todo." }
 ];
