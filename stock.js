@@ -50,5 +50,7 @@ window.STOCK = [
     descripcion: "Remera blanca sin mangas, estampa de estrella de mar en tono caramelo con apliques de perlas y la frase “Maldives, my next destination”." },
   { codigo: "RC045", nombre: "Chaleco Bombón", categoria: "Chalecos", precio: 31000, talles: ["L"], nuevo: true, foto: "RC045.jpg",
     variantes: ["Crudo con rayas chocolate", "Chocolate con rayas crudo"],
-    descripcion: "Chaleco tejido calado a rayas, escote en V y botones carey. Liviano, ideal para media estación." }
+    descripcion: "Chaleco tejido calado a rayas, escote en V y botones carey. Liviano, ideal para media estación." },
+  { codigo: "RC046", nombre: "Top Cacao", categoria: "Tops", precio: 23500, talles: ["L"], nuevo: true, foto: "RC046.jpg",
+    descripcion: "Top chocolate de breteles finos regulables, volado en el escote, lazo al frente y peplum en la cintura." }
 ];
