@@ -172,5 +172,7 @@ window.STOCK = [
     descripcion: "Short pollera cruzado con borde de encaje de pestañas. Por fuera parece pollera y por dentro tiene short. Va del talle 38 al 40. (El top y la cartera de la foto no están incluidos)." },
   { codigo: "RC090", nombre: "Short Volados Finos", categoria: "Shorts", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC090.jpg",
     variantes: ["Chocolate", "Blanco", "Negro"],
-    descripcion: "Short corto elastizado con textura de volados finitos en todo el cuerpo. Cómodo y canchero. Talle único." }
+    descripcion: "Short corto elastizado con textura de volados finitos en todo el cuerpo. Cómodo y canchero. Talle único." },
+  { codigo: "RC091", nombre: "Camisaco Cuero Negro", categoria: "Camisacos", precio: 34000, talles: ["38","40"], nuevo: true, foto: "RC091.jpg",
+    descripcion: "Camisaco corto de cuero ecológico negro con cuello camisero, botones a presión, bolsillos con solapa y puños anchos. Ideal para usar abierto como campera." }
 ];
