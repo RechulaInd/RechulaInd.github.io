@@ -68,5 +68,7 @@ window.STOCK = [
     descripcion: "Remera de morley con escote en V y mangas volado de tejido calado. Talle M/L." },
   { codigo: "RC052", nombre: "Musculosa Caramelo", categoria: "Tops", precio: 36500, talles: ["Único"], nuevo: true, foto: "RC052.jpg",
     variantes: ["Celeste con bordó", "Rosa con rojo"],
-    descripcion: "Musculosa tejida a rayas verticales con cuello y sisas en punto elástico. Disponible en celeste con bordó (la del medio) y rosa con rojo (la de la derecha)." }
+    descripcion: "Musculosa tejida a rayas verticales con cuello y sisas en punto elástico. Disponible en celeste con bordó (la del medio) y rosa con rojo (la de la derecha)." },
+  { codigo: "RC053", nombre: "Remera Marinera", categoria: "Remeras", precio: 21000, talles: ["S"], nuevo: true, foto: "RC053.jpg",
+    descripcion: "Remera tipo polo a rayas chocolate y crudo, con cuello camisero en contraste, escote en V y frunce al costado. Calce entallado." }
 ];
