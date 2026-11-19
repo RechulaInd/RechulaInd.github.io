@@ -103,5 +103,8 @@ window.STOCK = [
     descripcion: "Blusa de cuadrillé vichy con frunces elastizados en el cuerpo, mangas volado y peplum. Fresca y romántica." },
   { codigo: "RC065", nombre: "Blusa Rayada", categoria: "Blusas", precio: 49500, talles: ["Único"], nuevo: true, foto: "RC065.jpg",
     variantes: ["Chocolate", "Azul"],
-    descripcion: "Blusa a rayas finas con escote en V y lazo, manga corta, frunces elastizados en el cuerpo y volado en la cintura." }
+    descripcion: "Blusa a rayas finas con escote en V y lazo, manga corta, frunces elastizados en el cuerpo y volado en la cintura." },
+  { codigo: "RC066", nombre: "Blusa Textura", categoria: "Blusas", precio: 28000, talles: ["Único"], nuevo: true, foto: "RC066.jpg",
+    variantes: ["Negro", "Crudo"],
+    descripcion: "Blusa sin mangas de tela texturizada a rayas, cuello camisero y botones al frente. Liviana y fácil de combinar." }
 ];
