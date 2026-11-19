@@ -124,5 +124,7 @@ window.STOCK = [
     variantes: ["Blanco", "Chocolate"],
     descripcion: "Blusa sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros." },
   { codigo: "RC073", nombre: "Blusa Algodón de Azúcar", categoria: "Blusas", precio: 35500, talles: ["L"], nuevo: true, foto: "RC073.jpg",
-    descripcion: "Blusa blanca sin mangas con frunces en capas, puntilla calada en los hombros y botón en la espalda. Fresca y romántica." }
+    descripcion: "Blusa blanca sin mangas con frunces en capas, puntilla calada en los hombros y botón en la espalda. Fresca y romántica." },
+  { codigo: "RC074", nombre: "Top Medianoche", categoria: "Tops", precio: 19500, talles: ["L"], nuevo: true, foto: "RC074.jpg",
+    descripcion: "Top halter negro de tela texturizada con volados finos, escote en V profundo y lazo para atar en la nuca." }
 ];
