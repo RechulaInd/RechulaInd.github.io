@@ -243,7 +243,7 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261119233050"></script>
+<script src="stock.js?v=20261120131149"></script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
@@ -414,13 +414,16 @@
     const NS = "rechulaind", KEY = "visitas", api = "https://abacus.jasoncameron.dev";
     let today = new Date().toISOString().slice(0,10), counted = false;
     try { counted = localStorage.getItem("rechula-visita") === today; } catch(e){}
+    const ask = async (op) => {
+      const ctl = new AbortController(); const t = setTimeout(()=>ctl.abort(), 8000);
+      try { const r = await fetch(`${api}/${op}/${NS}/${KEY}`, {signal: ctl.signal, cache: "no-store"}); if (!r.ok) throw 0; const j = await r.json(); return +j.value || 0; }
+      catch(e){ return 0; } finally { clearTimeout(t); }
+    };
     let n = 0;
-    try {
-      const ctl = new AbortController(); setTimeout(()=>ctl.abort(), 6000);
-      const r = await fetch(`${api}/${counted ? "get" : "hit"}/${NS}/${KEY}`, {signal: ctl.signal});
-      const j = await r.json(); n = +j.value || 0;
-      if (!counted) try { localStorage.setItem("rechula-visita", today); } catch(e){}
-    } catch(e) { return; }
+    if (!counted) { n = await ask("hit"); if (!n) { await new Promise(r=>setTimeout(r,1500)); n = await ask("hit"); } if (n) try { localStorage.setItem("rechula-visita", today); } catch(e){} }
+    if (!n) n = await ask("get");
+    if (n) { try { localStorage.setItem("rechula-flores", n); } catch(e){} }
+    else { try { n = +localStorage.getItem("rechula-flores") || 0; } catch(e){} }
     if (!n) return;
     let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
     const cols = ["#DDB4AC","#FFFBF6","#B58A52","#E9C9C1","#F3E3DE","#C98F86"];
