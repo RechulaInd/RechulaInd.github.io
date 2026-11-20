@@ -14,7 +14,7 @@ window.CONFIG = {
 };
 
 window.STOCK = [
-  { codigo: "RC029", nombre: "Blusa Helecho", categoria: "Blusas", precio: 42000, talles: ["L"], nuevo: true, agotado: true, foto: "RC029.jpg",
+  { codigo: "RC029", nombre: "Blusa Helecho", categoria: "Blusas", precio: 42000, talles: ["L"], nuevo: true, foto: "RC029.jpg",
     descripcion: "Blusa liviana con bordado de hojas en relieve, escote en V, botones de presilla y puños anchos." },
   { codigo: "RC030", nombre: "Top Pantera", categoria: "Tops", precio: 20000, talles: ["Único"], nuevo: true, foto: "RC030.jpg",
     variantes: ["Leopardo clásico", "Leopardo tostado"],
