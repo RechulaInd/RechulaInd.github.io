@@ -198,5 +198,7 @@ window.STOCK = [
     descripcion: "Camisa de corte amplio con cuello clásico, botones ocultos al frente, puños con botón y ruedo redondeado." },
   { codigo: "RC100", nombre: "Body Nudo", categoria: "Bodys", precio: 19000, talles: ["XL"], nuevo: true, foto: "RC100.jpg",
     variantes: ["Topo", "Chocolate", "Negro"],
-    descripcion: "Body de manga corta con escote cruzado y nudo al frente, recorte en la cintura y broche abajo. Tela suave y elastizada." }
+    descripcion: "Body de manga corta con escote cruzado y nudo al frente, recorte en la cintura y broche abajo. Tela suave y elastizada." },
+  { codigo: "RC101", nombre: "Blusa Margarita Azul", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC101.jpg",
+    descripcion: "Blusa sin mangas azul tipo denim con flores bordadas en blanco a los lados del escote, botones nacarados y volados en los hombros." }
 ];
