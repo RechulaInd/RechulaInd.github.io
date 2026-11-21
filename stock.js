@@ -193,5 +193,8 @@ window.STOCK = [
     descripcion: "Camisa blanca con mangas abullonadas de broderie calado, pechera de encaje de flores y cuello mao con puntilla." },
   { codigo: "RC099", nombre: "Camisa Pastel", categoria: "Camisas", precio: 28000, talles: ["L"], nuevo: true, foto: "RC099.jpg",
     variantes: ["Beige", "Rosa", "Amarillo"],
-    descripcion: "Camisa de corte amplio con cuello clásico, botones ocultos al frente, puños con botón y ruedo redondeado." }
+    descripcion: "Camisa de corte amplio con cuello clásico, botones ocultos al frente, puños con botón y ruedo redondeado." },
+  { codigo: "RC100", nombre: "Body Nudo", categoria: "Bodys", precio: 19000, talles: ["XL"], nuevo: true, foto: "RC100.jpg",
+    variantes: ["Topo", "Chocolate", "Negro"],
+    descripcion: "Body de manga corta con escote cruzado y nudo al frente, recorte en la cintura y broche abajo. Tela suave y elastizada." }
 ];
