@@ -221,5 +221,7 @@ window.STOCK = [
   { codigo: "RC109", nombre: "Campera Leopardo", categoria: "Camisacos", precio: 80000, talles: ["S"], nuevo: true, foto: "RC109.jpg",
     descripcion: "Campera de gabardina con estampa animal print leopardo, cuello mao, botones a presión, bolsillos grandes al frente y ruedo desflecado. Calce oversize, talle S." },
   { codigo: "RC110", nombre: "Musculosa Ribete Bordó", categoria: "Tops", precio: 17000, talles: ["Único"], nuevo: true, foto: "RC110.jpg",
-    descripcion: "Musculosa blanca de morley con cuello redondo y ribetes bordó en el cuello y las sisas. Calce entallado. Talle único." }
+    descripcion: "Musculosa blanca de morley con cuello redondo y ribetes bordó en el cuello y las sisas. Calce entallado. Talle único." },
+  { codigo: "RC111", nombre: "Remerón Sardinas", categoria: "Remeras", precio: 29500, talles: ["Único"], nuevo: true, foto: "RC111.jpg",
+    descripcion: "Remerón chocolate de algodón, calce amplio, con cuello amarillo en contraste y estampa retro de sardinas, limones y cerezas. Talle único." }
 ];
