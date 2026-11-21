@@ -217,5 +217,7 @@ window.STOCK = [
   { codigo: "RC107", nombre: "Baby Tee Scooter", categoria: "Remeras", precio: 12000, talles: ["S/M"], nuevo: true, foto: "RC107.jpg",
     descripcion: "Baby tee a rayas negras y blancas con cuello rojo y estampa de un perrito con anteojos andando en scooter. Talle único S/M." },
   { codigo: "RC108", nombre: "Baby Tee Summer", categoria: "Remeras", precio: 12000, talles: ["Único"], nuevo: true, foto: "RC108.jpg",
-    descripcion: "Baby tee a rayas amarillas y blancas con cuello chocolate y estampa “Summer” con caracoles y estrella de mar. Talle único." }
+    descripcion: "Baby tee a rayas amarillas y blancas con cuello chocolate y estampa “Summer” con caracoles y estrella de mar. Talle único." },
+  { codigo: "RC109", nombre: "Campera Leopardo", categoria: "Camisacos", precio: 80000, talles: ["S"], nuevo: true, foto: "RC109.jpg",
+    descripcion: "Campera de gabardina con estampa animal print leopardo, cuello mao, botones a presión, bolsillos grandes al frente y ruedo desflecado. Calce oversize, talle S." }
 ];
