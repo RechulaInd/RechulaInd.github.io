@@ -210,5 +210,8 @@ window.STOCK = [
     descripcion: "Baby tee a lunares blancos con cuello en contraste y frase “Mal Studios Co.” al frente. Disponible en negro y azul marino (la rosa de la foto está agotada). Talle único." },
   { codigo: "RC105", nombre: "Remera Lunares Clásica", categoria: "Remeras", precio: 19000, talles: ["Único"], nuevo: true, foto: "RC105.jpg",
     variantes: ["Negro", "Beige"],
-    descripcion: "Remera de algodón a lunares con cuello redondo y manga corta. Disponible en negro con lunares blancos y beige con lunares negros (la chocolate de la foto está agotada). Talle único." }
+    descripcion: "Remera de algodón a lunares con cuello redondo y manga corta. Disponible en negro con lunares blancos y beige con lunares negros (la chocolate de la foto está agotada). Talle único." },
+  { codigo: "RC106", nombre: "Remera Rayitas", categoria: "Remeras", precio: 15000, talles: ["Único"], nuevo: true, foto: "RC106.jpg",
+    variantes: ["Blanco", "Celeste"],
+    descripcion: "Remera de algodón con rayitas finas negras, cuello redondo y manga corta con dobladillo. Disponible en blanco y celeste (la topo de la foto está agotada). Talle único." }
 ];
