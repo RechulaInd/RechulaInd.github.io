@@ -233,5 +233,8 @@ window.STOCK = [
     variantes: ["Gris melange", "Blanco"],
     descripcion: "Remera boxy de algodón, corte recto y amplio, con estampa fotográfica de ciudad en blanco y negro y letras “Fashion” en rosa. Talle único." },
   { codigo: "RC115", nombre: "Remera Totoro", categoria: "Remeras", precio: 18000, talles: ["4"], nuevo: true, foto: "RC115.jpg",
-    descripcion: "Remera blanca de algodón, cuello redondo y manga corta, con estampa en línea marrón de Totoro y la leyenda “Studio Ghibli”." }
+    descripcion: "Remera blanca de algodón, cuello redondo y manga corta, con estampa en línea marrón de Totoro y la leyenda “Studio Ghibli”." },
+  { codigo: "RC116", nombre: "Remera Escote Cuadrado", categoria: "Remeras", precio: 15500, talles: ["Único"], nuevo: true, foto: "RC116.jpg",
+    variantes: ["Beige", "Negro"],
+    descripcion: "Remera de morley entallada con escote cuadrado y manga corta. Un básico que queda bien con todo. Disponible en beige y negro (el crudo y el chocolate de la foto están agotados). Talle único." }
 ];
