@@ -180,5 +180,18 @@ window.STOCK = [
   { codigo: "RC092", nombre: "Short Bordado Marfil", categoria: "Shorts", precio: 35000, talles: ["Único"], nuevo: true, foto: "RC092.jpg",
     descripcion: "Short marfil con bordado de flores en relieve, ruedo festoneado y cintura elastizada con cordón y borlas. Talle único: va hasta el 40." },
   { codigo: "RC093", nombre: "Blusa Jardín Azul", categoria: "Blusas", precio: 39500, talles: ["XL"], nuevo: true, foto: "RC093.jpg",
-    descripcion: "Blusa sin mangas celeste tipo denim con bordado de flores en hilo crudo, escote en V con botones forrados y volados en los hombros." }
+    descripcion: "Blusa sin mangas celeste tipo denim con bordado de flores en hilo crudo, escote en V con botones forrados y volados en los hombros." },
+  { codigo: "RC094", nombre: "Camisa Celeste Clásica", categoria: "Camisas", precio: 44000, talles: ["Único"], nuevo: true, foto: "RC094.jpg",
+    descripcion: "Camisa celeste lisa de corte amplio, cuello clásico, botones al tono, puños anchos y ruedo redondeado. Talle único." },
+  { codigo: "RC095", nombre: "Camisa Rayada Azul", categoria: "Camisas", precio: 34000, talles: ["S"], nuevo: true, foto: "RC095.jpg",
+    descripcion: "Camisa a rayas azules y blancas con bolsillo al pecho, botones blancos y ruedo redondeado. Un clásico que combina con todo." },
+  { codigo: "RC096", nombre: "Camisa Corset Negra", categoria: "Camisas", precio: 37000, talles: ["S"], nuevo: true, foto: "RC096.jpg",
+    descripcion: "Camisa negra entallada tipo corset, con escote en V, recortes que marcan la cintura, botones al frente y puños anchos." },
+  { codigo: "RC097", nombre: "Camisa Rayada Bordó", categoria: "Camisas", precio: 39500, talles: ["M"], nuevo: true, foto: "RC097.jpg",
+    descripcion: "Camisa blanca con rayas finas bordó, cuello clásico, pinzas al frente y puños con botón." },
+  { codigo: "RC098", nombre: "Camisa Broderie", categoria: "Camisas", precio: 49800, talles: ["XL"], nuevo: true, foto: "RC098.jpg",
+    descripcion: "Camisa blanca con mangas abullonadas de broderie calado, pechera de encaje de flores y cuello mao con puntilla." },
+  { codigo: "RC099", nombre: "Camisa Pastel", categoria: "Camisas", precio: 28000, talles: ["L"], nuevo: true, foto: "RC099.jpg",
+    variantes: ["Beige", "Rosa", "Amarillo"],
+    descripcion: "Camisa de corte amplio con cuello clásico, botones ocultos al frente, puños con botón y ruedo redondeado." }
 ];
