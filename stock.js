@@ -223,5 +223,8 @@ window.STOCK = [
   { codigo: "RC110", nombre: "Musculosa Ribete Bordó", categoria: "Tops", precio: 17000, talles: ["Único"], nuevo: true, foto: "RC110.jpg",
     descripcion: "Musculosa blanca de morley con cuello redondo y ribetes bordó en el cuello y las sisas. Calce entallado. Talle único." },
   { codigo: "RC111", nombre: "Remerón Sardinas", categoria: "Remeras", precio: 29500, talles: ["Único"], nuevo: true, foto: "RC111.jpg",
-    descripcion: "Remerón chocolate de algodón, calce amplio, con cuello amarillo en contraste y estampa retro de sardinas, limones y cerezas. Talle único." }
+    descripcion: "Remerón chocolate de algodón, calce amplio, con cuello amarillo en contraste y estampa retro de sardinas, limones y cerezas. Talle único." },
+  { codigo: "RC112", nombre: "Remerón Secreto", categoria: "Remeras", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC112.jpg",
+    variantes: ["Crudo", "Camel", "Negro"],
+    descripcion: "Remerón oversize de algodón con estampa fotográfica en blanco y negro de una chica con gorra y mitones rosas. Talle único." }
 ];
