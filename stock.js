@@ -181,7 +181,7 @@ window.STOCK = [
     descripcion: "Camisaco corto de cuero ecológico negro con cuello camisero, botones a presión, bolsillos con solapa y puños anchos. Ideal para usar abierto como campera." },
   { codigo: "RC092", nombre: "Short Bordado Marfil", categoria: "Shorts", precio: 35000, talles: ["Único"], nuevo: true, foto: "RC092.jpg",
     descripcion: "Short marfil con bordado de flores en relieve, ruedo festoneado y cintura elastizada con cordón y borlas. Talle único: va hasta el 40." },
-  { codigo: "RC093", nombre: "Blusa Jardín Azul", categoria: "Blusas", precio: 39500, talles: ["XL"], nuevo: true, foto: "RC093.jpg",
+  { codigo: "RC093", nombre: "Blusa Jardín Azul", categoria: "Blusas", precio: 39500, talles: ["L","XL"], nuevo: true, foto: "RC093.jpg",
     descripcion: "Blusa sin mangas celeste tipo denim con bordado de flores en hilo crudo, escote en V con botones forrados y volados en los hombros." },
   { codigo: "RC094", nombre: "Camisa Celeste Clásica", categoria: "Camisas", precio: 44000, talles: ["L"], nuevo: true, foto: "RC094.jpg",
     descripcion: "Camisa celeste lisa de corte amplio, cuello clásico, botones al tono, puños anchos y ruedo redondeado." },
