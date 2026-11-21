@@ -238,5 +238,7 @@ window.STOCK = [
     variantes: ["Beige", "Negro"],
     descripcion: "Remera de morley entallada con escote cuadrado y manga corta. Un básico que queda bien con todo. Disponible en beige y negro (el crudo y el chocolate de la foto están agotados). Talle único S." },
   { codigo: "RC117", nombre: "Blusa Fruncida Brillos", categoria: "Blusas", precio: 42000, talles: ["Único"], nuevo: true, foto: "RC117.jpg",
-    descripcion: "Blusa blanca sin mangas con frunces elastizados en todo el cuerpo, bordado con lentejuelas, volados en los hombros y peplum en la cintura. Talle único." }
+    descripcion: "Blusa blanca sin mangas con frunces elastizados en todo el cuerpo, bordado con lentejuelas, volados en los hombros y peplum en la cintura. Talle único." },
+  { codigo: "RC118", nombre: "Musculosa Aro Plateado", categoria: "Tops", precio: 22500, talles: ["Único"], nuevo: true, foto: "RC118.jpg",
+    descripcion: "Musculosa entallada de tela suave con escote redondo y detalle de aro metálico plateado en el hombro. Disponible solo en beige (la segunda de la foto). Talle único." }
 ];
