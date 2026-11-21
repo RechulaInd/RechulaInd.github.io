@@ -213,5 +213,7 @@ window.STOCK = [
     descripcion: "Remera de algodón a lunares con cuello redondo y manga corta. Disponible en negro con lunares blancos y beige con lunares negros (la chocolate de la foto está agotada). Talle único." },
   { codigo: "RC106", nombre: "Remera Rayitas", categoria: "Remeras", precio: 15000, talles: ["Único"], nuevo: true, foto: "RC106.jpg",
     variantes: ["Blanco", "Celeste"],
-    descripcion: "Remera de algodón con rayitas finas negras, cuello redondo y manga corta con dobladillo. Disponible en blanco y celeste (la topo de la foto está agotada). Talle único." }
+    descripcion: "Remera de algodón con rayitas finas negras, cuello redondo y manga corta con dobladillo. Disponible en blanco y celeste (la topo de la foto está agotada). Talle único." },
+  { codigo: "RC107", nombre: "Baby Tee Scooter", categoria: "Remeras", precio: 12000, talles: ["S/M"], nuevo: true, foto: "RC107.jpg",
+    descripcion: "Baby tee a rayas negras y blancas con cuello rojo y estampa de un perrito con anteojos andando en scooter. Talle único S/M." }
 ];
