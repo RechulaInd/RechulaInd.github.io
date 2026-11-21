@@ -215,5 +215,7 @@ window.STOCK = [
     variantes: ["Blanco", "Celeste"],
     descripcion: "Remera de algodón con rayitas finas negras, cuello redondo y manga corta con dobladillo. Disponible en blanco y celeste (la topo de la foto está agotada). Talle único." },
   { codigo: "RC107", nombre: "Baby Tee Scooter", categoria: "Remeras", precio: 12000, talles: ["S/M"], nuevo: true, foto: "RC107.jpg",
-    descripcion: "Baby tee a rayas negras y blancas con cuello rojo y estampa de un perrito con anteojos andando en scooter. Talle único S/M." }
+    descripcion: "Baby tee a rayas negras y blancas con cuello rojo y estampa de un perrito con anteojos andando en scooter. Talle único S/M." },
+  { codigo: "RC108", nombre: "Baby Tee Summer", categoria: "Remeras", precio: 12000, talles: ["Único"], nuevo: true, foto: "RC108.jpg",
+    descripcion: "Baby tee a rayas amarillas y blancas con cuello chocolate y estampa “Summer” con caracoles y estrella de mar. Talle único." }
 ];
