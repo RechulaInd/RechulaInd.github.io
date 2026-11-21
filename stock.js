@@ -236,5 +236,7 @@ window.STOCK = [
     descripcion: "Remera blanca de algodón, cuello redondo y manga corta, con estampa en línea marrón de Totoro y la leyenda “Studio Ghibli”." },
   { codigo: "RC116", nombre: "Remera Escote Cuadrado", categoria: "Remeras", precio: 15500, talles: ["S"], nuevo: true, foto: "RC116.jpg",
     variantes: ["Beige", "Negro"],
-    descripcion: "Remera de morley entallada con escote cuadrado y manga corta. Un básico que queda bien con todo. Disponible en beige y negro (el crudo y el chocolate de la foto están agotados). Talle único S." }
+    descripcion: "Remera de morley entallada con escote cuadrado y manga corta. Un básico que queda bien con todo. Disponible en beige y negro (el crudo y el chocolate de la foto están agotados). Talle único S." },
+  { codigo: "RC117", nombre: "Blusa Fruncida Brillos", categoria: "Blusas", precio: 42000, talles: ["Único"], nuevo: true, foto: "RC117.jpg",
+    descripcion: "Blusa blanca sin mangas con frunces elastizados en todo el cuerpo, bordado con lentejuelas, volados en los hombros y peplum en la cintura. Talle único." }
 ];
