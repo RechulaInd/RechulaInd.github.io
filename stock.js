@@ -231,5 +231,7 @@ window.STOCK = [
     descripcion: "Remera crudo de algodón con cuello rayado verde oliva y estampa de magnolias en bordó, naranja y crudo con letras plateadas." },
   { codigo: "RC114", nombre: "Remera Boxy Fashion", categoria: "Remeras", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC114.jpg",
     variantes: ["Gris melange", "Blanco"],
-    descripcion: "Remera boxy de algodón, corte recto y amplio, con estampa fotográfica de ciudad en blanco y negro y letras “Fashion” en rosa. Talle único." }
+    descripcion: "Remera boxy de algodón, corte recto y amplio, con estampa fotográfica de ciudad en blanco y negro y letras “Fashion” en rosa. Talle único." },
+  { codigo: "RC115", nombre: "Remera Totoro", categoria: "Remeras", precio: 18000, talles: ["4"], nuevo: true, foto: "RC115.jpg",
+    descripcion: "Remera blanca de algodón, cuello redondo y manga corta, con estampa en línea marrón de Totoro y la leyenda “Studio Ghibli”." }
 ];
