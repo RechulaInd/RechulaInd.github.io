@@ -226,5 +226,7 @@ window.STOCK = [
     descripcion: "Remerón chocolate de algodón, calce amplio, con cuello amarillo en contraste y estampa retro de sardinas, limones y cerezas. Talle único." },
   { codigo: "RC112", nombre: "Remerón Secreto", categoria: "Remeras", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC112.jpg",
     variantes: ["Crudo", "Camel", "Negro"],
-    descripcion: "Remerón oversize de algodón con estampa fotográfica en blanco y negro de una chica con gorra y mitones rosas. Talle único." }
+    descripcion: "Remerón oversize de algodón con estampa fotográfica en blanco y negro de una chica con gorra y mitones rosas. Talle único." },
+  { codigo: "RC113", nombre: "Remera Magnolias", categoria: "Remeras", precio: 29500, talles: ["L"], nuevo: true, foto: "RC113.jpg",
+    descripcion: "Remera crudo de algodón con cuello rayado verde oliva y estampa de magnolias en bordó, naranja y crudo con letras plateadas." }
 ];
