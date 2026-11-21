@@ -240,5 +240,8 @@ window.STOCK = [
   { codigo: "RC117", nombre: "Blusa Fruncida Brillos", categoria: "Blusas", precio: 42000, talles: ["Único"], nuevo: true, foto: "RC117.jpg",
     descripcion: "Blusa blanca sin mangas con frunces elastizados en todo el cuerpo, bordado con lentejuelas, volados en los hombros y peplum en la cintura. Talle único." },
   { codigo: "RC118", nombre: "Musculosa Aro Plateado", categoria: "Tops", precio: 22500, talles: ["Único"], nuevo: true, foto: "RC118.jpg",
-    descripcion: "Musculosa entallada de tela suave con escote redondo y detalle de aro metálico plateado en el hombro. Disponible solo en beige (la segunda de la foto). Talle único." }
+    descripcion: "Musculosa entallada de tela suave con escote redondo y detalle de aro metálico plateado en el hombro. Disponible solo en beige (la segunda de la foto). Talle único." },
+  { codigo: "RC119", nombre: "Remera Puntilla", categoria: "Remeras", precio: 17500, talles: ["Único"], nuevo: true, foto: "RC119.jpg",
+    variantes: ["Blanco", "Bordó"],
+    descripcion: "Remera de algodón con cuello redondo, manga corta y ruedo de encaje al tono. Disponible en blanco y bordó (la negra de la foto está agotada). Talle único." }
 ];
