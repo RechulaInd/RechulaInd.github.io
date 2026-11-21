@@ -200,5 +200,7 @@ window.STOCK = [
     variantes: ["Topo", "Chocolate", "Negro"],
     descripcion: "Body de manga corta con escote cruzado y nudo al frente, recorte en la cintura y broche abajo. Tela suave y elastizada." },
   { codigo: "RC101", nombre: "Blusa Margarita Azul", categoria: "Blusas", precio: 39500, talles: ["L"], nuevo: true, foto: "RC101.jpg",
-    descripcion: "Blusa sin mangas azul tipo denim con flores bordadas en blanco a los lados del escote, botones nacarados y volados en los hombros." }
+    descripcion: "Blusa sin mangas azul tipo denim con flores bordadas en blanco a los lados del escote, botones nacarados y volados en los hombros." },
+  { codigo: "RC102", nombre: "Pantalón Hojas", categoria: "Pantalones", precio: 29000, talles: ["2","4"], nuevo: true, foto: "RC102.jpg",
+    descripcion: "Pantalón palazzo de tela satinada con estampa de hojas y arabescos en crudo sobre beige. Tiro alto, pinzas al frente y piernas amplias." }
 ];
