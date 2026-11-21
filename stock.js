@@ -65,7 +65,7 @@ window.STOCK = [
   { codigo: "RC048", nombre: "Top Siena", categoria: "Tops", precio: 46000, talles: ["Único"], nuevo: true, foto: "RC048.jpg",
     fotosExtra: ["RC048-espalda.jpg"],
     descripcion: "Top halter satinado color chocolate con cuello volcado, corte pañuelo con puntilla de encaje en las puntas y espalda abierta con lazo y tiritas cruzadas. Talle único: se ajusta en la espalda y va de S a XL." },
-  { codigo: "RC049", nombre: "Top Gitana", categoria: "Tops", precio: 36500, talles: ["Único"], nuevo: true, foto: "RC049.jpg",
+  { codigo: "RC049", nombre: "Top Gitana", categoria: "Tops", precio: 36500, talles: ["Único"], nuevo: true, agotado: true, foto: "RC049.jpg",
     descripcion: "Top chocolate escote bote con volado, cuerpo de panal elastizado y volado en la cintura. Talle único: por su elastizado va de S a XL." },
   { codigo: "RC050", nombre: "Top Encanto", categoria: "Tops", precio: 38500, talles: ["S/M"], nuevo: true, foto: "RC050.jpg",
     variantes: ["Blanco", "Chocolate"],
