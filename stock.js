@@ -219,5 +219,7 @@ window.STOCK = [
   { codigo: "RC108", nombre: "Baby Tee Summer", categoria: "Remeras", precio: 12000, talles: ["Único"], nuevo: true, foto: "RC108.jpg",
     descripcion: "Baby tee a rayas amarillas y blancas con cuello chocolate y estampa “Summer” con caracoles y estrella de mar. Talle único." },
   { codigo: "RC109", nombre: "Campera Leopardo", categoria: "Camisacos", precio: 80000, talles: ["S"], nuevo: true, foto: "RC109.jpg",
-    descripcion: "Campera de gabardina con estampa animal print leopardo, cuello mao, botones a presión, bolsillos grandes al frente y ruedo desflecado. Calce oversize, talle S." }
+    descripcion: "Campera de gabardina con estampa animal print leopardo, cuello mao, botones a presión, bolsillos grandes al frente y ruedo desflecado. Calce oversize, talle S." },
+  { codigo: "RC110", nombre: "Musculosa Ribete Bordó", categoria: "Tops", precio: 17000, talles: ["Único"], nuevo: true, foto: "RC110.jpg",
+    descripcion: "Musculosa blanca de morley con cuello redondo y ribetes bordó en el cuello y las sisas. Calce entallado. Talle único." }
 ];
