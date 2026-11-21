@@ -204,5 +204,8 @@ window.STOCK = [
   { codigo: "RC102", nombre: "Pantalón Hojas", categoria: "Pantalones", precio: 29000, talles: ["2","4"], nuevo: true, foto: "RC102.jpg",
     descripcion: "Pantalón palazzo de tela satinada con estampa de hojas y arabescos en crudo sobre beige. Tiro alto, pinzas al frente y piernas amplias." },
   { codigo: "RC103", nombre: "Remera Henley Rayada", categoria: "Remeras", precio: 15000, talles: ["Único"], nuevo: true, foto: "RC103.jpg",
-    descripcion: "Remera de morley a rayas crudo, beige y celeste con vivos negros, cuello redondo y botones al frente. Talle único." }
+    descripcion: "Remera de morley a rayas crudo, beige y celeste con vivos negros, cuello redondo y botones al frente. Talle único." },
+  { codigo: "RC104", nombre: "Baby Tee Lunares", categoria: "Remeras", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC104.jpg",
+    variantes: ["Negro", "Azul marino"],
+    descripcion: "Baby tee a lunares blancos con cuello en contraste y frase “Mal Studios Co.” al frente. Disponible en negro y azul marino (la rosa de la foto está agotada). Talle único." }
 ];
