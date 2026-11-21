@@ -228,5 +228,8 @@ window.STOCK = [
     variantes: ["Crudo", "Camel", "Negro"],
     descripcion: "Remerón oversize de algodón con estampa fotográfica en blanco y negro de una chica con gorra y mitones rosas. Talle único." },
   { codigo: "RC113", nombre: "Remera Magnolias", categoria: "Remeras", precio: 29500, talles: ["L"], nuevo: true, foto: "RC113.jpg",
-    descripcion: "Remera crudo de algodón con cuello rayado verde oliva y estampa de magnolias en bordó, naranja y crudo con letras plateadas." }
+    descripcion: "Remera crudo de algodón con cuello rayado verde oliva y estampa de magnolias en bordó, naranja y crudo con letras plateadas." },
+  { codigo: "RC114", nombre: "Remera Boxy Fashion", categoria: "Remeras", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC114.jpg",
+    variantes: ["Gris melange", "Blanco"],
+    descripcion: "Remera boxy de algodón, corte recto y amplio, con estampa fotográfica de ciudad en blanco y negro y letras “Fashion” en rosa. Talle único." }
 ];
