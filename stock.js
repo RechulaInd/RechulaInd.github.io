@@ -334,5 +334,7 @@ window.STOCK = [
     variantes: ["Chocolate", "Negro"],
     descripcion: "Musculosa básica de morley con breteles finos, escote redondo y push up incluido. Disponible en chocolate y negro (la blanca de la foto está agotada). Talle único." },
   { codigo: "RC153", nombre: "Musculosa Básica Escote V", categoria: "Tops", precio: 16000, talles: ["Único"], nuevo: true, foto: "RC153.jpg",
-    descripcion: "Musculosa básica negra de morley con escote en V, breteles anchos y push up incluido. Disponible solo en negro. Talle único." }
+    descripcion: "Musculosa básica negra de morley con escote en V, breteles anchos y push up incluido. Disponible solo en negro. Talle único." },
+  { codigo: "RC154", nombre: "Body Escote Cuadrado", categoria: "Bodys", precio: 20000, talles: ["Único"], nuevo: true, foto: "RC154.jpg",
+    descripcion: "Body de tela suave y elastizada con escote cuadrado, breteles anchos y frunce al costado. Disponible solo en blanco (el de atrás en la foto; el chocolate está agotado). Talle único." }
 ];
