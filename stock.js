@@ -307,5 +307,8 @@ window.STOCK = [
     descripcion: "Vestido corto entallado de tela elastizada con volados finitos en todo el cuerpo, escote recto y breteles dobles. Con forro. Talle único." },
   { codigo: "RC143", nombre: "Blusa Flores Lentejuelas", categoria: "Blusas", precio: 34000, talles: ["M/L"], nuevo: true, foto: "RC143.jpg",
     variantes: ["Blanco", "Chocolate"],
-    descripcion: "Blusa amplia sin mangas con flores bordadas con lentejuelas, cuello con volado y lazo, y volados en los hombros. Talle M/L." }
+    descripcion: "Blusa amplia sin mangas con flores bordadas con lentejuelas, cuello con volado y lazo, y volados en los hombros. Talle M/L." },
+  { codigo: "RC144", nombre: "Blusa Panal Mangas Globo", categoria: "Blusas", precio: 42000, talles: ["Único"], nuevo: true, foto: "RC144.jpg",
+    variantes: ["Blanco", "Negro"],
+    descripcion: "Blusa con cuerpo de panal elastizado, escote cuadrado, mangas globo y peplum, con flores bordadas con lentejuelas. Disponible en blanco y negro (la beige y la chocolate de la foto están agotadas). Talle único: va hasta un XL." }
 ];
