@@ -313,5 +313,8 @@ window.STOCK = [
     descripcion: "Blusa amplia sin mangas con flores bordadas con lentejuelas, cuello con volado y lazo, y volados en los hombros. Talle M/L." },
   { codigo: "RC144", nombre: "Blusa Panal Mangas Globo", categoria: "Blusas", precio: 42000, talles: ["Único"], nuevo: true, foto: "RC144.jpg",
     variantes: ["Blanco", "Negro"],
-    descripcion: "Blusa con cuerpo de panal elastizado, escote cuadrado, mangas globo y peplum, con flores bordadas con lentejuelas. Disponible en blanco y negro (la beige y la chocolate de la foto están agotadas). Talle único: va hasta un XL." }
+    descripcion: "Blusa con cuerpo de panal elastizado, escote cuadrado, mangas globo y peplum, con flores bordadas con lentejuelas. Disponible en blanco y negro (la beige y la chocolate de la foto están agotadas). Talle único: va hasta un XL." },
+  { codigo: "RC145", nombre: "Chaleco Bordado Mostacillas", categoria: "Chalecos", precio: 54500, talles: ["M/L"], nuevo: true, foto: "RC145.jpg",
+    variantes: ["Crudo", "Chocolate"],
+    descripcion: "Chaleco de algodón con flores bordadas y calados, detalles de mostacillas, ribete tejido en los bordes, escote en V y botones al frente. Talle M/L." }
 ];
