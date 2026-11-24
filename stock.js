@@ -316,5 +316,7 @@ window.STOCK = [
     descripcion: "Blusa con cuerpo de panal elastizado, escote cuadrado, mangas globo y peplum, con flores bordadas con lentejuelas. Disponible en blanco y negro (la beige y la chocolate de la foto están agotadas). Talle único: va hasta un XL." },
   { codigo: "RC145", nombre: "Chaleco Bordado Mostacillas", categoria: "Chalecos", precio: 54500, talles: ["M/L"], nuevo: true, foto: "RC145.jpg",
     variantes: ["Crudo", "Chocolate"],
-    descripcion: "Chaleco de algodón con flores bordadas y calados, detalles de mostacillas, ribete tejido en los bordes, escote en V y botones al frente. Talle M/L." }
+    descripcion: "Chaleco de algodón con flores bordadas y calados, detalles de mostacillas, ribete tejido en los bordes, escote en V y botones al frente. Talle M/L." },
+  { codigo: "RC146", nombre: "Remerón Boho Chic", categoria: "Remeras", precio: 19000, talles: ["Único"], nuevo: true, foto: "RC146.jpg",
+    descripcion: "Remerón oversize de algodón color crudo con estampa de corazón ornamental en chocolate y la frase “Boho Chic”. Talle único." }
 ];
