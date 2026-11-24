@@ -321,5 +321,7 @@ window.STOCK = [
     descripcion: "Remerón oversize de algodón color crudo con estampa de corazón ornamental en chocolate y la frase “Boho Chic”. Talle único." },
   { codigo: "RC147", nombre: "Top Fruncido Satinado", categoria: "Tops", precio: 13000, talles: ["Único"], nuevo: true, foto: "RC147.jpg",
     variantes: ["Manteca", "Negro"],
-    descripcion: "Top corto sin mangas de tela satinada, con frunce elastizado en el escote y en la cintura. En la foto, color manteca (el pantalón no está incluido). Talle único." }
+    descripcion: "Top corto sin mangas de tela satinada, con frunce elastizado en el escote y en la cintura. En la foto, color manteca (el pantalón no está incluido). Talle único." },
+  { codigo: "RC148", nombre: "Remera Puntillas Beige", categoria: "Remeras", precio: 27000, talles: ["Único"], nuevo: true, foto: "RC148.jpg",
+    descripcion: "Remera beige de tela texturizada con franjas de puntilla calada, cuello redondo y manga corta. Disponible solo en beige (la de adelante en la foto). Talle único." }
 ];
