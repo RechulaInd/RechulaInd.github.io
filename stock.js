@@ -342,5 +342,7 @@ window.STOCK = [
   { codigo: "RC156", nombre: "Campera Napoleón", categoria: "Camisacos", precio: 54000, talles: ["L"], nuevo: true, foto: "RC156.jpg",
     descripcion: "Campera corta chocolate de gabardina estilo Napoleón, sin cuello, con tiras al frente y botones metálicos, y puños anchos con abertura." },
   { codigo: "RC157", nombre: "Conjunto Crochet Chocolate", categoria: "Conjuntos", precio: 42000, talles: ["S"], nuevo: true, foto: "RC157.jpg",
-    descripcion: "Conjunto de dos piezas tejido al crochet color chocolate: top corto de breteles finos y short, ambos con borde festoneado. Ideal para el verano." }
+    descripcion: "Conjunto de dos piezas tejido al crochet color chocolate: top corto de breteles finos y short, ambos con borde festoneado. Ideal para el verano." },
+  { codigo: "RC158", nombre: "Blusa Enredadera Chocolate", categoria: "Blusas", precio: 39500, talles: ["M"], nuevo: true, foto: "RC158.jpg",
+    descripcion: "Blusa chocolate sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros. Disponible solo en chocolate." }
 ];
