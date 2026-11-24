@@ -470,5 +470,19 @@ window.STOCK = [
   { codigo: "RC215", nombre: "Jean Wide Azul Clásico", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC215.jpg", oculto: true,
     descripcion: "Jean wide leg azul de tiro alto con botón dorado y cinco bolsillos." },
   { codigo: "RC216", nombre: "Jean Oxford Bolsillos Tapita", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC216.jpg", oculto: true,
-    descripcion: "Jean oxford azul oscuro elastizado de tiro medio, con bolsillos traseros con tapita y botón." }
+    descripcion: "Jean oxford azul oscuro elastizado de tiro medio, con bolsillos traseros con tapita y botón." },
+  { codigo: "RC217", nombre: "Jean Wide Índigo", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC217.jpg", oculto: true,
+    descripcion: "Jean wide leg azul índigo de tiro alto, con lavado suave y cinco bolsillos." },
+  { codigo: "RC218", nombre: "Jean Mom Nevado", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC218.jpg", oculto: true,
+    descripcion: "Jean mom celeste con lavado nevado, tiro alto y pierna recta al tobillo." },
+  { codigo: "RC219", nombre: "Jean Oxford Azul Oscuro", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC219.jpg", oculto: true,
+    descripcion: "Jean oxford azul oscuro elastizado de tiro medio, con cinco bolsillos y largo tobillero." },
+  { codigo: "RC220", nombre: "Pantalón Animal Print Crudo", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC220.jpg", oculto: true,
+    descripcion: "Pantalón recto de gabardina crudo con estampa animal print en marrón y negro, tiro medio y cinco bolsillos." },
+  { codigo: "RC221", nombre: "Jean Oxford Gris", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC221.jpg", oculto: true,
+    descripcion: "Jean oxford gris topo elastizado de tiro medio, con cinco bolsillos y largo tobillero." },
+  { codigo: "RC222", nombre: "Jean Oxford Azul Lavado", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC222.jpg", oculto: true,
+    descripcion: "Jean oxford azul con lavado gastado, elastizado, de tiro alto y largo tobillero." },
+  { codigo: "RC223", nombre: "Jean Baggy Celeste", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC223.jpg", oculto: true,
+    descripcion: "Jean baggy celeste con lavado gastado, tiro medio y pierna amplia levemente curva." }
 ];
