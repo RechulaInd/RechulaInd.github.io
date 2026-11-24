@@ -346,5 +346,7 @@ window.STOCK = [
   { codigo: "RC158", nombre: "Blusa Enredadera Chocolate", categoria: "Blusas", precio: 39500, talles: ["M"], nuevo: true, foto: "RC158.jpg",
     descripcion: "Blusa chocolate sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros. Disponible solo en chocolate." },
   { codigo: "RC159", nombre: "Musculosa Puntilla Bordó", categoria: "Tops", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC159.jpg",
-    descripcion: "Musculosa bordó de morley con breteles finos, escote en V bordeado de puntilla y recorte debajo del busto. Disponible solo en bordó. Talle único." }
+    descripcion: "Musculosa bordó de morley con breteles finos, escote en V bordeado de puntilla y recorte debajo del busto. Disponible solo en bordó. Talle único." },
+  { codigo: "RC160", nombre: "Pantalón Rayado Celeste", categoria: "Pantalones", precio: 17500, talles: ["38"], nuevo: true, foto: "RC160.jpg",
+    descripcion: "Pantalón ancho de tela liviana tipo lino, celeste con rayas blancas finas y cintura elastizada. Fresco y cómodo para el verano." }
 ];
