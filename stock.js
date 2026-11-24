@@ -285,5 +285,8 @@ window.STOCK = [
     descripcion: "Top halter de tela suave y elastizada con escote en V profundo, frunces al costado y tiras para atar en la nuca. Se puede usar de varias formas. Disponible en negro, bordó y camel (el crudo de la foto está agotado). Talle único." },
   { codigo: "RC134", nombre: "Falda Marea", categoria: "Polleras", precio: 20000, talles: ["Único"], nuevo: true, foto: "RC134.jpg",
     variantes: ["Chocolate", "Beige"],
-    descripcion: "Minifalda recta de tela texturizada en ondas con lentejuelas, con forro. Disponible en chocolate y beige (la negra de la foto está agotada). Talle único." }
+    descripcion: "Minifalda recta de tela texturizada en ondas con lentejuelas, con forro. Disponible en chocolate y beige (la negra de la foto está agotada). Talle único." },
+  { codigo: "RC135", nombre: "Remera Lunares Pastel", categoria: "Remeras", precio: 17500, talles: ["Único"], nuevo: true, foto: "RC135.jpg",
+    variantes: ["Beige", "Celeste"],
+    descripcion: "Remera de algodón a lunares negros, cuello redondo y manga corta. Disponible en beige y celeste (la segunda y la tercera de la foto). Talle único." }
 ];
