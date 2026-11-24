@@ -288,5 +288,11 @@ window.STOCK = [
     descripcion: "Minifalda recta de tela texturizada en ondas con lentejuelas, con forro. Disponible en chocolate y beige (la negra de la foto está agotada). Talle único." },
   { codigo: "RC135", nombre: "Remera Lunares Pastel", categoria: "Remeras", precio: 17500, talles: ["Único"], nuevo: true, foto: "RC135.jpg",
     variantes: ["Beige", "Celeste"],
-    descripcion: "Remera de algodón a lunares negros, cuello redondo y manga corta. Disponible en beige y celeste (la segunda y la tercera de la foto). Talle único." }
+    descripcion: "Remera de algodón a lunares negros, cuello redondo y manga corta. Disponible en beige y celeste (la segunda y la tercera de la foto). Talle único." },
+  { codigo: "RC136", nombre: "Remerón Amore Rayado", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC136.jpg",
+    descripcion: "Remerón oversize de algodón a rayas anchas celeste y chocolate, con estampa “Amore” en rojo sobre franjas fucsia. Talle único." },
+  { codigo: "RC137", nombre: "Remerón París", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC137.jpg",
+    descripcion: "Remerón oversize de algodón a rayas anchas rosa y crudo, con estampa de la Torre Eiffel en fucsia y letras “Paris” en turquesa. Talle único." },
+  { codigo: "RC138", nombre: "Remerón Wine & Chill", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC138.jpg",
+    descripcion: "Remerón oversize de algodón a rayas anchas rosa y blanco, con estampa estilo estampilla de una copa de vino, frutillas y naranjas con la frase “Wine & Chill”. Talle único." }
 ];
