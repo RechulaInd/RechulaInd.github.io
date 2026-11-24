@@ -297,5 +297,7 @@ window.STOCK = [
     descripcion: "Remerón oversize de algodón a rayas anchas rosa y blanco, con estampa estilo estampilla de una copa de vino, frutillas y naranjas con la frase “Wine & Chill”. Talle único." },
   { codigo: "RC139", nombre: "Baby Tee Puntilla", categoria: "Remeras", precio: 13500, talles: ["Único"], nuevo: true, foto: "RC139.jpg",
     variantes: ["Beige", "Celeste", "Negro"],
-    descripcion: "Baby tee de morley con escote redondo bordeado de puntilla y terminaciones onduladas en mangas y ruedo. Disponible en beige, celeste y negro (la blanca de la foto está agotada). Talle único." }
+    descripcion: "Baby tee de morley con escote redondo bordeado de puntilla y terminaciones onduladas en mangas y ruedo. Disponible en beige, celeste y negro (la blanca de la foto está agotada). Talle único." },
+  { codigo: "RC140", nombre: "Remera Corazones", categoria: "Remeras", precio: 23000, talles: ["3"], nuevo: true, foto: "RC140.jpg",
+    descripcion: "Remera beige de algodón con escote en V, manga corta y estampa de corazoncitos bordó en todo el frente." }
 ];
