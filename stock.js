@@ -340,5 +340,7 @@ window.STOCK = [
   { codigo: "RC155", nombre: "Campera Jean Celeste", categoria: "Camisacos", precio: 72000, talles: ["2"], nuevo: true, foto: "RC155.jpg",
     descripcion: "Campera de jean celeste claro con cuello camisero, botones a presión forrados, recortes al frente, bolsillos y puños anchos. Industria argentina." },
   { codigo: "RC156", nombre: "Campera Napoleón", categoria: "Camisacos", precio: 54000, talles: ["L"], nuevo: true, foto: "RC156.jpg",
-    descripcion: "Campera corta chocolate de gabardina estilo Napoleón, sin cuello, con tiras al frente y botones metálicos, y puños anchos con abertura." }
+    descripcion: "Campera corta chocolate de gabardina estilo Napoleón, sin cuello, con tiras al frente y botones metálicos, y puños anchos con abertura." },
+  { codigo: "RC157", nombre: "Conjunto Crochet Chocolate", categoria: "Conjuntos", precio: 42000, talles: ["S"], nuevo: true, foto: "RC157.jpg",
+    descripcion: "Conjunto de dos piezas tejido al crochet color chocolate: top corto de breteles finos y short, ambos con borde festoneado. Ideal para el verano." }
 ];
