@@ -318,5 +318,8 @@ window.STOCK = [
     variantes: ["Crudo", "Chocolate"],
     descripcion: "Chaleco de algodón con flores bordadas y calados, detalles de mostacillas, ribete tejido en los bordes, escote en V y botones al frente. Talle M/L." },
   { codigo: "RC146", nombre: "Remerón Boho Chic", categoria: "Remeras", precio: 19000, talles: ["Único"], nuevo: true, foto: "RC146.jpg",
-    descripcion: "Remerón oversize de algodón color crudo con estampa de corazón ornamental en chocolate y la frase “Boho Chic”. Talle único." }
+    descripcion: "Remerón oversize de algodón color crudo con estampa de corazón ornamental en chocolate y la frase “Boho Chic”. Talle único." },
+  { codigo: "RC147", nombre: "Top Fruncido Satinado", categoria: "Tops", precio: 13000, talles: ["Único"], nuevo: true, foto: "RC147.jpg",
+    variantes: ["Manteca", "Negro"],
+    descripcion: "Top corto sin mangas de tela satinada, con frunce elastizado en el escote y en la cintura. En la foto, color manteca (el pantalón no está incluido). Talle único." }
 ];
