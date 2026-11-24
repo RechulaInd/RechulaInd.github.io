@@ -304,5 +304,8 @@ window.STOCK = [
     descripcion: "Remerón oversize de algodón color arena con estampa de un perro salchicha con anteojos de sol y pañuelo, sobre fondo a rayas verde y crudo. Talle único." },
   { codigo: "RC142", nombre: "Vestido Volados Finitos", categoria: "Vestidos", precio: 26000, talles: ["Único"], nuevo: true, foto: "RC142.jpg",
     variantes: ["Negro", "Blanco"],
-    descripcion: "Vestido corto entallado de tela elastizada con volados finitos en todo el cuerpo, escote recto y breteles dobles. Con forro. Talle único." }
+    descripcion: "Vestido corto entallado de tela elastizada con volados finitos en todo el cuerpo, escote recto y breteles dobles. Con forro. Talle único." },
+  { codigo: "RC143", nombre: "Blusa Flores Lentejuelas", categoria: "Blusas", precio: 34000, talles: ["M/L"], nuevo: true, foto: "RC143.jpg",
+    variantes: ["Blanco", "Chocolate"],
+    descripcion: "Blusa amplia sin mangas con flores bordadas con lentejuelas, cuello con volado y lazo, y volados en los hombros. Talle M/L." }
 ];
