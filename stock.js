@@ -348,5 +348,7 @@ window.STOCK = [
   { codigo: "RC159", nombre: "Musculosa Puntilla Bordó", categoria: "Tops", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC159.jpg",
     descripcion: "Musculosa bordó de morley con breteles finos, escote en V bordeado de puntilla y recorte debajo del busto. Disponible solo en bordó. Talle único." },
   { codigo: "RC160", nombre: "Pantalón Rayado Celeste", categoria: "Pantalones", precio: 17500, talles: ["38"], nuevo: true, foto: "RC160.jpg",
-    descripcion: "Pantalón ancho de tela liviana tipo lino, celeste con rayas blancas finas y cintura elastizada. Fresco y cómodo para el verano." }
+    descripcion: "Pantalón ancho de tela liviana tipo lino, celeste con rayas blancas finas y cintura elastizada. Fresco y cómodo para el verano." },
+  { codigo: "RC161", nombre: "Blazer Cruzado Topo", categoria: "Abrigos", precio: 48000, talles: ["2"], nuevo: true, foto: "RC161.jpg",
+    descripcion: "Blazer cruzado color topo sin cuello, con escote en V, doble botonadura con botones negros, bolsillos con solapa y forro interior." }
 ];
