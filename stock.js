@@ -294,5 +294,8 @@ window.STOCK = [
   { codigo: "RC137", nombre: "Remerón París", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC137.jpg",
     descripcion: "Remerón oversize de algodón a rayas anchas rosa y crudo, con estampa de la Torre Eiffel en fucsia y letras “Paris” en turquesa. Talle único." },
   { codigo: "RC138", nombre: "Remerón Wine & Chill", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC138.jpg",
-    descripcion: "Remerón oversize de algodón a rayas anchas rosa y blanco, con estampa estilo estampilla de una copa de vino, frutillas y naranjas con la frase “Wine & Chill”. Talle único." }
+    descripcion: "Remerón oversize de algodón a rayas anchas rosa y blanco, con estampa estilo estampilla de una copa de vino, frutillas y naranjas con la frase “Wine & Chill”. Talle único." },
+  { codigo: "RC139", nombre: "Baby Tee Puntilla", categoria: "Remeras", precio: 13500, talles: ["Único"], nuevo: true, foto: "RC139.jpg",
+    variantes: ["Beige", "Celeste", "Negro"],
+    descripcion: "Baby tee de morley con escote redondo bordeado de puntilla y terminaciones onduladas en mangas y ruedo. Disponible en beige, celeste y negro (la blanca de la foto está agotada). Talle único." }
 ];
