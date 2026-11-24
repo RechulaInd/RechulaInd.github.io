@@ -336,5 +336,7 @@ window.STOCK = [
   { codigo: "RC153", nombre: "Musculosa Básica Escote V", categoria: "Tops", precio: 16000, talles: ["Único"], nuevo: true, foto: "RC153.jpg",
     descripcion: "Musculosa básica negra de morley con escote en V, breteles anchos y push up incluido. Disponible solo en negro. Talle único." },
   { codigo: "RC154", nombre: "Body Escote Cuadrado", categoria: "Bodys", precio: 20000, talles: ["Único"], nuevo: true, foto: "RC154.jpg",
-    descripcion: "Body de tela suave y elastizada con escote cuadrado, breteles anchos y frunce al costado. Disponible solo en blanco (el de atrás en la foto; el chocolate está agotado). Talle único." }
+    descripcion: "Body de tela suave y elastizada con escote cuadrado, breteles anchos y frunce al costado. Disponible solo en blanco (el de atrás en la foto; el chocolate está agotado). Talle único." },
+  { codigo: "RC155", nombre: "Campera Jean Celeste", categoria: "Camisacos", precio: 72000, talles: ["2"], nuevo: true, foto: "RC155.jpg",
+    descripcion: "Campera de jean celeste claro con cuello camisero, botones a presión forrados, recortes al frente, bolsillos y puños anchos. Industria argentina." }
 ];
