@@ -329,5 +329,10 @@ window.STOCK = [
   { codigo: "RC150", nombre: "Chaleco Militar", categoria: "Chalecos", precio: 54000, talles: ["XL"], nuevo: true, foto: "RC150.jpg",
     descripcion: "Chaleco entallado negro estilo militar, con cuello mao, cierre al frente, tiras con botones dorados y peplum. Disponible solo en negro (la de atrás en la foto; el beige está agotado)." },
   { codigo: "RC151", nombre: "Camisola Noche Encaje", categoria: "Blusas", precio: 45000, talles: ["Único"], nuevo: true, foto: "RC151.jpg",
-    descripcion: "Camisola negra de breteles finos dobles, escote cruzado con puntilla calada, peplum asimétrico y ruedo de encaje bordado en punta. Talle único." }
+    descripcion: "Camisola negra de breteles finos dobles, escote cruzado con puntilla calada, peplum asimétrico y ruedo de encaje bordado en punta. Talle único." },
+  { codigo: "RC152", nombre: "Musculosa Básica Tiritas", categoria: "Tops", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC152.jpg",
+    variantes: ["Chocolate", "Negro"],
+    descripcion: "Musculosa básica de morley con breteles finos, escote redondo y push up incluido. Disponible en chocolate y negro (la blanca de la foto está agotada). Talle único." },
+  { codigo: "RC153", nombre: "Musculosa Básica Escote V", categoria: "Tops", precio: 16000, talles: ["Único"], nuevo: true, foto: "RC153.jpg",
+    descripcion: "Musculosa básica negra de morley con escote en V, breteles anchos y push up incluido. Disponible solo en negro. Talle único." }
 ];
