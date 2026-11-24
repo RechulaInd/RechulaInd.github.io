@@ -350,5 +350,7 @@ window.STOCK = [
   { codigo: "RC160", nombre: "Pantalón Rayado Celeste", categoria: "Pantalones", precio: 17500, talles: ["38"], nuevo: true, foto: "RC160.jpg",
     descripcion: "Pantalón ancho de tela liviana tipo lino, celeste con rayas blancas finas y cintura elastizada. Fresco y cómodo para el verano." },
   { codigo: "RC161", nombre: "Blazer Cruzado Topo", categoria: "Abrigos", precio: 48000, talles: ["2"], nuevo: true, foto: "RC161.jpg",
-    descripcion: "Blazer cruzado color topo sin cuello, con escote en V, doble botonadura con botones negros, bolsillos con solapa y forro interior." }
+    descripcion: "Blazer cruzado color topo sin cuello, con escote en V, doble botonadura con botones negros, bolsillos con solapa y forro interior." },
+  { codigo: "RC162", nombre: "Blazer Sastrero Arena", categoria: "Abrigos", precio: 59000, talles: ["2"], nuevo: true, foto: "RC162.jpg",
+    descripcion: "Blazer sastrero color arena de corte largo, con solapas en punta, doble botón carey, bolsillos con solapa y forro interior." }
 ];
