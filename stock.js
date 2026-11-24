@@ -327,5 +327,7 @@ window.STOCK = [
   { codigo: "RC149", nombre: "Musculosa Tul Encaje", categoria: "Tops", precio: 21000, talles: ["Único"], nuevo: true, foto: "RC149.jpg",
     descripcion: "Musculosa blanca de tul transparente con encaje de flores, escote redondo y calce entallado. Ideal con un top o bralette debajo. Disponible solo en blanco. Talle único." },
   { codigo: "RC150", nombre: "Chaleco Militar", categoria: "Chalecos", precio: 54000, talles: ["XL"], nuevo: true, foto: "RC150.jpg",
-    descripcion: "Chaleco entallado negro estilo militar, con cuello mao, cierre al frente, tiras con botones dorados y peplum. Disponible solo en negro (la de atrás en la foto; el beige está agotado)." }
+    descripcion: "Chaleco entallado negro estilo militar, con cuello mao, cierre al frente, tiras con botones dorados y peplum. Disponible solo en negro (la de atrás en la foto; el beige está agotado)." },
+  { codigo: "RC151", nombre: "Camisola Noche Encaje", categoria: "Blusas", precio: 45000, talles: ["Único"], nuevo: true, foto: "RC151.jpg",
+    descripcion: "Camisola negra de breteles finos dobles, escote cruzado con puntilla calada, peplum asimétrico y ruedo de encaje bordado en punta. Talle único." }
 ];
