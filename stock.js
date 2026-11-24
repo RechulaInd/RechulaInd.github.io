@@ -344,5 +344,7 @@ window.STOCK = [
   { codigo: "RC157", nombre: "Conjunto Crochet Chocolate", categoria: "Conjuntos", precio: 42000, talles: ["S"], nuevo: true, foto: "RC157.jpg",
     descripcion: "Conjunto de dos piezas tejido al crochet color chocolate: top corto de breteles finos y short, ambos con borde festoneado. Ideal para el verano." },
   { codigo: "RC158", nombre: "Blusa Enredadera Chocolate", categoria: "Blusas", precio: 39500, talles: ["M"], nuevo: true, foto: "RC158.jpg",
-    descripcion: "Blusa chocolate sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros. Disponible solo en chocolate." }
+    descripcion: "Blusa chocolate sin mangas con bordado de flores y enredaderas al tono, escote en V con pinza y volados en los hombros. Disponible solo en chocolate." },
+  { codigo: "RC159", nombre: "Musculosa Puntilla Bordó", categoria: "Tops", precio: 14500, talles: ["Único"], nuevo: true, foto: "RC159.jpg",
+    descripcion: "Musculosa bordó de morley con breteles finos, escote en V bordeado de puntilla y recorte debajo del busto. Disponible solo en bordó. Talle único." }
 ];
