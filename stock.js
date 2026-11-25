@@ -490,5 +490,7 @@ window.STOCK = [
     descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera y por detrás short. Tiro alto, botón y bolsillos al frente. Va del talle 38 al 44." },
   { codigo: "RC225", nombre: "Short Cuero Hebilla", categoria: "Shorts", precio: 22000, talles: ["1"], nuevo: true, foto: "RC225.jpg",
     fotosExtra: ["RC225-atras.jpg"],
-    descripcion: "Short de cuero ecológico negro tiro bajo, con cinturón ancho al tono con hebilla plateada y ojalillos metálicos. Talle 1." }
+    descripcion: "Short de cuero ecológico negro tiro bajo, con cinturón ancho al tono con hebilla plateada y ojalillos metálicos. Talle 1." },
+  { codigo: "RC226", nombre: "Short Cuero Clásico", categoria: "Shorts", precio: 18000, talles: ["38"], nuevo: true, foto: "RC226.jpg",
+    descripcion: "Short de cuero ecológico negro tiro bajo, con botón, bragueta, presillas y bolsillos al costado. Talle 38." }
 ];
