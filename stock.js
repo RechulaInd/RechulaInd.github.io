@@ -547,5 +547,7 @@ window.STOCK = [
     fotosExtra: ["RC247-atras.jpg"],
     descripcion: "Skort de cuero ecológico camel: por delante pollera tableada con tira y hebilla dorada al costado, y por detrás short con cierre. Forro color mostaza. Talle único." },
   { codigo: "RC248", nombre: "Minifalda Leopardo Bengalina", categoria: "Polleras", precio: 18000, talles: ["38"], nuevo: true, foto: "RC248.jpg",
-    descripcion: "Minifalda recta de bengalina con estampa animal print leopardo, con botón, presillas y bolsillos al frente. Talle 38." }
+    descripcion: "Minifalda recta de bengalina con estampa animal print leopardo, con botón, presillas y bolsillos al frente. Talle 38." },
+  { codigo: "RC249", nombre: "Short Lycra Terracota", categoria: "Shorts", precio: 7000, talles: ["Único"], nuevo: true, foto: "RC249.jpg",
+    descripcion: "Short corto de lycra elastizada color terracota, con cintura alta ancha y costura central. Cómodo para el día a día o para entrenar. Talle único: va hasta un 40." }
 ];
