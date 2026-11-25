@@ -566,5 +566,8 @@ window.STOCK = [
     descripcion: "Minifalda recta de cuero ecológico negro con cinturón ancho al frente, hebilla plateada grande y ojalillos metálicos. Cierre al costado. Talle único M." },
   { codigo: "RC255", nombre: "Remerón Salchicha Café", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC255.jpg",
     variantes: ["Gris y blanco", "Celeste y blanco", "Chocolate y blanco"],
-    descripcion: "Remerón oversize a rayas anchas con cuello en contraste y estampa de un perro salchicha con boina, anteojos y taza de café. Talle único." }
+    descripcion: "Remerón oversize a rayas anchas con cuello en contraste y estampa de un perro salchicha con boina, anteojos y taza de café. Talle único." },
+  { codigo: "RC256", nombre: "Remera Mangas Tachas", categoria: "Remeras", precio: 21000, talles: ["M/L"], nuevo: true, foto: "RC256.jpg",
+    variantes: ["Blanco", "Beige"],
+    descripcion: "Remera de algodón con cuello redondo y mangas cortas cubiertas de tachas plateadas. Disponible en blanco y beige (el chocolate y el negro de la foto están agotados). Talle M/L." }
 ];
