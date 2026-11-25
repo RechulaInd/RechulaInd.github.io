@@ -534,5 +534,7 @@ window.STOCK = [
     descripcion: "Minifalda tiro bajo de tela aterciopelada negra con estampa animal print leopardo al tono, cinturón con hebilla plateada y ojalillos, y cierre atrás. Talle M." },
   { codigo: "RC243", nombre: "Skort Cuero Lazos", categoria: "Shorts", precio: 19000, talles: ["5","6"], nuevo: true, foto: "RC243.jpg",
     fotosExtra: ["RC243-atras.jpg"],
-    descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera con cordones entrelazados para atar al costado, y por detrás short con cierre. Talles grandes 5 y 6." }
+    descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera con cordones entrelazados para atar al costado, y por detrás short con cierre. Talles grandes 5 y 6." },
+  { codigo: "RC244", nombre: "Skort Cuero Cinturón", categoria: "Shorts", precio: 32500, talles: ["5"], nuevo: true, foto: "RC244.jpg",
+    descripcion: "Skort de cuero ecológico negro cruzado al frente, con cinturón ancho al tono con hebilla plateada y doble fila de ojalillos. Por fuera parece pollera y por dentro tiene short. Talle 5." }
 ];
