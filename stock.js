@@ -505,5 +505,7 @@ window.STOCK = [
     descripcion: "Minifalda negra de tela elastizada tiro bajo, con frunce y hebilla metálica al costado y tiras largas para atar. Talle único." },
   { codigo: "RC231", nombre: "Minifalda Doble Hebilla", categoria: "Polleras", precio: 26000, talles: ["3"], nuevo: true, foto: "RC231.jpg",
     fotosExtra: ["RC231-atras.jpg"],
-    descripcion: "Minifalda recta de cuero ecológico negro tiro medio, con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 3." }
+    descripcion: "Minifalda recta de cuero ecológico negro tiro medio, con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 3." },
+  { codigo: "RC232", nombre: "Minifalda Serpiente Brillo", categoria: "Polleras", precio: 15500, talles: ["Único"], nuevo: true, foto: "RC232.jpg",
+    descripcion: "Minifalda recta elastizada negra con estampa de piel de serpiente en plateado metalizado y cintura elástica. Talle único." }
 ];
