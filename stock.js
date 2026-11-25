@@ -563,5 +563,8 @@ window.STOCK = [
     descripcion: "Minifalda chocolate elastizada con cintura ancha y volados en capas, con short por dentro. Talle único." },
   { codigo: "RC254", nombre: "Minifalda Cinturón Maxi", categoria: "Polleras", precio: 22000, talles: ["M"], nuevo: true, foto: "RC254.jpg",
     fotosExtra: ["RC254-atras.jpg"],
-    descripcion: "Minifalda recta de cuero ecológico negro con cinturón ancho al frente, hebilla plateada grande y ojalillos metálicos. Cierre al costado. Talle único M." }
+    descripcion: "Minifalda recta de cuero ecológico negro con cinturón ancho al frente, hebilla plateada grande y ojalillos metálicos. Cierre al costado. Talle único M." },
+  { codigo: "RC255", nombre: "Remerón Salchicha Café", categoria: "Remeras", precio: 23500, talles: ["Único"], nuevo: true, foto: "RC255.jpg",
+    variantes: ["Gris y blanco", "Celeste y blanco", "Chocolate y blanco"],
+    descripcion: "Remerón oversize a rayas anchas con cuello en contraste y estampa de un perro salchicha con boina, anteojos y taza de café. Talle único." }
 ];
