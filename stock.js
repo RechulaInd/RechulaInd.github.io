@@ -495,5 +495,8 @@ window.STOCK = [
     descripcion: "Short de cuero ecológico negro tiro bajo, con botón, bragueta, presillas y bolsillos al costado. Talle 38." },
   { codigo: "RC227", nombre: "Short Cuero Hebillas", categoria: "Shorts", precio: 32500, talles: ["2"], nuevo: true, foto: "RC227.jpg",
     fotosExtra: ["RC227-atras.jpg"],
-    descripcion: "Short de cuero ecológico negro tiro alto, con tres tiras con hebillas plateadas y ojalillos a cada lado, y botón a presión. Talle 2." }
+    descripcion: "Short de cuero ecológico negro tiro alto, con tres tiras con hebillas plateadas y ojalillos a cada lado, y botón a presión. Talle 2." },
+  { codigo: "RC228", nombre: "Minifalda Cuero Hebilla", categoria: "Polleras", precio: 18000, talles: ["Único"], nuevo: true, foto: "RC228.jpg",
+    fotosExtra: ["RC228-atras.jpg"],
+    descripcion: "Minifalda recta de cuero ecológico negro tiro bajo, con cinturón al tono con hebilla plateada y ojalillos metálicos. Talle único." }
 ];
