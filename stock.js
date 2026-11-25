@@ -487,5 +487,8 @@ window.STOCK = [
     descripcion: "Jean baggy celeste con lavado gastado, tiro medio y pierna amplia levemente curva." },
   { codigo: "RC224", nombre: "Skort Cuero Negro", categoria: "Shorts", precio: 20000, talles: ["38 al 44"], nuevo: true, foto: "RC224.jpg",
     fotosExtra: ["RC224-atras.jpg"],
-    descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera y por detrás short. Tiro alto, botón y bolsillos al frente. Va del talle 38 al 44." }
+    descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera y por detrás short. Tiro alto, botón y bolsillos al frente. Va del talle 38 al 44." },
+  { codigo: "RC225", nombre: "Short Cuero Hebilla", categoria: "Shorts", precio: 22000, talles: ["1"], nuevo: true, foto: "RC225.jpg",
+    fotosExtra: ["RC225-atras.jpg"],
+    descripcion: "Short de cuero ecológico negro tiro bajo, con cinturón ancho al tono con hebilla plateada y ojalillos metálicos. Talle 1." }
 ];
