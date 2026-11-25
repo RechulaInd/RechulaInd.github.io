@@ -551,5 +551,8 @@ window.STOCK = [
   { codigo: "RC249", nombre: "Short Lycra Terracota", categoria: "Shorts", precio: 7000, talles: ["Único"], nuevo: true, foto: "RC249.jpg",
     descripcion: "Short corto de lycra elastizada color terracota, con cintura alta ancha y costura central. Cómodo para el día a día o para entrenar. Talle único: va hasta un 40." },
   { codigo: "RC250", nombre: "Minifalda Lunares Chocolate", categoria: "Polleras", precio: 15000, talles: ["Único"], nuevo: true, foto: "RC250.jpg",
-    descripcion: "Minifalda recta tiro bajo de tela suave elastizada, chocolate con lunarcitos crudo. Talle único." }
+    descripcion: "Minifalda recta tiro bajo de tela suave elastizada, chocolate con lunarcitos crudo. Talle único." },
+  { codigo: "RC251", nombre: "Minifalda Doble Hebilla Bordó", categoria: "Polleras", precio: 25000, talles: ["2"], nuevo: true, foto: "RC251.jpg",
+    fotosExtra: ["RC251-atras.jpg"],
+    descripcion: "Minifalda recta de cuero ecológico bordó tiro medio, con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 2." }
 ];
