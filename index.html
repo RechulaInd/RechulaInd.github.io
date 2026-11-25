@@ -45,6 +45,13 @@
   .row::-webkit-scrollbar{display:none}
   .chip{flex:none;padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;background:var(--card);transition:.15s}
   .chip.on{background:var(--deep);color:#F7F1E9;border-color:var(--deep)}
+  .search{position:relative;margin-bottom:14px}
+  .search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
+  .search input{width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--card);border:1px solid var(--gold);border-radius:999px;padding:13px 44px 13px 44px;outline:none;-webkit-appearance:none;appearance:none}
+  .search input::placeholder{color:#a8958e}
+  .search input:focus{box-shadow:0 0 0 3px rgba(181,138,82,.18)}
+  .search input::-webkit-search-cancel-button{display:none}
+  #qx{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;font-size:20px;color:var(--soft)}
   .lbl{font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin:6px 2px 8px}
   .size{min-width:44px;height:44px;padding:0 12px;display:grid;place-items:center}
   .sortbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;padding-top:12px;border-top:1px solid var(--line)}
@@ -184,6 +191,11 @@
 </section>
 
 <section class="filters">
+  <div class="search">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Buscá tu prenda: short, blusa, encaje, leopardo…" autocomplete="off" enterkeyhint="search" aria-label="Buscar prendas">
+    <button id="qx" aria-label="Borrar búsqueda" hidden>×</button>
+  </div>
   <div class="row" id="cats"></div>
   <div class="lbl">Talle</div>
   <div class="row" id="sizes"></div>
@@ -243,7 +255,7 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261125163142"></script>
+<script src="stock.js?v=20261125164229"></script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
@@ -315,7 +327,9 @@
   $("sizes").onclick = e => { const b=e.target.closest("[data-s]"); if(!b) return; fSize = fSize===b.dataset.s?null:b.dataset.s; drawFilters(); drawGrid(); };
 
   function drawGrid(){
-    let list = ALL.map((p,i)=>({p,i})).filter(({p}) => (fCat==="Todo" || (fCat==="Nuevos ingresos" ? p.nuevo : p.categoria===fCat)) && (!fSize || p.talles.includes(fSize)));
+    const terms = norm($("q").value).split(/\s+/).filter(Boolean);
+    let list = ALL.map((p,i)=>({p,i})).filter(({p}) => (fCat==="Todo" || (fCat==="Nuevos ingresos" ? p.nuevo : p.categoria===fCat)) && (!fSize || p.talles.includes(fSize))
+      && terms.every(t => hay(p).includes(t)));
     const so = $("sort").value;
     list.sort((a,b)=> so==="menor" ? a.p.precio-b.p.precio || b.i-a.i : so==="mayor" ? b.p.precio-a.p.precio || b.i-a.i : b.i-a.i);
     list = list.map(x=>x.p);
@@ -330,9 +344,17 @@
           <div class="p-cash">${money(cash(p))}<span>efectivo / transf.</span></div>
           <div class="sizes-mini">${p.talles.length>1?"Talles":"Talle"} ${p.talles.map(esc).join(" · ")}</div>
         </div>
-      </button>`).join("") : `<div class="empty">No hay prendas con ese filtro por ahora 💗</div>`;
+      </button>`).join("") : `<div class="empty">${$("q").value?`No encontramos “${esc($("q").value)}” 💗<br><small>Probá con otra palabra o escribinos por WhatsApp y te ayudamos.</small>`:"No hay prendas con ese filtro por ahora 💗"}</div>`;
   }
   $("sort").onchange = drawGrid;
+  // Buscador: busca en nombre, categoría, descripción, colores y código, sin importar tildes ni mayúsculas
+  const SIN = {remera:"remeron remera baby tee",remeras:"remeron remera",pollera:"falda minifalda skort",falda:"pollera minifalda",short:"bermuda skort",jean:"jeans denim",cuero:"ecologico",campera:"camisaco blazer abrigo",musculosa:"top",top:"musculosa",vestido:"vestidos"};
+  const norm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  const HAY = new Map();
+  const hay = p => { if(!HAY.has(p)){ let t=norm([p.nombre,p.categoria,p.descripcion,p.codigo,(p.variantes||[]).join(" "),p.talles.join(" ")].join(" ")); const extra=Object.entries(SIN).filter(([k])=>t.includes(k)).map(([,v])=>v).join(" "); HAY.set(p,t+" "+norm(extra)); } return HAY.get(p); };
+  let qt; $("q").addEventListener("input", () => { $("qx").hidden = !$("q").value; clearTimeout(qt); qt=setTimeout(()=>{ if($("q").value && fCat!=="Todo"){ fCat="Todo"; drawFilters(); } drawGrid(); },150); });
+  $("q").addEventListener("keydown", e => { if(e.key==="Enter"){ e.preventDefault(); $("q").blur(); document.getElementById("grid").scrollIntoView({behavior:"smooth",block:"start"}); } });
+  $("qx").onclick = () => { $("q").value=""; $("qx").hidden=true; drawGrid(); $("q").focus(); };
   $("grid").onclick = e => { const b=e.target.closest("[data-k]"); if(b) openItem(b.dataset.k); };
 
   // Bolsa
