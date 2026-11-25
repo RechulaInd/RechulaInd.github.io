@@ -594,5 +594,7 @@ window.STOCK = [
   { codigo: "RC266", nombre: "Chaleco Gamuza Negro", categoria: "Chalecos", precio: 24000, talles: ["M"], nuevo: true, foto: "RC266.jpg",
     descripcion: "Chaleco largo de gamuza negra con escote redondo, botonadura carey al frente y recortes que entallan. Talle M." },
   { codigo: "RC267", nombre: "Chaleco Bordado Perlas", categoria: "Chalecos", precio: 44000, talles: ["M"], nuevo: true, foto: "RC267.jpg",
-    descripcion: "Chaleco celeste con bordado en relieve color crudo y aplicaciones de perlas, estilo étnico, escote en V y abierto al frente. Talle M." }
+    descripcion: "Chaleco celeste con bordado en relieve color crudo y aplicaciones de perlas, estilo étnico, escote en V y abierto al frente. Talle M." },
+  { codigo: "RC268", nombre: "Chaleco Sastrero Negro", categoria: "Chalecos", precio: 34000, talles: ["1","2","3","5"], nuevo: true, foto: "RC268.jpg",
+    descripcion: "Chaleco sastrero negro con escote en V, tres botones, bolsillos con ribete y pinzas que entallan, con terminación en punta. Talles 1, 2, 3 y 5." }
 ];
