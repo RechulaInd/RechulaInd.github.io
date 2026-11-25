@@ -519,5 +519,8 @@ window.STOCK = [
   { codigo: "RC236", nombre: "Short Encaje Negro", categoria: "Shorts", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC236.jpg",
     descripcion: "Short negro de encaje con flores, con forro, cintura elastizada y bolsillos al costado. Talle único." },
   { codigo: "RC237", nombre: "Short Lentejuelas Negro", categoria: "Shorts", precio: 21000, talles: ["M"], nuevo: true, foto: "RC237.jpg",
-    descripcion: "Short negro cubierto de lentejuelas, con forro suave y cintura elastizada. Ideal para salir. Talle M." }
+    descripcion: "Short negro cubierto de lentejuelas, con forro suave y cintura elastizada. Ideal para salir. Talle M." },
+  { codigo: "RC238", nombre: "Pollera Volados Bordó", categoria: "Polleras", precio: 20000, talles: ["Único"], nuevo: true, foto: "RC238.jpg",
+    fotosExtra: ["RC238-short.jpg"],
+    descripcion: "Minifalda bordó elastizada con volados en capas y short por dentro, cintura elástica. Talle único: va hasta un 40." }
 ];
