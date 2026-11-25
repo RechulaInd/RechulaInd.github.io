@@ -512,5 +512,8 @@ window.STOCK = [
     descripcion: "Minifalda recta de tul elastizado verde oliva con estampa animal print leopardo en terciopelo chocolate. Talle único: va hasta un 38." },
   { codigo: "RC234", nombre: "Bermuda Cuero Pinzas", categoria: "Shorts", precio: 13000, talles: ["40"], nuevo: true, foto: "RC234.jpg",
     fotosExtra: ["RC234-atras.jpg"],
-    descripcion: "Bermuda ancha de cuero ecológico negro tiro alto, con pinzas al frente, bolsillos, botón metálico y cintura elastizada atrás. Talle 40." }
+    descripcion: "Bermuda ancha de cuero ecológico negro tiro alto, con pinzas al frente, bolsillos, botón metálico y cintura elastizada atrás. Talle 40." },
+  { codigo: "RC235", nombre: "Short Cuero Bolsillos", categoria: "Shorts", precio: 18824, talles: ["38 al 44"], nuevo: true, foto: "RC235.jpg",
+    fotosExtra: ["RC235-atras.jpg"],
+    descripcion: "Short de cuero ecológico negro tiro alto, con botón, presillas, bolsillos al frente y pinzas atrás. Va del talle 38 al 44." }
 ];
