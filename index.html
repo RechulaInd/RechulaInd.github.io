@@ -45,6 +45,21 @@
   .row::-webkit-scrollbar{display:none}
   .chip{flex:none;padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;background:var(--card);transition:.15s}
   .chip.on{background:var(--deep);color:#F7F1E9;border-color:var(--deep)}
+  .fbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .fbtn{display:flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--gold);border-radius:999px;font-size:13px;font-weight:500;color:var(--deep);background:var(--card)}
+  .fbtn svg{width:16px;height:16px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
+  .fbtn.open{background:var(--deep);color:#F7F1E9;border-color:var(--deep)}
+  .fn{background:var(--rose);color:var(--deep);border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;font-size:11px;font-weight:600;padding:0 6px}
+  .fsel{display:flex;gap:6px;flex-wrap:wrap}
+  .tag-on{display:flex;align-items:center;gap:6px;padding:6px 8px 6px 12px;background:#F3E3DE;color:var(--deep);border-radius:999px;font-size:12.5px;font-weight:500}
+  .tag-on b{font-weight:400;font-size:15px;line-height:1;opacity:.7}
+  .fpanel{margin-top:12px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+  .fhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12.5px;color:var(--soft)}
+  .flink{font-size:12.5px;color:var(--deep);text-decoration:underline}
+  .fgrp{font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:12px 2px 8px}
+  .fgrp:first-child{margin-top:0}
+  #sizes .row{flex-wrap:wrap;overflow:visible;padding-bottom:0}
+  .fok{margin-top:16px}
   .search{position:relative;margin-bottom:14px}
   .search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
   .search input{width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--card);border:1px solid var(--gold);border-radius:999px;padding:13px 44px 13px 44px;outline:none;-webkit-appearance:none;appearance:none}
@@ -197,8 +212,15 @@
     <button id="qx" aria-label="Borrar búsqueda" hidden>×</button>
   </div>
   <div class="row" id="cats"></div>
-  <div class="lbl">Talle</div>
-  <div class="row" id="sizes"></div>
+  <div class="fbar">
+    <button class="fbtn" id="fbtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filtrar por talle<span class="fn" id="fn" hidden></span></button>
+    <div class="fsel" id="fsel"></div>
+  </div>
+  <div class="fpanel" id="fpanel" hidden>
+    <div class="fhead"><span>Elegí uno o varios talles</span><button class="flink" id="fclear">Limpiar</button></div>
+    <div id="sizes"></div>
+    <button class="cta dark fok" id="fok">Ver prendas</button>
+  </div>
   <div class="sortbar"><span id="count"></span>
     <label class="sort">Ordenar por
       <select id="sort">
@@ -255,7 +277,7 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261125164229"></script>
+<script src="stock.js?v=20261125164307"></script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
@@ -318,22 +340,32 @@
   const ORD = ["1/2","2/3","XS","S","S/M","M","M/L","L","L/XL","XL","XXL","XXXL","Único"];
   const rank = t => isNaN(+t) ? 1000 + (ORD.indexOf(t)<0 ? 99 : ORD.indexOf(t)) : +t;
   const sizes = [...new Set(ALL.flatMap(p=>p.talles))].sort((a,b)=>rank(a)-rank(b));
-  let fCat = "Todo", fSize = null;
+  let fCat = "Todo"; const fSizes = new Set();
   function drawFilters(){
     $("cats").innerHTML = cats.map(c=>`<button class="chip ${c===fCat?"on":""}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
-    $("sizes").innerHTML = sizes.map(s=>`<button class="chip size ${s===fSize?"on":""}" data-s="${esc(s)}">${esc(s)}</button>`).join("");
+    const grp = {Letras:[], Números:[], "Únicos y combinados":[]};
+    sizes.forEach(s => { if(/^\d+$/.test(s)) grp["Números"].push(s); else if(/^(XXS|XS|S|M|L|XL|XXL|XXXL)$/.test(s)) grp.Letras.push(s); else grp["Únicos y combinados"].push(s); });
+    $("sizes").innerHTML = Object.entries(grp).filter(([,v])=>v.length).map(([k,v])=>`<div class="fgrp">${k}</div><div class="row">${v.map(s=>`<button class="chip size ${fSizes.has(s)?"on":""}" data-s="${esc(s)}">${esc(s)}</button>`).join("")}</div>`).join("");
+    $("fn").hidden = !fSizes.size; $("fn").textContent = fSizes.size;
+    $("fsel").innerHTML = [...fSizes].map(s=>`<button class="tag-on" data-rm="${esc(s)}">Talle ${esc(s)} <b>×</b></button>`).join("");
   }
   $("cats").onclick = e => { const b=e.target.closest("[data-c]"); if(!b) return; fCat=b.dataset.c; drawFilters(); drawGrid(); };
-  $("sizes").onclick = e => { const b=e.target.closest("[data-s]"); if(!b) return; fSize = fSize===b.dataset.s?null:b.dataset.s; drawFilters(); drawGrid(); };
+  $("sizes").onclick = e => { const b=e.target.closest("[data-s]"); if(!b) return; const s=b.dataset.s; fSizes.has(s)?fSizes.delete(s):fSizes.add(s); drawFilters(); drawGrid(); };
+  $("fsel").onclick = e => { const b=e.target.closest("[data-rm]"); if(!b) return; fSizes.delete(b.dataset.rm); drawFilters(); drawGrid(); };
+  $("fbtn").onclick = () => { const p=$("fpanel"); p.hidden=!p.hidden; $("fbtn").classList.toggle("open",!p.hidden); };
+  $("fclear").onclick = () => { fSizes.clear(); drawFilters(); drawGrid(); };
+  $("fok").onclick = () => { $("fpanel").hidden=true; $("fbtn").classList.remove("open"); document.getElementById("grid").scrollIntoView({behavior:"smooth",block:"start"}); };
+  $("fok").textContent = "Ver prendas";
 
   function drawGrid(){
     const terms = norm($("q").value).split(/\s+/).filter(Boolean);
-    let list = ALL.map((p,i)=>({p,i})).filter(({p}) => (fCat==="Todo" || (fCat==="Nuevos ingresos" ? p.nuevo : p.categoria===fCat)) && (!fSize || p.talles.includes(fSize))
+    let list = ALL.map((p,i)=>({p,i})).filter(({p}) => (fCat==="Todo" || (fCat==="Nuevos ingresos" ? p.nuevo : p.categoria===fCat)) && (!fSizes.size || p.talles.some(t=>fSizes.has(t) || t.split("/").some(x=>fSizes.has(x.trim()))))
       && terms.every(t => hay(p).includes(t)));
     const so = $("sort").value;
     list.sort((a,b)=> so==="menor" ? a.p.precio-b.p.precio || b.i-a.i : so==="mayor" ? b.p.precio-a.p.precio || b.i-a.i : b.i-a.i);
     list = list.map(x=>x.p);
     $("count").textContent = list.length + (list.length===1 ? " prenda" : " prendas");
+    if ($("fok")) $("fok").textContent = `Ver ${list.length} ${list.length===1?"prenda":"prendas"}`;
     $("grid").innerHTML = list.length ? list.map(p=>`
       <button class="card" data-k="${esc(p.codigo)}">
         <div class="ph">${pic(p)}${p.nuevo?'<span class="tag">Nuevo</span>':""}</div>
@@ -380,7 +412,7 @@
     const p = ALL.find(x=>x.codigo===k); if(!p) return;
     const hasV = !!(p.variantes&&p.variantes.length);
     let vari = hasV && p.variantes.length===1 ? p.variantes[0] : null;
-    let talle = p.talles.length===1 ? p.talles[0] : (fSize && p.talles.includes(fSize) ? fSize : null);
+    let talle = p.talles.length===1 ? p.talles[0] : (p.talles.find(t=>fSizes.has(t)) || null);
     open(`<div class="det">
       <div><div class="ph" id="dPh">${pic(p, vari)}</div>
       ${p.fotosExtra&&p.fotosExtra.length?`<div class="thumbs" id="dTh">${[p.foto,...p.fotosExtra].map((f,n)=>`<button class="${n?"":"on"}" data-f="${esc(f)}" aria-label="Ver foto ${n+1}"><img src="fotos/${esc(f)}" alt=""></button>`).join("")}</div>`:""}</div>
