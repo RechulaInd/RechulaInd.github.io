@@ -60,6 +60,10 @@
   .mi small{font-size:11.5px;color:var(--soft)}
   .mi.on small{color:#e7d6cc}
   @media(min-width:720px){ #cats{flex-wrap:wrap;overflow:visible} }
+  body.bf .promo{background:#24211F;color:#F7F1E9;font-weight:600;letter-spacing:.1em}
+  body.bf .p-cash span{color:#24211F;font-weight:600;text-transform:uppercase;font-size:9.5px}
+  body.bf .p-list{text-decoration:line-through}
+  body.bf .tag{background:#24211F;color:#F7F1E9}
   .fbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px}
   .fbtn{display:flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--gold);border-radius:999px;font-size:13px;font-weight:500;color:var(--deep);background:var(--card)}
   .fbtn svg{width:16px;height:16px;fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
@@ -300,22 +304,30 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261125214200"></script>
+<script src="stock.js?v=20261125215755"></script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
   const ALL = (window.STOCK||[]).filter(p => !p.agotado && !p.oculto && p.talles && p.talles.length);
   const $ = id => document.getElementById(id);
   const money = n => "$" + Math.round(n).toLocaleString("es-AR");
-  const cash = p => { let v = p.precio * (1 - C.descuento/100); if (C.redondeo>0) v = Math.floor(v/C.redondeo)*C.redondeo; return Math.round(v); };
+  // Black Friday: activo entre las fechas de CONFIG (o en modo prueba con ?bf=1 en el link)
+  const BF = C.blackFriday || null;
+  const bfOn = (() => { if (!BF) return false; try { if (new URLSearchParams(location.search).get("bf")==="1") return true; } catch(e){}
+    const now = Date.now(); return now >= Date.parse(BF.desde+"T00:00:00-03:00") && now < Date.parse(BF.hasta+"T23:59:59-03:00"); })();
+  const pct = p => bfOn ? (p.precio <= BF.umbral ? BF.hastaUmbral : BF.masUmbral) : C.descuento;
+  const etq = bfOn ? "Black Friday" : "Efectivo o transferencia";
+  const etqC = bfOn ? "black friday" : "efectivo / transf.";
+  if (bfOn) document.body.classList.add("bf");
+  const cash = p => { let v = p.precio * (1 - pct(p)/100); if (C.redondeo>0) v = Math.floor(v/C.redondeo)*C.redondeo; return Math.round(v); };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-  const msgs = [`♡ ${C.descuento}% OFF pagando en efectivo o transferencia`];
+  const msgs = bfOn ? [`BLACK FRIDAY ♡ 25% OFF en prendas hasta ${money(BF.umbral)}`, `BLACK FRIDAY ♡ 30% OFF en prendas de más de ${money(BF.umbral)}`, `Solo ${BF.desde.slice(8)} y ${BF.hasta.slice(8)} de noviembre`] : [`♡ ${C.descuento}% OFF pagando en efectivo o transferencia`];
   if (C.cuotas) msgs.push(`♡ ${C.cuotas} cuotas sin interés`);
   if (C.linkDePago) msgs.push(`♡ Pagá con link de pago`);
   if (msgs.length > 1) { const once = msgs.map(m=>`<span>${m}</span>`).join(""); $("promo").innerHTML = `<div class="track">${once}${once}${once}${once}</div>`; }
   else { $("promo").innerHTML = `<div style="text-align:center">${msgs[0]} ♡</div>`; }
-  $("howPay").textContent = `Pagando en efectivo o transferencia tenés ${C.descuento}% de descuento sobre el precio de lista.` + (C.cuotas ? ` También podés pagar ${C.linkDePago?"con link de pago ":""}en ${C.cuotas} cuotas sin interés.` : "");
+  $("howPay").textContent = (bfOn ? `¡Black Friday! 25% OFF en prendas de hasta ${money(BF.umbral)} y 30% OFF en las de más de ${money(BF.umbral)}, sobre el precio de lista.` : `Pagando en efectivo o transferencia tenés ${C.descuento}% de descuento sobre el precio de lista.`) + (C.cuotas ? ` También podés pagar ${C.linkDePago?"con link de pago ":""}en ${C.cuotas} cuotas sin interés.` : "");
   const ICON = {
     wa:'<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>',
     ig:'<svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8.2c-.1-1.6-.4-3-1.6-4.2S17.4 2.2 15.8 2.1C14.2 2 9.8 2 8.2 2.1 6.6 2.2 5.2 2.5 4 3.7S2.2 6.6 2.1 8.2C2 9.8 2 14.2 2.1 15.8c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6 .1 7.6 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6 0-7.6zM19.8 18a3 3 0 0 1-1.7 1.7c-1.2.5-4 .4-5.3.4s-4.1.1-5.3-.4A3 3 0 0 1 5.8 18c-.5-1.2-.4-4-.4-5.3s-.1-4.1.4-5.3A3 3 0 0 1 7.5 5.7c1.2-.5 4-.4 5.3-.4s4.1-.1 5.3.4A3 3 0 0 1 19.8 7.4c.5 1.2.4 4 .4 5.3s.1 4.1-.4 5.3z"/></svg>',
@@ -405,7 +417,7 @@
           <div class="code">${esc(p.codigo)}</div>
           <div class="name">${esc(p.nombre)}</div>
           <div class="p-list">Lista ${money(p.precio)}</div>
-          <div class="p-cash">${money(cash(p))}<span>efectivo / transf.</span></div>
+          <div class="p-cash">${money(cash(p))}<span>${bfOn?`-${pct(p)}% BF`:etqC}</span></div>
           <div class="sizes-mini">${p.talles.length>1?"Talles":"Talle"} ${p.talles.map(esc).join(" · ")}</div>
         </div>
       </button>`).join("") : `<div class="empty">${$("q").value?`No encontramos “${esc($("q").value)}” 💗<br><small>Probá con otra palabra o escribinos por WhatsApp y te ayudamos.</small>`:"No hay prendas con ese filtro por ahora 💗"}</div>`;
@@ -431,7 +443,7 @@
     const txt = "Hola Re Chula! 👋 Me interesa:\n" + lines.join("\n") + "\n¿Está disponible?";
     return "https://wa.me/" + (C.whatsapp||"") + "?text=" + encodeURIComponent(txt);
   }
-  const line = (p,t,v) => `• ${p.codigo} ${p.nombre}${v?` (${v})`:""} – talle ${t} – lista ${money(p.precio)} / efectivo o transf. ${money(cash(p))}`;
+  const line = (p,t,v) => `• ${p.codigo} ${p.nombre}${v?` (${v})`:""} – talle ${t} – lista ${money(p.precio)} / ${bfOn?`Black Friday -${pct(p)}%`:"efectivo o transf."} ${money(cash(p))}`;
 
   // Ventana
   const veil=$("veil"), sheet=$("sheet");
@@ -454,7 +466,7 @@
         ${p.descripcion?`<p style="color:var(--soft);font-size:14.5px;line-height:1.5;font-weight:300">${esc(p.descripcion)}</p>`:""}
         <div class="prices">
           <div class="r"><span>Precio de lista</span><span>${money(p.precio)}</span></div>
-          <div class="r"><span>Efectivo o transferencia <i class="badge">${C.descuento}% OFF</i></span><span class="big">${money(cash(p))}</span></div>
+          <div class="r"><span>${etq} <i class="badge">${pct(p)}% OFF</i></span><span class="big">${money(cash(p))}</span></div>
           ${C.cuotas?`<div class="r cuotas"><span>o ${C.cuotas} cuotas sin interés de</span><span>${money(p.precio/C.cuotas)}</span></div>`:""}
         </div>
         ${p.variantes&&p.variantes.length?`<div class="lbl">Elegí tu estampa</div>
@@ -487,7 +499,7 @@
     open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Revisá y envianos el pedido por WhatsApp.</p>
       ${items.map((i,n)=>`<div class="item"><div class="ph">${pic(i.p,i.variante)}</div><div class="grow"><div class="name">${esc(i.p.nombre)}</div><small>${esc(i.p.codigo)}${i.variante?` · ${esc(i.variante)}`:""} · Talle ${esc(i.talle)} · ${money(cash(i.p))}</small></div><button class="rm" data-n="${n}">Quitar</button></div>`).join("")}
       <div class="tot"><span>Total precio de lista</span><span>${money(tl)}</span></div>
-      <div class="tot big"><span>Efectivo o transferencia</span><span>${money(tc)}</span></div>
+      <div class="tot big"><span>${etq}</span><span>${money(tc)}</span></div>
       <a class="cta wa" href="${waLink(items.map(i=>line(i.p,i.talle,i.variante)))}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
       <button class="cta ghost" id="seguir">Seguir mirando</button></div>`);
     sheet.querySelectorAll(".rm").forEach(b=>b.onclick=()=>{ const it=items[+b.dataset.n]; bag=bag.filter(x=>!(x.codigo===it.codigo&&x.talle===it.talle&&(x.variante||null)===(it.variante||null))); saveBag(); openBag(); });

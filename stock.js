@@ -5,6 +5,8 @@ window.CONFIG = {
   descuento: 15,          // % de descuento en efectivo o transferencia
   cuotas: 0,              // cuotas sin interés (0 = no se muestran)
   linkDePago: false,      // true = muestra "Pagá con link de pago"
+  // BLACK FRIDAY: se activa y desactiva solo según la fecha (hora Argentina)
+  blackFriday: { desde: "2026-11-27", hasta: "2026-11-28", umbral: 30000, hastaUmbral: 25, masUmbral: 30 },
   redondeo: 0,            // 0 = sin redondeo (el precio con descuento queda exacto)
   whatsapp: "5493813341164",         // número con código de país, sin + ni espacios. Ej: 5493511234567
   tiktok: "rechula.ind",
