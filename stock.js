@@ -560,5 +560,8 @@ window.STOCK = [
     descripcion: "Short de gamuza efecto gastado color camel, tiro alto, con cierre metálico al frente y tres tiras con hebillas plateadas a cada lado. Forro mostaza. Talle 38/40." },
   { codigo: "RC253", nombre: "Pollera Volados Chocolate", categoria: "Polleras", precio: 25000, talles: ["Único"], nuevo: true, foto: "RC253.jpg",
     fotosExtra: ["RC253-short.jpg"],
-    descripcion: "Minifalda chocolate elastizada con cintura ancha y volados en capas, con short por dentro. Talle único." }
+    descripcion: "Minifalda chocolate elastizada con cintura ancha y volados en capas, con short por dentro. Talle único." },
+  { codigo: "RC254", nombre: "Minifalda Cinturón Maxi", categoria: "Polleras", precio: 22000, talles: ["M"], nuevo: true, foto: "RC254.jpg",
+    fotosExtra: ["RC254-atras.jpg"],
+    descripcion: "Minifalda recta de cuero ecológico negro con cinturón ancho al frente, hebilla plateada grande y ojalillos metálicos. Cierre al costado. Talle único M." }
 ];
