@@ -484,5 +484,8 @@ window.STOCK = [
   { codigo: "RC222", nombre: "Jean Oxford Azul Lavado", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC222.jpg", oculto: true,
     descripcion: "Jean oxford azul con lavado gastado, elastizado, de tiro alto y largo tobillero." },
   { codigo: "RC223", nombre: "Jean Baggy Celeste", categoria: "Pantalones", precio: 0, talles: [], nuevo: true, foto: "RC223.jpg", oculto: true,
-    descripcion: "Jean baggy celeste con lavado gastado, tiro medio y pierna amplia levemente curva." }
+    descripcion: "Jean baggy celeste con lavado gastado, tiro medio y pierna amplia levemente curva." },
+  { codigo: "RC224", nombre: "Skort Cuero Negro", categoria: "Shorts", precio: 20000, talles: ["38 al 44"], nuevo: true, foto: "RC224.jpg",
+    fotosExtra: ["RC224-atras.jpg"],
+    descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera y por detrás short. Tiro alto, botón y bolsillos al frente. Va del talle 38 al 44." }
 ];
