@@ -545,5 +545,7 @@ window.STOCK = [
     descripcion: "Short de cuero ecológico negro tiro alto, con cierre metálico al frente, recortes con pespuntes y pinzas atrás. Talle 3." },
   { codigo: "RC247", nombre: "Skort Tablas Camel", categoria: "Shorts", precio: 29000, talles: ["Único"], nuevo: true, foto: "RC247.jpg",
     fotosExtra: ["RC247-atras.jpg"],
-    descripcion: "Skort de cuero ecológico camel: por delante pollera tableada con tira y hebilla dorada al costado, y por detrás short con cierre. Forro color mostaza. Talle único." }
+    descripcion: "Skort de cuero ecológico camel: por delante pollera tableada con tira y hebilla dorada al costado, y por detrás short con cierre. Forro color mostaza. Talle único." },
+  { codigo: "RC248", nombre: "Minifalda Leopardo Bengalina", categoria: "Polleras", precio: 18000, talles: ["38"], nuevo: true, foto: "RC248.jpg",
+    descripcion: "Minifalda recta de bengalina con estampa animal print leopardo, con botón, presillas y bolsillos al frente. Talle 38." }
 ];
