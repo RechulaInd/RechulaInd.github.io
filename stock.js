@@ -549,5 +549,7 @@ window.STOCK = [
   { codigo: "RC248", nombre: "Minifalda Leopardo Bengalina", categoria: "Polleras", precio: 18000, talles: ["38"], nuevo: true, foto: "RC248.jpg",
     descripcion: "Minifalda recta de bengalina con estampa animal print leopardo, con botón, presillas y bolsillos al frente. Talle 38." },
   { codigo: "RC249", nombre: "Short Lycra Terracota", categoria: "Shorts", precio: 7000, talles: ["Único"], nuevo: true, foto: "RC249.jpg",
-    descripcion: "Short corto de lycra elastizada color terracota, con cintura alta ancha y costura central. Cómodo para el día a día o para entrenar. Talle único: va hasta un 40." }
+    descripcion: "Short corto de lycra elastizada color terracota, con cintura alta ancha y costura central. Cómodo para el día a día o para entrenar. Talle único: va hasta un 40." },
+  { codigo: "RC250", nombre: "Minifalda Lunares Chocolate", categoria: "Polleras", precio: 15000, talles: ["Único"], nuevo: true, foto: "RC250.jpg",
+    descripcion: "Minifalda recta tiro bajo de tela suave elastizada, chocolate con lunarcitos crudo. Talle único." }
 ];
