@@ -507,5 +507,7 @@ window.STOCK = [
     fotosExtra: ["RC231-atras.jpg"],
     descripcion: "Minifalda recta de cuero ecológico negro tiro medio, con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 3." },
   { codigo: "RC232", nombre: "Minifalda Serpiente Brillo", categoria: "Polleras", precio: 15500, talles: ["Único"], nuevo: true, foto: "RC232.jpg",
-    descripcion: "Minifalda recta elastizada negra con estampa de piel de serpiente en plateado metalizado y cintura elástica. Talle único." }
+    descripcion: "Minifalda recta elastizada negra con estampa de piel de serpiente en plateado metalizado y cintura elástica. Talle único." },
+  { codigo: "RC233", nombre: "Minifalda Leopardo Terciopelo", categoria: "Polleras", precio: 23000, talles: ["Único"], nuevo: true, foto: "RC233.jpg",
+    descripcion: "Minifalda recta de tul elastizado verde oliva con estampa animal print leopardo en terciopelo chocolate. Talle único: va hasta un 38." }
 ];
