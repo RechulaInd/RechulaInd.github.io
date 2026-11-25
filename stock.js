@@ -584,5 +584,15 @@ window.STOCK = [
     descripcion: "Body chocolate de tela suave y elastizada, sin mangas, con frunce en el escote y broche abajo. Talle único." },
   { codigo: "RC262", nombre: "Remera Volados Broderie", categoria: "Remeras", precio: 31000, talles: ["S/M"], nuevo: true, foto: "RC262.jpg",
     variantes: ["Blanco", "Celeste", "Amarillo pastel"],
-    descripcion: "Remera de algodón con escote en V y mangas volado de broderie calado. También disponible en amarillo pastel. Talle S/M." }
+    descripcion: "Remera de algodón con escote en V y mangas volado de broderie calado. También disponible en amarillo pastel. Talle S/M." },
+  { codigo: "RC263", nombre: "Chaleco Sastrero Beige", categoria: "Chalecos", precio: 20800, talles: ["2","3","4"], nuevo: true, foto: "RC263.jpg",
+    descripcion: "Chaleco sastrero corto color beige, con escote en V, botones al tono, pinzas que entallan y terminación en punta. Talles 2, 3 y 4." },
+  { codigo: "RC264", nombre: "Chaleco Sastrero Gris", categoria: "Chalecos", precio: 22000, talles: ["2","3","4"], nuevo: true, foto: "RC264.jpg",
+    descripcion: "Chaleco sastrero gris perla con escote en V, botones carey y bolsillos con ribete al frente. Talles 2, 3 y 4." },
+  { codigo: "RC265", nombre: "Chaleco Sastrero Visón", categoria: "Chalecos", precio: 32000, talles: ["1","3"], nuevo: true, foto: "RC265.jpg",
+    descripcion: "Chaleco sastrero color visón con escote en V profundo, tres botones, bolsillos con ribete y terminación en punta. Talles 1 y 3." },
+  { codigo: "RC266", nombre: "Chaleco Gamuza Negro", categoria: "Chalecos", precio: 24000, talles: ["M"], nuevo: true, foto: "RC266.jpg",
+    descripcion: "Chaleco largo de gamuza negra con escote redondo, botonadura carey al frente y recortes que entallan. Talle M." },
+  { codigo: "RC267", nombre: "Chaleco Bordado Perlas", categoria: "Chalecos", precio: 44000, talles: ["M"], nuevo: true, foto: "RC267.jpg",
+    descripcion: "Chaleco celeste con bordado en relieve color crudo y aplicaciones de perlas, estilo étnico, escote en V y abierto al frente. Talle M." }
 ];
