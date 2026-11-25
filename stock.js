@@ -531,5 +531,8 @@ window.STOCK = [
     descripcion: "Minifalda recta tiro alto de tela aterciopelada negra con estampa animal print leopardo al tono, tajo al frente y cintura elastizada atrás. Talle L." },
   { codigo: "RC242", nombre: "Minifalda Leopardo Cinturón", categoria: "Polleras", precio: 26500, talles: ["M"], nuevo: true, foto: "RC242.jpg",
     fotosExtra: ["RC242-atras.jpg"],
-    descripcion: "Minifalda tiro bajo de tela aterciopelada negra con estampa animal print leopardo al tono, cinturón con hebilla plateada y ojalillos, y cierre atrás. Talle M." }
+    descripcion: "Minifalda tiro bajo de tela aterciopelada negra con estampa animal print leopardo al tono, cinturón con hebilla plateada y ojalillos, y cierre atrás. Talle M." },
+  { codigo: "RC243", nombre: "Skort Cuero Lazos", categoria: "Shorts", precio: 19000, talles: ["5","6"], nuevo: true, foto: "RC243.jpg",
+    fotosExtra: ["RC243-atras.jpg"],
+    descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera con cordones entrelazados para atar al costado, y por detrás short con cierre. Talles grandes 5 y 6." }
 ];
