@@ -509,5 +509,8 @@ window.STOCK = [
   { codigo: "RC232", nombre: "Minifalda Serpiente Brillo", categoria: "Polleras", precio: 15500, talles: ["Único"], nuevo: true, foto: "RC232.jpg",
     descripcion: "Minifalda recta elastizada negra con estampa de piel de serpiente en plateado metalizado y cintura elástica. Talle único." },
   { codigo: "RC233", nombre: "Minifalda Leopardo Terciopelo", categoria: "Polleras", precio: 23000, talles: ["Único"], nuevo: true, foto: "RC233.jpg",
-    descripcion: "Minifalda recta de tul elastizado verde oliva con estampa animal print leopardo en terciopelo chocolate. Talle único: va hasta un 38." }
+    descripcion: "Minifalda recta de tul elastizado verde oliva con estampa animal print leopardo en terciopelo chocolate. Talle único: va hasta un 38." },
+  { codigo: "RC234", nombre: "Bermuda Cuero Pinzas", categoria: "Shorts", precio: 13000, talles: ["40"], nuevo: true, foto: "RC234.jpg",
+    fotosExtra: ["RC234-atras.jpg"],
+    descripcion: "Bermuda ancha de cuero ecológico negro tiro alto, con pinzas al frente, bolsillos, botón metálico y cintura elastizada atrás. Talle 40." }
 ];
