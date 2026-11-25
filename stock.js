@@ -536,5 +536,8 @@ window.STOCK = [
     fotosExtra: ["RC243-atras.jpg"],
     descripcion: "Skort de cuero ecológico negro: por delante cruzado como pollera con cordones entrelazados para atar al costado, y por detrás short con cierre. Talles grandes 5 y 6." },
   { codigo: "RC244", nombre: "Skort Cuero Cinturón", categoria: "Shorts", precio: 32500, talles: ["5"], nuevo: true, foto: "RC244.jpg",
-    descripcion: "Skort de cuero ecológico negro cruzado al frente, con cinturón ancho al tono con hebilla plateada y doble fila de ojalillos. Por fuera parece pollera y por dentro tiene short. Talle 5." }
+    descripcion: "Skort de cuero ecológico negro cruzado al frente, con cinturón ancho al tono con hebilla plateada y doble fila de ojalillos. Por fuera parece pollera y por dentro tiene short. Talle 5." },
+  { codigo: "RC245", nombre: "Short Cuero Básico", categoria: "Shorts", precio: 21000, talles: ["3"], nuevo: true, foto: "RC245.jpg",
+    fotosExtra: ["RC245-atras.jpg"],
+    descripcion: "Short de cuero ecológico negro tiro bajo, con botón metálico, presillas y pinzas atrás. Un básico que combina con todo. Talle 3." }
 ];
