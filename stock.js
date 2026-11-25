@@ -492,5 +492,8 @@ window.STOCK = [
     fotosExtra: ["RC225-atras.jpg"],
     descripcion: "Short de cuero ecológico negro tiro bajo, con cinturón ancho al tono con hebilla plateada y ojalillos metálicos. Talle 1." },
   { codigo: "RC226", nombre: "Short Cuero Clásico", categoria: "Shorts", precio: 18000, talles: ["38"], nuevo: true, foto: "RC226.jpg",
-    descripcion: "Short de cuero ecológico negro tiro bajo, con botón, bragueta, presillas y bolsillos al costado. Talle 38." }
+    descripcion: "Short de cuero ecológico negro tiro bajo, con botón, bragueta, presillas y bolsillos al costado. Talle 38." },
+  { codigo: "RC227", nombre: "Short Cuero Hebillas", categoria: "Shorts", precio: 32500, talles: ["2"], nuevo: true, foto: "RC227.jpg",
+    fotosExtra: ["RC227-atras.jpg"],
+    descripcion: "Short de cuero ecológico negro tiro alto, con tres tiras con hebillas plateadas y ojalillos a cada lado, y botón a presión. Talle 2." }
 ];
