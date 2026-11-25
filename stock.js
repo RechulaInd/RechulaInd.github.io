@@ -498,5 +498,7 @@ window.STOCK = [
     descripcion: "Short de cuero ecológico negro tiro alto, con tres tiras con hebillas plateadas y ojalillos a cada lado, y botón a presión. Talle 2." },
   { codigo: "RC228", nombre: "Minifalda Cuero Hebilla", categoria: "Polleras", precio: 18000, talles: ["Único"], nuevo: true, foto: "RC228.jpg",
     fotosExtra: ["RC228-atras.jpg"],
-    descripcion: "Minifalda recta de cuero ecológico negro tiro bajo, con cinturón al tono con hebilla plateada y ojalillos metálicos. Talle único." }
+    descripcion: "Minifalda recta de cuero ecológico negro tiro bajo, con cinturón al tono con hebilla plateada y ojalillos metálicos. Talle único." },
+  { codigo: "RC229", nombre: "Minifalda Vaquita", categoria: "Polleras", precio: 9000, talles: ["Único"], nuevo: true, foto: "RC229.jpg",
+    descripcion: "Minifalda elastizada con estampa animal print vaca en chocolate y negro, y tajo al costado. Talle único." }
 ];
