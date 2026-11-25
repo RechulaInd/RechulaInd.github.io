@@ -596,5 +596,20 @@ window.STOCK = [
   { codigo: "RC267", nombre: "Chaleco Bordado Perlas", categoria: "Chalecos", precio: 44000, talles: ["M"], nuevo: true, foto: "RC267.jpg",
     descripcion: "Chaleco celeste con bordado en relieve color crudo y aplicaciones de perlas, estilo étnico, escote en V y abierto al frente. Talle M." },
   { codigo: "RC268", nombre: "Chaleco Sastrero Negro", categoria: "Chalecos", precio: 34000, talles: ["1","2","3","5"], nuevo: true, foto: "RC268.jpg",
-    descripcion: "Chaleco sastrero negro con escote en V, tres botones, bolsillos con ribete y pinzas que entallan, con terminación en punta. Talles 1, 2, 3 y 5." }
+    descripcion: "Chaleco sastrero negro con escote en V, tres botones, bolsillos con ribete y pinzas que entallan, con terminación en punta. Talles 1, 2, 3 y 5." },
+  { codigo: "RC269", nombre: "Remera Perlas Hombros", categoria: "Remeras", precio: 21000, talles: ["M/L"], nuevo: true, foto: "RC269.jpg",
+    variantes: ["Chocolate", "Blanco", "Negro"],
+    descripcion: "Remera de algodón sin mangas con cuello redondo, hombros marcados y aplicaciones de perlas metálicas en la costura. Talle M/L." },
+  { codigo: "RC270", nombre: "Chaleco Crochet Flores", categoria: "Chalecos", precio: 31765, talles: ["S"], nuevo: true, foto: "RC270.jpg",
+    descripcion: "Chaleco tejido al crochet color topo con flores de bouclé crudo en relieve, rayas al tono y botones de madera. Talle S." },
+  { codigo: "RC271", nombre: "Chaleco Gamuza Bordado Camel", categoria: "Chalecos", precio: 39000, talles: ["XL"], nuevo: true, foto: "RC271.jpg",
+    descripcion: "Chaleco de gamuza camel con bordado de flores en marrón y crudo, y tiras para atar al frente. Talle XL." },
+  { codigo: "RC272", nombre: "Chaleco Gamuza Bordado Tachas", categoria: "Chalecos", precio: 59500, talles: ["M"], nuevo: true, foto: "RC272.jpg",
+    descripcion: "Chaleco de gamuza negra con bordado de flores en gris y blanco, tachas metálicas en los bordes y tiras para atar al frente. Talle M." },
+  { codigo: "RC273", nombre: "Chaleco Tejido Blanco", categoria: "Chalecos", precio: 41000, talles: ["L"], nuevo: true, foto: "RC273.jpg",
+    descripcion: "Chaleco tejido calado blanco con relieves en espiral, detalles de perlas y mostacillas, y botones de madera. Talle L." },
+  { codigo: "RC274", nombre: "Chaleco Tejido Crudo", categoria: "Chalecos", precio: 41000, talles: ["S/M"], nuevo: true, foto: "RC274.jpg",
+    descripcion: "Chaleco tejido calado color crudo con relieves en espiral, detalles de perlas y mostacillas, y botones de madera. Talle S/M." },
+  { codigo: "RC275", nombre: "Chaleco Gamuza Bordado Negro", categoria: "Chalecos", precio: 39000, talles: ["L"], nuevo: true, foto: "RC275.jpg",
+    descripcion: "Chaleco de gamuza negra con bordado de flores en marrón y blanco, y tiras para atar al frente. Talle L." }
 ];
