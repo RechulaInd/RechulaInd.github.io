@@ -515,5 +515,7 @@ window.STOCK = [
     descripcion: "Bermuda ancha de cuero ecológico negro tiro alto, con pinzas al frente, bolsillos, botón metálico y cintura elastizada atrás. Talle 40." },
   { codigo: "RC235", nombre: "Short Cuero Bolsillos", categoria: "Shorts", precio: 18824, talles: ["38 al 44"], nuevo: true, foto: "RC235.jpg",
     fotosExtra: ["RC235-atras.jpg"],
-    descripcion: "Short de cuero ecológico negro tiro alto, con botón, presillas, bolsillos al frente y pinzas atrás. Va del talle 38 al 44." }
+    descripcion: "Short de cuero ecológico negro tiro alto, con botón, presillas, bolsillos al frente y pinzas atrás. Va del talle 38 al 44." },
+  { codigo: "RC236", nombre: "Short Encaje Negro", categoria: "Shorts", precio: 24000, talles: ["Único"], nuevo: true, foto: "RC236.jpg",
+    descripcion: "Short negro de encaje con flores, con forro, cintura elastizada y bolsillos al costado. Talle único." }
 ];
