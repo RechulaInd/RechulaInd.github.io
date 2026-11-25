@@ -479,7 +479,7 @@ window.STOCK = [
     descripcion: "Jean mom celeste con lavado nevado, tiro alto y pierna recta al tobillo." },
   { codigo: "RC219", nombre: "Jean Oxford Azul Oscuro", categoria: "Pantalones", precio: 0, talles: ["A consultar"], nuevo: true, foto: "RC219.jpg",
     descripcion: "Jean oxford azul oscuro elastizado de tiro medio, con cinco bolsillos y largo tobillero." },
-  { codigo: "RC220", nombre: "Pantalón Manchado Crudo", categoria: "Pantalones", precio: 42000, talles: ["36"], nuevo: true, foto: "RC220.jpg",
+  { codigo: "RC220", nombre: "Pantalón Manchado Crudo", categoria: "Pantalones", precio: 42000, talles: ["36"], nuevo: true, agotado: true, foto: "RC220.jpg",
     descripcion: "Pantalón recto de gabardina crudo con efecto manchado en marrón y negro, tiro medio y cinco bolsillos. Talle 36." },
   { codigo: "RC221", nombre: "Jean Oxford Gris", categoria: "Pantalones", precio: 0, talles: ["A consultar"], nuevo: true, foto: "RC221.jpg",
     descripcion: "Jean oxford gris topo elastizado de tiro medio, con cinco bolsillos y largo tobillero." },
