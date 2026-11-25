@@ -554,5 +554,8 @@ window.STOCK = [
     descripcion: "Minifalda recta tiro bajo de tela suave elastizada, chocolate con lunarcitos crudo. Talle único." },
   { codigo: "RC251", nombre: "Minifalda Doble Hebilla Bordó", categoria: "Polleras", precio: 25000, talles: ["2"], nuevo: true, foto: "RC251.jpg",
     fotosExtra: ["RC251-atras.jpg"],
-    descripcion: "Minifalda recta de cuero ecológico bordó tiro medio, con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 2." }
+    descripcion: "Minifalda recta de cuero ecológico bordó tiro medio, con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 2." },
+  { codigo: "RC252", nombre: "Short Gamuza Hebillas", categoria: "Shorts", precio: 35000, talles: ["38/40"], nuevo: true, foto: "RC252.jpg",
+    fotosExtra: ["RC252-atras.jpg"],
+    descripcion: "Short de gamuza efecto gastado color camel, tiro alto, con cierre metálico al frente y tres tiras con hebillas plateadas a cada lado. Forro mostaza. Talle 38/40." }
 ];
