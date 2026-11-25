@@ -524,5 +524,7 @@ window.STOCK = [
     fotosExtra: ["RC238-short.jpg"],
     descripcion: "Minifalda bordó elastizada con volados en capas y short por dentro, cintura elástica. Talle único: va hasta un 40." },
   { codigo: "RC239", nombre: "Minifalda Tablas Cuero", categoria: "Polleras", precio: 30000, talles: ["38"], nuevo: true, foto: "RC239.jpg",
-    descripcion: "Minifalda tableada de cuero ecológico negro, con doble tira con hebillas metálicas y ojalillos en la cadera. Talle único 38." }
+    descripcion: "Minifalda tableada de cuero ecológico negro, con doble tira con hebillas metálicas y ojalillos en la cadera. Talle único 38." },
+  { codigo: "RC240", nombre: "Short Lentejuelas Leopardo", categoria: "Shorts", precio: 24000, talles: ["36/38"], nuevo: true, foto: "RC240.jpg",
+    descripcion: "Short tiro bajo cubierto de lentejuelas con estampa animal print leopardo en dorado y negro, con forro suave y cintura elastizada. Talle 36/38." }
 ];
