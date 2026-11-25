@@ -502,5 +502,8 @@ window.STOCK = [
   { codigo: "RC229", nombre: "Minifalda Vaquita", categoria: "Polleras", precio: 9000, talles: ["Único"], nuevo: true, foto: "RC229.jpg",
     descripcion: "Minifalda elastizada con estampa animal print vaca en chocolate y negro, y tajo al costado. Talle único." },
   { codigo: "RC230", nombre: "Minifalda Hebilla Tiras", categoria: "Polleras", precio: 14000, talles: ["Único"], nuevo: true, foto: "RC230.jpg",
-    descripcion: "Minifalda negra de tela elastizada tiro bajo, con frunce y hebilla metálica al costado y tiras largas para atar. Talle único." }
+    descripcion: "Minifalda negra de tela elastizada tiro bajo, con frunce y hebilla metálica al costado y tiras largas para atar. Talle único." },
+  { codigo: "RC231", nombre: "Minifalda Doble Hebilla", categoria: "Polleras", precio: 26000, talles: ["3"], nuevo: true, foto: "RC231.jpg",
+    fotosExtra: ["RC231-atras.jpg"],
+    descripcion: "Minifalda recta de cuero ecológico negro con dos tiras cruzadas con hebillas plateadas y ojalillos metálicos. Cierre al costado. Talle 3." }
 ];
