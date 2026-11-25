@@ -386,7 +386,7 @@ window.STOCK = [
     descripcion: "Pantalón ancho de tela liviana camel con estampa de manchas negras, cintura elastizada con cordón y bolsillos. Talles M y L." },
   { codigo: "RC176", nombre: "Pantalón Manchas Crudo", categoria: "Pantalones", precio: 38000, talles: ["M","XXL"], nuevo: true, foto: "RC176.jpg",
     descripcion: "Pantalón ancho de tela liviana crudo con estampa de manchas negras, cintura elastizada con cordón y bolsillos. Talles M y XXL." },
-  { codigo: "RC177", nombre: "Pantalón Estampado Arena", categoria: "Pantalones", precio: 0, talles: ["A consultar"], nuevo: true, foto: "RC177.jpg",
+  { codigo: "RC177", nombre: "Pantalón Estampado Arena", categoria: "Pantalones", precio: 0, talles: ["A consultar"], nuevo: true, agotado: true, foto: "RC177.jpg",
     descripcion: "Pantalón ancho de tela liviana beige con estampa de hojas y arabescos en crudo, tiro alto y pinzas al frente." },
   { codigo: "RC178", nombre: "Remera Mangas Broderie", categoria: "Remeras", precio: 0, talles: ["A consultar"], nuevo: true, foto: "RC178.jpg",
     variantes: ["Blanco", "Negro"],
