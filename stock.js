@@ -522,5 +522,7 @@ window.STOCK = [
     descripcion: "Short negro cubierto de lentejuelas, con forro suave y cintura elastizada. Ideal para salir. Talle M." },
   { codigo: "RC238", nombre: "Pollera Volados Bordó", categoria: "Polleras", precio: 20000, talles: ["Único"], nuevo: true, foto: "RC238.jpg",
     fotosExtra: ["RC238-short.jpg"],
-    descripcion: "Minifalda bordó elastizada con volados en capas y short por dentro, cintura elástica. Talle único: va hasta un 40." }
+    descripcion: "Minifalda bordó elastizada con volados en capas y short por dentro, cintura elástica. Talle único: va hasta un 40." },
+  { codigo: "RC239", nombre: "Minifalda Tablas Cuero", categoria: "Polleras", precio: 0, talles: ["38"], nuevo: true, foto: "RC239.jpg", oculto: true,
+    descripcion: "Minifalda tableada de cuero ecológico negro, con doble tira con hebillas metálicas y ojalillos en la cadera. Talle único 38." }
 ];
