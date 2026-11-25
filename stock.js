@@ -569,5 +569,8 @@ window.STOCK = [
     descripcion: "Remerón oversize a rayas anchas con cuello en contraste y estampa de un perro salchicha con boina, anteojos y taza de café. Talle único." },
   { codigo: "RC256", nombre: "Remera Mangas Tachas", categoria: "Remeras", precio: 21000, talles: ["M/L"], nuevo: true, foto: "RC256.jpg",
     variantes: ["Blanco", "Beige"],
-    descripcion: "Remera de algodón con cuello redondo y mangas cortas cubiertas de tachas plateadas. Disponible en blanco y beige (el chocolate y el negro de la foto están agotados). Talle M/L." }
+    descripcion: "Remera de algodón con cuello redondo y mangas cortas cubiertas de tachas plateadas. Disponible en blanco y beige (el chocolate y el negro de la foto están agotados). Talle M/L." },
+  { codigo: "RC257", nombre: "Musculosa Algodón Puntilla", categoria: "Tops", precio: 14500, talles: ["S"], nuevo: true, foto: "RC257.jpg",
+    variantes: ["Negro", "Blanco", "Topo"],
+    descripcion: "Musculosa de algodón con breteles finos, escote en V bordeado de puntilla al tono y recorte debajo del busto. Talle S." }
 ];
