@@ -500,5 +500,7 @@ window.STOCK = [
     fotosExtra: ["RC228-atras.jpg"],
     descripcion: "Minifalda recta de cuero ecológico negro tiro bajo, con cinturón al tono con hebilla plateada y ojalillos metálicos. Talle único." },
   { codigo: "RC229", nombre: "Minifalda Vaquita", categoria: "Polleras", precio: 9000, talles: ["Único"], nuevo: true, foto: "RC229.jpg",
-    descripcion: "Minifalda elastizada con estampa animal print vaca en chocolate y negro, y tajo al costado. Talle único." }
+    descripcion: "Minifalda elastizada con estampa animal print vaca en chocolate y negro, y tajo al costado. Talle único." },
+  { codigo: "RC230", nombre: "Minifalda Hebilla Tiras", categoria: "Polleras", precio: 14000, talles: ["Único"], nuevo: true, foto: "RC230.jpg",
+    descripcion: "Minifalda negra de tela elastizada tiro bajo, con frunce y hebilla metálica al costado y tiras largas para atar. Talle único." }
 ];
