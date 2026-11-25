@@ -528,5 +528,8 @@ window.STOCK = [
   { codigo: "RC240", nombre: "Short Lentejuelas Leopardo", categoria: "Shorts", precio: 24000, talles: ["36/38"], nuevo: true, foto: "RC240.jpg",
     descripcion: "Short tiro bajo cubierto de lentejuelas con estampa animal print leopardo en dorado y negro, con forro suave y cintura elastizada. Talle 36/38." },
   { codigo: "RC241", nombre: "Minifalda Leopardo Negro", categoria: "Polleras", precio: 32500, talles: ["L"], nuevo: true, foto: "RC241.jpg",
-    descripcion: "Minifalda recta tiro alto de tela aterciopelada negra con estampa animal print leopardo al tono, tajo al frente y cintura elastizada atrás. Talle L." }
+    descripcion: "Minifalda recta tiro alto de tela aterciopelada negra con estampa animal print leopardo al tono, tajo al frente y cintura elastizada atrás. Talle L." },
+  { codigo: "RC242", nombre: "Minifalda Leopardo Cinturón", categoria: "Polleras", precio: 26500, talles: ["M"], nuevo: true, foto: "RC242.jpg",
+    fotosExtra: ["RC242-atras.jpg"],
+    descripcion: "Minifalda tiro bajo de tela aterciopelada negra con estampa animal print leopardo al tono, cinturón con hebilla plateada y ojalillos, y cierre atrás. Talle M." }
 ];
