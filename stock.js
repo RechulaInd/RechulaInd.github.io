@@ -624,5 +624,17 @@ window.STOCK = [
     descripcion: "Musculosa entallada de morley acanalado con borde de encaje en el escote y breteles anchos. Disponible en beige, negro y blanco. Talle S." },
   { codigo: "RC279", nombre: "Body Morley Doble Tela", categoria: "Bodys", precio: 17500, talles: ["S"], nuevo: true, foto: "RC279.jpg",
     variantes: ["Beige", "Crudo"],
-    descripcion: "Body de morley acanalado doble tela, escote redondo cerrado y sisas americanas. Cierre con broches. Disponible en beige y crudo. Talle S." }
+    descripcion: "Body de morley acanalado doble tela, escote redondo cerrado y sisas americanas. Cierre con broches. Disponible en beige y crudo. Talle S." },
+  { codigo: "RC280", nombre: "Vestido Midi Frunce Chocolate", categoria: "Vestidos", precio: 41000, talles: ["Único"], nuevo: true, foto: "RC280.jpg",
+    descripcion: "Vestido midi color chocolate de tela fluida con caída, escote cuadrado, breteles anchos y frunces a los costados de la cintura. Talle único, va hasta un L." },
+  { codigo: "RC281", nombre: "Vestido Morley Animal Print", categoria: "Vestidos", precio: 24000, talles: ["M/L"], nuevo: true, foto: "RC281.jpg",
+    fotosExtra: ["RC281-textura.jpg"],
+    variantes: ["Leopardo negro", "Leopardo marrón"],
+    descripcion: "Vestido largo de morley acanalado, sin mangas y entallado, con estampa animal print. Dos versiones: manchas negras sobre fondo claro, o manchas marrones sobre fondo arena. Talle M/L." },
+  { codigo: "RC282", nombre: "Remerón Marilyn", categoria: "Remeras", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC282.jpg",
+    descripcion: "Remerón oversize de algodón color camel con estampa fotográfica en blanco y negro de Marilyn haciendo un corazón con las manos. Talle único." },
+  { codigo: "RC283", nombre: "Remera Auriculares", categoria: "Remeras", precio: 23500, talles: ["M"], nuevo: true, foto: "RC283.jpg",
+    descripcion: "Remera blanca de algodón con estampa fotográfica en blanco y negro de una chica con auriculares. Talle M." },
+  { codigo: "RC284", nombre: "Remera Marilyn Brillo", categoria: "Remeras", precio: 19000, talles: ["M"], nuevo: true, foto: "RC284.jpg",
+    descripcion: "Remera negra de algodón con estampa de Marilyn en blanco y negro con detalles de brillo, y ruedo más largo atrás. Talle M." }
 ];
