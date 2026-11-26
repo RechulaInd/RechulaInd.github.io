@@ -641,5 +641,7 @@ window.STOCK = [
     descripcion: "Remera beige de algodón con cuello redondo y manga corta, con estampa de mariposa en rosa, chocolate y negro y la frase “Free and Wild”. Talle L." },
   { codigo: "RC286", nombre: "Remera Calada Mangas Globo", categoria: "Remeras", precio: 22000, talles: ["M"], nuevo: true, foto: "RC286.jpg",
     variantes: ["Rosa", "Celeste", "Beige"],
-    descripcion: "Remera de tela texturizada con calados de flores en rombos, cuello redondo y mangas cortas abullonadas. Disponible en rosa, celeste y beige. Talle M." }
+    descripcion: "Remera de tela texturizada con calados de flores en rombos, cuello redondo y mangas cortas abullonadas. Disponible en rosa, celeste y beige. Talle M." },
+  { codigo: "RC287", nombre: "Remera Flores Strass", categoria: "Remeras", precio: 28000, talles: ["XL"], nuevo: true, foto: "RC287.jpg",
+    descripcion: "Remera celeste de algodón con cuello redondo y manga corta, con estampa de flores en azul, verde agua y marrón con detalles de strass y la frase “A simple life is a beautiful life”. Talle XL." }
 ];
