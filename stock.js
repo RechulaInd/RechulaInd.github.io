@@ -655,5 +655,7 @@ window.STOCK = [
   { codigo: "RC292", nombre: "Body Asimétrico Broche Dorado", categoria: "Bodys", precio: 19500, talles: ["L"], nuevo: true, foto: "RC292.jpg",
     descripcion: "Body chocolate de tela suave y elastizada con escote asimétrico, frunces al costado y detalle de broche metálico dorado en el hombro. Talle L." },
   { codigo: "RC293", nombre: "Body Escote Cuadrado Manga Corta", categoria: "Bodys", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC293.jpg",
-    descripcion: "Body negro de tela suave y elastizada con escote cuadrado, manga corta y broche abajo. Un básico que combina con todo. Talle único." }
+    descripcion: "Body negro de tela suave y elastizada con escote cuadrado, manga corta y broche abajo. Un básico que combina con todo. Talle único." },
+  { codigo: "RC294", nombre: "Body Musculosa Negro", categoria: "Bodys", precio: 17000, talles: ["M"], nuevo: true, foto: "RC294.jpg",
+    descripcion: "Body negro sin mangas de tela suave y elastizada, con escote redondo, sisas americanas y broche abajo. Un básico infaltable. Talle M." }
 ];
