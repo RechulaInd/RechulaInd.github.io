@@ -658,11 +658,13 @@ window.STOCK = [
     descripcion: "Body negro de tela suave y elastizada con escote cuadrado, manga corta y broche abajo. Un básico que combina con todo. Talle único." },
   { codigo: "RC294", nombre: "Body Musculosa Negro", categoria: "Bodys", precio: 17000, talles: ["M"], nuevo: true, foto: "RC294.jpg",
     descripcion: "Body negro sin mangas de tela suave y elastizada, con escote redondo, sisas americanas y broche abajo. Un básico infaltable. Talle M." },
-  { codigo: "RC285", nombre: "Corset Encaje Blanco", categoria: "Tops", precio: 42000, talles: ["90"], nuevo: true, foto: "RC285.jpg",
+  { codigo: "RC295", nombre: "Corset Encaje Blanco", categoria: "Tops", precio: 42000, talles: ["90"], nuevo: true, foto: "RC295.jpg",
     descripcion: "Corset blanco de encaje floral con copas armadas, ballenas marcadas, cierre de ganchos al frente y breteles regulables. Talle 90." },
-  { codigo: "RC286", nombre: "Remerón Ruedo Encaje", categoria: "Remeras", precio: 19000, talles: ["Único"], nuevo: true, foto: "RC286.jpg",
+  { codigo: "RC296", nombre: "Remerón Ruedo Encaje", categoria: "Remeras", precio: 19000, talles: ["Único"], nuevo: true, foto: "RC296.jpg",
     variantes: ["Negro"],
     descripcion: "Remerón amplio de algodón, cuello redondo y manga corta, con ruedo de encaje al tono. Disponible en negro (el chocolate de la foto está agotado). Talle único." },
-  { codigo: "RC287", nombre: "Baby Tee Morley Chocolate", categoria: "Remeras", precio: 11000, talles: ["S"], nuevo: true, foto: "RC287.jpg",
-    descripcion: "Baby tee de morley acanalado color chocolate, entallada, con cuello redondo y manga corta. Talle S." }
+  { codigo: "RC297", nombre: "Baby Tee Morley Chocolate", categoria: "Remeras", precio: 11000, talles: ["S"], nuevo: true, foto: "RC297.jpg",
+    descripcion: "Baby tee de morley acanalado color chocolate, entallada, con cuello redondo y manga corta. Talle S." },
+  { codigo: "RC298", nombre: "Jean Crop Flare Crudo", categoria: "Pantalones", precio: 89500, talles: ["42"], nuevo: true, foto: "RC298.jpg",
+    descripcion: "Jean crop color crudo de tiro alto, pierna oxford con ruedo deshilachado y costuras en contraste. Largo tobillero. Talle 42." }
 ];
