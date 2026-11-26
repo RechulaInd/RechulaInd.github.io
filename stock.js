@@ -647,5 +647,13 @@ window.STOCK = [
   { codigo: "RC288", nombre: "Remera Volados Oliva", categoria: "Remeras", precio: 12000, talles: ["M"], nuevo: true, foto: "RC288.jpg",
     descripcion: "Remera verde oliva de tela suave y elastizada con escote redondo y volados dobles en los hombros. Talle M." },
   { codigo: "RC289", nombre: "Blusa Bordado Inglés Negra", categoria: "Blusas", precio: 23000, talles: ["S"], nuevo: true, foto: "RC289.jpg",
-    descripcion: "Blusa negra sin mangas con bordado inglés de flores en blanco, escote redondo y volados en los hombros. Talle S." }
+    descripcion: "Blusa negra sin mangas con bordado inglés de flores en blanco, escote redondo y volados en los hombros. Talle S." },
+  { codigo: "RC290", nombre: "Body Mangas Abullonadas", categoria: "Bodys", precio: 19000, talles: ["L"], nuevo: true, foto: "RC290.jpg",
+    descripcion: "Body chocolate de morley acanalado con escote en V, mangas cortas abullonadas y broche abajo. Talle L." },
+  { codigo: "RC291", nombre: "Body Transparencia Leopardo", categoria: "Bodys", precio: 27000, talles: ["S"], nuevo: true, foto: "RC291.jpg",
+    descripcion: "Body negro sin mangas, de tela suave y elastizada, con escote en V profundo de tul transparente con estampa animal print leopardo. Talle S." },
+  { codigo: "RC292", nombre: "Body Asimétrico Broche Dorado", categoria: "Bodys", precio: 19500, talles: ["L"], nuevo: true, foto: "RC292.jpg",
+    descripcion: "Body chocolate de tela suave y elastizada con escote asimétrico, frunces al costado y detalle de broche metálico dorado en el hombro. Talle L." },
+  { codigo: "RC293", nombre: "Body Escote Cuadrado Manga Corta", categoria: "Bodys", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC293.jpg",
+    descripcion: "Body negro de tela suave y elastizada con escote cuadrado, manga corta y broche abajo. Un básico que combina con todo. Talle único." }
 ];
