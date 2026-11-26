@@ -636,5 +636,10 @@ window.STOCK = [
   { codigo: "RC283", nombre: "Remera Auriculares", categoria: "Remeras", precio: 23500, talles: ["M"], nuevo: true, foto: "RC283.jpg",
     descripcion: "Remera blanca de algodón con estampa fotográfica en blanco y negro de una chica con auriculares. Talle M." },
   { codigo: "RC284", nombre: "Remera Marilyn Brillo", categoria: "Remeras", precio: 19000, talles: ["M"], nuevo: true, foto: "RC284.jpg",
-    descripcion: "Remera negra de algodón con estampa de Marilyn en blanco y negro con detalles de brillo, y ruedo más largo atrás. Talle M." }
+    descripcion: "Remera negra de algodón con estampa de Marilyn en blanco y negro con detalles de brillo, y ruedo más largo atrás. Talle M." },
+  { codigo: "RC285", nombre: "Remera Mariposa Free and Wild", categoria: "Remeras", precio: 21000, talles: ["L"], nuevo: true, foto: "RC285.jpg",
+    descripcion: "Remera beige de algodón con cuello redondo y manga corta, con estampa de mariposa en rosa, chocolate y negro y la frase “Free and Wild”. Talle L." },
+  { codigo: "RC286", nombre: "Remera Calada Mangas Globo", categoria: "Remeras", precio: 22000, talles: ["M"], nuevo: true, foto: "RC286.jpg",
+    variantes: ["Rosa", "Celeste", "Beige"],
+    descripcion: "Remera de tela texturizada con calados de flores en rombos, cuello redondo y mangas cortas abullonadas. Disponible en rosa, celeste y beige. Talle M." }
 ];
