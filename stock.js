@@ -645,5 +645,7 @@ window.STOCK = [
   { codigo: "RC287", nombre: "Remera Flores Strass", categoria: "Remeras", precio: 28000, talles: ["XL"], nuevo: true, foto: "RC287.jpg",
     descripcion: "Remera celeste de algodón con cuello redondo y manga corta, con estampa de flores en azul, verde agua y marrón con detalles de strass y la frase “A simple life is a beautiful life”. Talle XL." },
   { codigo: "RC288", nombre: "Remera Volados Oliva", categoria: "Remeras", precio: 12000, talles: ["M"], nuevo: true, foto: "RC288.jpg",
-    descripcion: "Remera verde oliva de tela suave y elastizada con escote redondo y volados dobles en los hombros. Talle M." }
+    descripcion: "Remera verde oliva de tela suave y elastizada con escote redondo y volados dobles en los hombros. Talle M." },
+  { codigo: "RC289", nombre: "Blusa Bordado Inglés Negra", categoria: "Blusas", precio: 23000, talles: ["S"], nuevo: true, foto: "RC289.jpg",
+    descripcion: "Blusa negra sin mangas con bordado inglés de flores en blanco, escote redondo y volados en los hombros. Talle S." }
 ];
