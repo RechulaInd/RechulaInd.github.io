@@ -666,5 +666,11 @@ window.STOCK = [
   { codigo: "RC297", nombre: "Baby Tee Morley Chocolate", categoria: "Remeras", precio: 11000, talles: ["S"], nuevo: true, foto: "RC297.jpg",
     descripcion: "Baby tee de morley acanalado color chocolate, entallada, con cuello redondo y manga corta. Talle S." },
   { codigo: "RC298", nombre: "Jean Crop Flare Crudo", categoria: "Pantalones", precio: 89500, talles: ["42"], nuevo: true, foto: "RC298.jpg",
-    descripcion: "Jean crop color crudo de tiro alto, pierna oxford con ruedo deshilachado y costuras en contraste. Largo tobillero. Talle 42." }
+    descripcion: "Jean crop color crudo de tiro alto, pierna oxford con ruedo deshilachado y costuras en contraste. Largo tobillero. Talle 42." },
+  { codigo: "RC299", nombre: "Body Tul Cebra", categoria: "Bodys", precio: 28500, talles: ["Único"], nuevo: true, foto: "RC299.jpg",
+    descripcion: "Body negro sin mangas de tela suave y elastizada, con paneles de tul transparente con estampa animal print cebra en el escote y en la cadera. Talle único." },
+  { codigo: "RC300", nombre: "Body Acanalado Ciruela", categoria: "Bodys", precio: 16500, talles: ["M/L"], nuevo: true, foto: "RC300.jpg",
+    descripcion: "Body color ciruela de morley acanalado, sin mangas, con escote cuadrado y breteles anchos. Un básico que combina con todo. Talle M/L." },
+  { codigo: "RC301", nombre: "Body Escote V Berenjena", categoria: "Bodys", precio: 17059, talles: ["M"], nuevo: true, foto: "RC301.jpg",
+    descripcion: "Body color berenjena de tela suave y elastizada, sin mangas, con escote en V profundo y breteles anchos. Talle M." }
 ];
