@@ -621,5 +621,8 @@ window.STOCK = [
     descripcion: "Musculosa de algodón elastizado a rayas finas blancas, con ribete en cuello y sisas. Disponible en negro con ribete blanco, celeste y negro con ribete negro. Talle M/L." },
   { codigo: "RC278", nombre: "Musculosa Morley Encaje", categoria: "Tops", precio: 12000, talles: ["S"], nuevo: true, foto: "RC278.jpg",
     variantes: ["Beige", "Negro", "Blanco"],
-    descripcion: "Musculosa entallada de morley acanalado con borde de encaje en el escote y breteles anchos. Disponible en beige, negro y blanco. Talle S." }
+    descripcion: "Musculosa entallada de morley acanalado con borde de encaje en el escote y breteles anchos. Disponible en beige, negro y blanco. Talle S." },
+  { codigo: "RC279", nombre: "Body Morley Doble Tela", categoria: "Bodys", precio: 17500, talles: ["S"], nuevo: true, foto: "RC279.jpg",
+    variantes: ["Beige", "Crudo"],
+    descripcion: "Body de morley acanalado doble tela, escote redondo cerrado y sisas americanas. Cierre con broches. Disponible en beige y crudo. Talle S." }
 ];
