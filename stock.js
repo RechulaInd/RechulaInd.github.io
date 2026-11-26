@@ -181,8 +181,8 @@ window.STOCK = [
     descripcion: "Short corto elastizado con textura de volados finitos en todo el cuerpo. Cómodo y canchero. Talle único." },
   { codigo: "RC091", nombre: "Camisaco Cuero Negro", categoria: "Camisacos", precio: 34000, talles: ["38","40"], nuevo: true, foto: "RC091.jpg",
     descripcion: "Camisaco corto de cuero ecológico negro con cuello camisero, botones a presión, bolsillos con solapa y puños anchos. Ideal para usar abierto como campera." },
-  { codigo: "RC092", nombre: "Short Bordado Marfil", categoria: "Shorts", precio: 35000, talles: ["Único"], nuevo: true, foto: "RC092.jpg",
-    descripcion: "Short marfil con bordado de flores en relieve, ruedo festoneado y cintura elastizada con cordón y borlas. Talle único: va hasta el 40." },
+  { codigo: "RC092", nombre: "Short Bordado Marfil", categoria: "Shorts", precio: 35000, talles: ["M"], nuevo: true, foto: "RC092.jpg",
+    descripcion: "Short marfil con bordado de flores en relieve, ruedo festoneado y cintura elastizada con cordón y borlas. Talle M." },
   { codigo: "RC093", nombre: "Blusa Jardín Azul", categoria: "Blusas", precio: 39500, talles: ["L","XL"], nuevo: true, foto: "RC093.jpg",
     descripcion: "Blusa sin mangas celeste tipo denim con bordado de flores en hilo crudo, escote en V con botones forrados y volados en los hombros." },
   { codigo: "RC094", nombre: "Camisa Celeste Clásica", categoria: "Camisas", precio: 44000, talles: ["L"], nuevo: true, foto: "RC094.jpg",
@@ -657,5 +657,12 @@ window.STOCK = [
   { codigo: "RC293", nombre: "Body Escote Cuadrado Manga Corta", categoria: "Bodys", precio: 16500, talles: ["Único"], nuevo: true, foto: "RC293.jpg",
     descripcion: "Body negro de tela suave y elastizada con escote cuadrado, manga corta y broche abajo. Un básico que combina con todo. Talle único." },
   { codigo: "RC294", nombre: "Body Musculosa Negro", categoria: "Bodys", precio: 17000, talles: ["M"], nuevo: true, foto: "RC294.jpg",
-    descripcion: "Body negro sin mangas de tela suave y elastizada, con escote redondo, sisas americanas y broche abajo. Un básico infaltable. Talle M." }
+    descripcion: "Body negro sin mangas de tela suave y elastizada, con escote redondo, sisas americanas y broche abajo. Un básico infaltable. Talle M." },
+  { codigo: "RC285", nombre: "Corset Encaje Blanco", categoria: "Tops", precio: 42000, talles: ["90"], nuevo: true, foto: "RC285.jpg",
+    descripcion: "Corset blanco de encaje floral con copas armadas, ballenas marcadas, cierre de ganchos al frente y breteles regulables. Talle 90." },
+  { codigo: "RC286", nombre: "Remerón Ruedo Encaje", categoria: "Remeras", precio: 19000, talles: ["Único"], nuevo: true, foto: "RC286.jpg",
+    variantes: ["Negro"],
+    descripcion: "Remerón amplio de algodón, cuello redondo y manga corta, con ruedo de encaje al tono. Disponible en negro (el chocolate de la foto está agotado). Talle único." },
+  { codigo: "RC287", nombre: "Baby Tee Morley Chocolate", categoria: "Remeras", precio: 11000, talles: ["S"], nuevo: true, foto: "RC287.jpg",
+    descripcion: "Baby tee de morley acanalado color chocolate, entallada, con cuello redondo y manga corta. Talle S." }
 ];
