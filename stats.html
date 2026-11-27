@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Re Chula · Estadísticas</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--crudo:#F7F1E9;--choco:#4A3029;--rosa:#DDB4AC;--dorado:#B58A52;--negro:#24211F}
+*{box-sizing:border-box}body{margin:0;background:var(--crudo);color:var(--negro);font:14px/1.45 Montserrat,sans-serif}
+header{padding:22px 18px 8px;text-align:center}h1{font:600 26px "Playfair Display",serif;color:var(--choco);margin:0}
+.sub{font-size:12px;color:#7a6a62;margin-top:4px}.wrap{max-width:860px;margin:0 auto;padding:8px 14px 40px}
+.card{background:#fff;border:1px solid #ecdfd3;border-radius:14px;padding:16px;margin:12px 0}
+h2{font:600 18px "Playfair Display",serif;color:var(--choco);margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.kpi{background:var(--crudo);border-radius:10px;padding:10px 12px}.kpi b{display:block;font:600 22px Montserrat;color:var(--choco)}.kpi span{font-size:11px;color:#7a6a62;text-transform:uppercase;letter-spacing:.04em}
+.row{display:flex;align-items:center;gap:10px;margin:6px 0}.lab{width:120px;flex:none;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar{flex:1;height:14px;background:#f3ebe3;border-radius:7px;overflow:hidden}.bar i{display:block;height:100%;background:var(--rosa);border-radius:7px}
+.num{width:44px;text-align:right;font-weight:600;color:var(--choco)}
+.prod{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid #f3ebe3}
+.prod img{width:44px;height:55px;object-fit:cover;border-radius:6px}.prod small{color:#7a6a62}.prod .n{text-align:right;font-size:12px;white-space:nowrap}.prod .n b{color:var(--choco);font-size:15px}
+.days{display:flex;align-items:flex-end;gap:4px;height:120px}.days div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:10px;color:#7a6a62}
+.days i{display:block;width:100%;background:var(--rosa);border-radius:4px 4px 0 0;min-height:2px}.days b{font-size:10px;color:var(--choco)}
+.muted{color:#7a6a62;font-size:12px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.two{grid-template-columns:1fr}}
+#prog{height:3px;background:var(--dorado);width:0;transition:width .3s;position:fixed;top:0;left:0}
+button{font:500 13px Montserrat;background:var(--choco);color:#fff;border:0;border-radius:20px;padding:8px 16px;cursor:pointer}
+</style></head><body><div id="prog"></div>
+<header><h1>Estadísticas de la web</h1><div class="sub">Re Chula · datos anónimos desde el 27/11/2026 · <span id="st">cargando…</span></div></header>
+<div class="wrap">
+<div class="card"><h2>Resumen</h2><div class="kpis" id="kpis"></div></div>
+<div class="card"><h2>Visitas por día</h2><div class="days" id="days"></div><div class="muted" style="margin-top:6px">Una visita = una persona que entra (se cuenta una vez por sesión).</div></div>
+<div class="two"><div class="card"><h2>De dónde vienen</h2><div id="orig"></div></div><div class="card"><h2>Dispositivo</h2><div id="dev"></div></div></div>
+<div class="card"><h2>Prendas más vistas</h2><div id="topv"><div class="muted">Cargando…</div></div></div>
+<div class="card"><h2>Prendas más pedidas</h2><div class="muted" style="margin-bottom:6px">Bolsa = la agregaron a la bolsa · Pedido = la mandaron por WhatsApp.</div><div id="topp"><div class="muted">Cargando…</div></div></div>
+<div class="two"><div class="card"><h2>Talles más buscados</h2><div id="tal"><div class="muted">Cargando…</div></div></div><div class="card"><h2>Categorías más elegidas</h2><div id="cat"><div class="muted">Cargando…</div></div></div></div>
+<div class="card"><h2>Qué buscan en el buscador</h2><div id="bus"><div class="muted">Cargando…</div></div></div>
+<div style="text-align:center"><button onclick="location.reload()">Actualizar</button></div>
+</div>
+<script>document.write('<script src="stock.js?v='+Date.now()+'"><\/script>')</script>
+<script>
+(function(){
+const API="https://abacus.jasoncameron.dev/get/rechulaind-st/", $=id=>document.getElementById(id);
+const slug=s=>String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_+|_+$/g,"").slice(0,50)||"x";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const STOCK=(window.STOCK||[]), BY={}; STOCK.forEach(p=>BY[p.codigo]=p);
+let total=0,done=0; const prog=()=>{ $("prog").style.width=(total?done/total*100:0)+"%"; $("st").textContent= done<total?"cargando "+done+"/"+total+"…":"actualizado "+new Date().toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit"}); };
+const cache={};
+async function get1(k){ for(let i=0;i<4;i++){ try{ const r=await fetch(API+k.slice(0,60)); if(r.status===404) return 0; if(r.ok){ const j=await r.json(); return j.value||0; } }catch(e){} await new Promise(r=>setTimeout(r,600*(i+1))); } return 0; }
+async function getMany(keys){ keys=keys.filter(k=>!(k in cache)); total+=keys.length; prog(); let i=0;
+  await Promise.all(Array.from({length:6},async()=>{ while(i<keys.length){ const k=keys[i++]; cache[k]=await get1(k); done++; prog(); } })); }
+const v=k=>cache[k]||0;
+const bars=(el,list)=>{ list=list.filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]); if(!list.length){ $(el).innerHTML='<div class="muted">Todavía sin datos.</div>'; return; }
+  const m=list[0][1]; $(el).innerHTML=list.slice(0,15).map(([l,n])=>'<div class="row"><div class="lab" title="'+esc(l)+'">'+esc(l)+'</div><div class="bar"><i style="width:'+(n/m*100)+'%"></i></div><div class="num">'+n+'</div></div>').join(""); };
+const prodRow=(p,main,extra)=>'<div class="prod"><img src="fotos/'+esc(p.foto)+'" loading="lazy" alt=""><div><b>'+esc(p.codigo)+'</b> · '+esc(p.nombre)+'<br><small>'+esc(extra)+'</small></div><div class="n">'+main+'</div></div>';
+(async()=>{
+  const days=[]; for(let i=13;i>=0;i--){ const d=new Date(Date.now()-3*36e5-i*864e5).toISOString().slice(0,10); days.push(d); }
+  const O=["instagram","tiktok","whatsapp","facebook","google","directo","otros"];
+  await getMany(["x_visitas","x_busquedas","x_bolsa","x_pedidos","x_whatsapp","x_instagram","x_tiktok","x_grupo","q__otras","q__sinres","dv_movil","dv_pc"].concat(days.map(d=>"d_"+d.replace(/-/g,"")),O.map(o=>"o_"+o)));
+  $("kpis").innerHTML=[["Visitas","x_visitas"],["Búsquedas","x_busquedas"],["Agregados a la bolsa","x_bolsa"],["Pedidos por WhatsApp","x_pedidos"],["Consultas WhatsApp","x_whatsapp"],["Clicks a Instagram","x_instagram"],["Clicks a TikTok","x_tiktok"],["Se unieron al grupo","x_grupo"]].map(([l,k])=>'<div class="kpi"><b>'+v(k)+'</b><span>'+l+'</span></div>').join("");
+  const dm=Math.max(1,...days.map(d=>v("d_"+d.replace(/-/g,""))));
+  $("days").innerHTML=days.map(d=>{const n=v("d_"+d.replace(/-/g,""));return '<div><b>'+(n||"")+'</b><i style="height:'+(n/dm*95)+'%"></i>'+d.slice(8)+'/'+d.slice(5,7)+'</div>';}).join("");
+  bars("orig",O.map(o=>[o[0].toUpperCase()+o.slice(1),v("o_"+o)])); bars("dev",[["Celular",v("dv_movil")],["Computadora",v("dv_pc")]]);
+  // Talles y categorías
+  const sizes=new Set(["XS","S","M","L","XL","XXL"]); STOCK.forEach(p=>(p.talles||[]).forEach(t=>{ if(t!=="A consultar") sizes.add(t); }));
+  const cats=[...new Set(STOCK.map(p=>p.categoria))];
+  await getMany([...sizes].map(t=>"t_"+slug(t)).concat(cats.map(c=>"c_"+slug(c))));
+  bars("tal",[...sizes].map(t=>[t,v("t_"+slug(t))])); bars("cat",cats.map(c=>[c,v("c_"+slug(c))]));
+  // Prendas
+  const vis=STOCK.filter(p=>!p.oculto);
+  await getMany(vis.map(p=>"v_"+p.codigo));
+  const seen=vis.filter(p=>v("v_"+p.codigo)>0).sort((a,b)=>v("v_"+b.codigo)-v("v_"+a.codigo));
+  $("topv").innerHTML=seen.length?seen.slice(0,20).map(p=>prodRow(p,'<b>'+v("v_"+p.codigo)+'</b> vistas',p.categoria+(p.agotado?" · agotada":""))).join(""):'<div class="muted">Todavía sin datos.</div>';
+  await getMany(seen.flatMap(p=>["b_"+p.codigo,"p_"+p.codigo]));
+  const ped=seen.filter(p=>v("p_"+p.codigo)+v("b_"+p.codigo)>0).sort((a,b)=>(v("p_"+b.codigo)*2+v("b_"+b.codigo))-(v("p_"+a.codigo)*2+v("b_"+a.codigo)));
+  $("topp").innerHTML=ped.length?ped.slice(0,15).map(p=>prodRow(p,'<b>'+v("p_"+p.codigo)+'</b> pedido · '+v("b_"+p.codigo)+' bolsa',v("v_"+p.codigo)+' vistas')).join(""):'<div class="muted">Todavía sin datos.</div>';
+  // Búsquedas
+  const V=new Set(); STOCK.forEach(p=>[p.nombre,p.categoria].concat(p.variantes||[]).join(" ").split(/\s+/).forEach(w=>{w=slug(w); if(w.length>=3) V.add(w);})); ["jean","jeans","short","shorts","vestido","remera","remeron","pollera","falda","top","body","blusa","camisa","chaleco","campera","musculosa","baby","tee","oxford","wide","leg","mom","recto","baggy","cuero","encaje","lino","negro","negra","blanco","blanca","beige","crudo","rosa","celeste","azul","rojo","verde","chocolate","marron","bordado","tejido","animal","print","leopardo","corset","crop","bermuda","skort","conjunto","mono","enterito","bikini","malla","sweater","buzo","saco","blazer","kimono","camisaco","pantalon","puntilla","volados","flores","rayas","lunares","morley","gabardina","sastrero","largo","corto","midi","mini"].forEach(w=>V.add(slug(w)));
+  await getMany([...V].map(w=>"q_"+w));
+  const words=[...V].map(w=>[w.replace(/_/g," "),v("q_"+w)]);
+  bars("bus",words); $("bus").insertAdjacentHTML("beforeend",'<div class="muted" style="margin-top:10px">Otras búsquedas (palabras que no están en ninguna prenda): <b>'+v("q__otras")+'</b> · Búsquedas sin resultados: <b>'+v("q__sinres")+'</b></div>');
+  prog();
+})();
+})();
+</script></body></html>

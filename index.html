@@ -305,7 +305,7 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261127023800"></script>
+<script src="stock.js?v=20261127142649"></script>
 <script>
 /* ===== Medición: Google Analytics 4 + Píxel de Meta (los IDs se cargan en stock.js → CONFIG) ===== */
 (function(){
@@ -338,6 +338,58 @@
     else if (h.includes("instagram.com")) track("click_instagram", "ClickInstagram");
     else if (h.includes("tiktok.com")) track("click_tiktok", "ClickTikTok");
     else if (h.includes("wa.me") && !a.dataset.trk) track("contacto_whatsapp", "Contact", {ga:{method:"whatsapp"}});
+  }, true);
+})();
+</script>
+<script>
+/* ===== Contadores propios (sin cuenta): suman en abacus y se ven en /stats.html ===== */
+(function(){
+  const API = "https://abacus.jasoncameron.dev/hit/rechulaind-st/";
+  const slug = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_+|_+$/g,"").slice(0,50) || "x";
+  let seen = {}; try { seen = JSON.parse(sessionStorage.getItem("rc-st")||"{}"); } catch(e){}
+  const hit = (k, once) => {
+    k = k.slice(0,60);
+    if (once) { if (seen[k]) return; seen[k]=1; try{ sessionStorage.setItem("rc-st", JSON.stringify(seen)); }catch(e){} }
+    try { fetch(API + k, {mode:"cors", keepalive:true}).catch(()=>{}); } catch(e){}
+  };
+  window.rcHit = hit; window.rcSlug = slug;
+  // Visita: una por sesión, por día, origen y dispositivo
+  const d = new Date(Date.now() - 3*36e5).toISOString().slice(0,10).replace(/-/g,"");
+  const ua = navigator.userAgent, ref = document.referrer || "";
+  const o = /Instagram/i.test(ua) || /instagram/.test(ref) ? "instagram" : /musical_ly|TikTok|Bytedance/i.test(ua) || /tiktok/.test(ref) ? "tiktok"
+          : /FBAN|FBAV/i.test(ua) || /facebook/.test(ref) ? "facebook" : /whatsapp/i.test(ua+ref) ? "whatsapp" : /google\./.test(ref) ? "google" : ref ? "otros" : "directo";
+  hit("d_"+d, true); hit("o_"+o, true); hit("dv_"+(/Mobi|Android|iPhone/i.test(ua)?"movil":"pc"), true); hit("x_visitas", true);
+  // Eventos de la tienda
+  const prev = window.track || function(){};
+  window.track = function(ga, meta, data){
+    try {
+      const m = (data && data.meta) || {}, ids = m.content_ids || [];
+      if (ga==="view_item") ids.forEach(c => hit("v_"+c, true));
+      else if (ga==="add_to_cart") { ids.forEach(c => hit("b_"+c)); hit("x_bolsa"); }
+      else if (ga==="generate_lead") { ids.forEach(c => hit("p_"+c)); hit("x_pedidos"); }
+      else if (ga==="search") {
+        const q = ((data.ga||{}).search_term||"").trim();
+        const words = q.split(/\s+/).map(slug).filter(w => w.length>=3);
+        const V = window.rcVocab || new Set();
+        let any = false; words.forEach(w => { if (V.has(w)) { hit("q_"+w); any = true; } });
+        if (!any) hit("q__otras");
+        setTimeout(() => { if (!document.querySelector("#grid [data-k]")) hit("q__sinres"); }, 300);
+        hit("x_busquedas");
+      }
+      else if (ga==="contacto_whatsapp") hit("x_whatsapp");
+      else if (ga==="click_instagram") hit("x_instagram");
+      else if (ga==="click_tiktok") hit("x_tiktok");
+      else if (ga==="unirse_grupo_whatsapp") hit("x_grupo");
+    } catch(e){}
+    return prev.apply(this, arguments);
+  };
+  // Vocabulario de búsquedas (palabras de nombres, categorías y colores)
+  try { const V = new Set(); (window.STOCK||[]).forEach(p => [p.nombre, p.categoria].concat(p.variantes||[]).join(" ").split(/\s+/).forEach(w => { w = slug(w); if (w.length>=3) V.add(w); }));
+        ["jean","jeans","short","shorts","vestido","remera","remeron","pollera","falda","top","body","blusa","camisa","chaleco","campera","musculosa","baby","tee","oxford","wide","leg","mom","recto","baggy","cuero","encaje","lino","negro","negra","blanco","blanca","beige","crudo","rosa","celeste","azul","rojo","verde","chocolate","marron","bordado","tejido","animal","print","leopardo","corset","crop","bermuda","skort","conjunto","mono","enterito","bikini","malla","sweater","buzo","saco","blazer","kimono","camisaco","pantalon","puntilla","volados","flores","rayas","lunares","morley","gabardina","sastrero","largo","corto","midi","mini"].forEach(w => V.add(slug(w))); window.rcVocab = V; } catch(e){}
+  // Filtros de talle y categorías
+  document.addEventListener("click", e => {
+    const s = e.target.closest("#sizes [data-s]"); if (s && !s.classList.contains("on")) hit("t_"+slug(s.dataset.s));
+    const c = e.target.closest("#cats [data-c], #menuList [data-m]"); if (c) { const n = c.dataset.c || c.dataset.m; if (n && n!=="Todo") hit("c_"+slug(n)); }
   }, true);
 })();
 </script>
