@@ -305,7 +305,38 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261126235413"></script>
+<script src="stock.js?v=20261127011000"></script>
+<script>
+/* ===== Medición: Google Analytics 4 + Píxel de Meta (los IDs se cargan en stock.js → CONFIG) ===== */
+(function(){
+  const C = window.CONFIG||{}, GA = C.ga4||"", PX = C.metaPixel||"";
+  if (GA) {
+    const s=document.createElement("script"); s.async=true; s.src="https://www.googletagmanager.com/gtag/js?id="+GA; document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);};
+    gtag("js", new Date()); gtag("config", GA);
+  }
+  if (PX) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", PX); fbq("track", "PageView");
+  }
+  // track(evento_ga4, evento_meta, datos). evento_meta puede ser estándar o personalizado.
+  const STD = ["ViewContent","AddToCart","InitiateCheckout","Lead","Contact","Search","CompleteRegistration","Purchase"];
+  window.track = function(ga, meta, d){
+    d = d||{};
+    try { if (GA && ga) gtag("event", ga, d.ga||{}); } catch(e){}
+    try { if (PX && meta) fbq(STD.includes(meta)?"track":"trackCustom", meta, d.meta||{}); } catch(e){}
+  };
+  // Clicks a WhatsApp / redes (funciona también con los botones que se arman después)
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a[href]"); if (!a) return;
+    const h = a.getAttribute("href");
+    if (h.includes("chat.whatsapp.com")) track("unirse_grupo_whatsapp", "UnirseGrupoWhatsApp");
+    else if (h.includes("instagram.com")) track("click_instagram", "ClickInstagram");
+    else if (h.includes("tiktok.com")) track("click_tiktok", "ClickTikTok");
+    else if (h.includes("wa.me") && !a.dataset.trk) track("contacto_whatsapp", "Contact", {ga:{method:"whatsapp"}});
+  }, true);
+})();
+</script>
 <script>
 (function(){
   const C = Object.assign({descuento:15, redondeo:0, whatsapp:"", tiktok:""}, window.CONFIG||{});
@@ -322,6 +353,8 @@
   if (bfOn) document.body.classList.add("bf");
   const cash = p => { let v = p.precio * (1 - pct(p)/100); if (C.redondeo>0) v = Math.floor(v/C.redondeo)*C.redondeo; return Math.round(v); };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const T = window.track || function(){};
+  const gaItem = (p,t,v) => ({item_id:p.codigo, item_name:p.nombre, item_category:p.categoria, item_variant:[t,v].filter(Boolean).join(" / ")||undefined, price:p.precio?cash(p):0, quantity:1});
 
   const msgs = bfOn ? [`BLACK FRIDAY ♡ 25% OFF en prendas hasta ${money(BF.umbral)}`, `BLACK FRIDAY ♡ 30% OFF en prendas de más de ${money(BF.umbral)}`, `Solo ${BF.desde.slice(8)} y ${BF.hasta.slice(8)} de noviembre`] : [`♡ ${C.descuento}% OFF pagando en efectivo o transferencia`];
   if (C.cuotas) msgs.push(`♡ ${C.cuotas} cuotas sin interés`);
@@ -429,6 +462,7 @@
   const norm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
   const HAY = new Map();
   const hay = p => { if(!HAY.has(p)){ let t=norm([p.nombre,p.categoria,p.descripcion,p.codigo,(p.variantes||[]).join(" "),p.talles.join(" ")].join(" ")); const extra=Object.entries(SIN).filter(([k])=>t.includes(k)).map(([,v])=>v).join(" "); HAY.set(p,t+" "+norm(extra)); } return HAY.get(p); };
+  let qs; $("q").addEventListener("input", () => { clearTimeout(qs); const v=$("q").value.trim(); if(v.length>=3) qs=setTimeout(()=>T("search","Search",{ga:{search_term:v},meta:{search_string:v}}),1500); });
   let qt; $("q").addEventListener("input", () => { $("qx").hidden = !$("q").value; clearTimeout(qt); qt=setTimeout(()=>{ if($("q").value && fCat!=="Todo"){ fCat="Todo"; drawFilters(); } drawGrid(); },150); });
   $("q").addEventListener("keydown", e => { if(e.key==="Enter"){ e.preventDefault(); $("q").blur(); document.getElementById("grid").scrollIntoView({behavior:"smooth",block:"start"}); } });
   $("qx").onclick = () => { $("q").value=""; $("qx").hidden=true; drawGrid(); $("q").focus(); };
@@ -455,6 +489,7 @@
 
   function openItem(k){
     const p = ALL.find(x=>x.codigo===k); if(!p) return;
+    T("view_item","ViewContent",{ga:{currency:"ARS",value:p.precio?cash(p):0,items:[gaItem(p)]},meta:{content_ids:[p.codigo],content_name:p.nombre,content_category:p.categoria,content_type:"product",value:p.precio?cash(p):0,currency:"ARS"}});
     const hasV = !!(p.variantes&&p.variantes.length);
     let vari = hasV && p.variantes.length===1 ? p.variantes[0] : null;
     let talle = p.talles.length===1 ? p.talles[0] : (p.talles.find(t=>fSizes.has(t)) || null);
@@ -489,22 +524,29 @@
     $("add").onclick = () => {
       if(!ready()){ $("hint").textContent=need(); return; }
       if(!bag.some(i=>i.codigo===p.codigo && i.talle===talle && (i.variante||null)===vari)) bag.push({codigo:p.codigo, talle, variante:vari});
+      T("add_to_cart","AddToCart",{ga:{currency:"ARS",value:p.precio?cash(p):0,items:[gaItem(p,talle,vari)]},meta:{content_ids:[p.codigo],content_name:p.nombre,content_type:"product",value:p.precio?cash(p):0,currency:"ARS"}});
       saveBag(); close(); toast("Sumado a tu selección ✓");
     };
-    $("wa").onclick = e => { if(!ready()){ e.preventDefault(); $("hint").textContent=need(); } };
+    $("wa").dataset.trk = "1";
+    $("wa").onclick = e => { if(!ready()){ e.preventDefault(); $("hint").textContent=need(); return; }
+      const v = p.precio?cash(p):0;
+      T("generate_lead","Lead",{ga:{currency:"ARS",value:v,lead_source:"lo_quiero",items:[gaItem(p,talle,vari)]},meta:{content_ids:[p.codigo],content_type:"product",num_items:1,value:v,currency:"ARS",content_category:"lo_quiero"}}); };
   }
 
   function openBag(){
     const items = bag.map(i=>({...i, p:ALL.find(p=>p.codigo===i.codigo)})).filter(i=>i.p);
     if(!items.length){ open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Todavía no sumaste prendas. Tocá una prenda para elegir tu talle.</p><button class="cta ghost" id="seguir">Ver prendas</button></div>`); $("seguir").onclick=close; return; }
     const tl = items.reduce((s,i)=>s+i.p.precio,0), tc = items.reduce((s,i)=>s+cash(i.p),0);
+    const gaItems = items.map(i=>gaItem(i.p,i.talle,i.variante)), ids = items.map(i=>i.p.codigo);
+    T("begin_checkout","InitiateCheckout",{ga:{currency:"ARS",value:tc,items:gaItems},meta:{content_ids:ids,content_type:"product",num_items:items.length,value:tc,currency:"ARS"}});
     open(`<div class="bag"><h2>Mi selección</h2><p class="sub">Revisá y envianos el pedido por WhatsApp.</p>
       ${items.map((i,n)=>`<div class="item"><div class="ph">${pic(i.p,i.variante)}</div><div class="grow"><div class="name">${esc(i.p.nombre)}</div><small>${esc(i.p.codigo)}${i.variante?` · ${esc(i.variante)}`:""} · ${i.p.precio?`Talle ${esc(i.talle)} · ${money(cash(i.p))}`:"Precio a consultar"}</small></div><button class="rm" data-n="${n}">Quitar</button></div>`).join("")}
       <div class="tot"><span>Total precio de lista</span><span>${money(tl)}</span></div>
       <div class="tot big"><span>${etq}</span><span>${money(tc)}</span></div>
-      <a class="cta wa" href="${waLink(items.map(i=>line(i.p,i.talle,i.variante)))}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+      <a class="cta wa" id="sendBag" data-trk="1" href="${waLink(items.map(i=>line(i.p,i.talle,i.variante)))}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
       <button class="cta ghost" id="seguir">Seguir mirando</button></div>`);
     sheet.querySelectorAll(".rm").forEach(b=>b.onclick=()=>{ const it=items[+b.dataset.n]; bag=bag.filter(x=>!(x.codigo===it.codigo&&x.talle===it.talle&&(x.variante||null)===(it.variante||null))); saveBag(); openBag(); });
+    $("sendBag").onclick = () => T("generate_lead","Lead",{ga:{currency:"ARS",value:tc,lead_source:"pedido_seleccion",items:gaItems},meta:{content_ids:ids,content_type:"product",num_items:items.length,value:tc,currency:"ARS",content_category:"pedido_seleccion"}});
     $("seguir").onclick=close;
   }
   $("bagBtn").onclick = openBag;

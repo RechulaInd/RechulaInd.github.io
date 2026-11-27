@@ -12,7 +12,9 @@ window.CONFIG = {
   tiktok: "rechula.ind",
   instagram: "rechula.ind",          // usuario de Instagram sin @
   grupoWhatsapp: "https://chat.whatsapp.com/K8UAiZUdiZx6OAdvadSvY1",      // link de invitación al grupo de WhatsApp
-  formularioComunidad: "" // link del formulario de Google para la comunidad
+  formularioComunidad: "", // link del formulario de Google para la comunidad
+  ga4: "",                // ID de Google Analytics 4 (empieza con G-). Vacío = no mide
+  metaPixel: "1694460912084003"         // ID del Píxel / conjunto de datos de Meta (solo números). Vacío = no mide
 };
 
 window.STOCK = [
