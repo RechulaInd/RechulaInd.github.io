@@ -305,11 +305,14 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
 <div class="toast" id="toast"></div>
 
-<script src="stock.js?v=20261127021000"></script>
+<script src="stock.js?v=20261127023800"></script>
 <script>
 /* ===== Medición: Google Analytics 4 + Píxel de Meta (los IDs se cargan en stock.js → CONFIG) ===== */
 (function(){
-  const C = window.CONFIG||{}, GA = C.ga4||"", PX = C.metaPixel||"";
+  const C = window.CONFIG||{}, GA = C.ga4||"", PX = C.metaPixel||"", CL = C.clarity||"";
+  if (CL) {
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);
+  }
   if (GA) {
     const s=document.createElement("script"); s.async=true; s.src="https://www.googletagmanager.com/gtag/js?id="+GA; document.head.appendChild(s);
     window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);};
@@ -325,6 +328,7 @@
     d = d||{};
     try { if (GA && ga) gtag("event", ga, d.ga||{}); } catch(e){}
     try { if (PX && meta) fbq(STD.includes(meta)?"track":"trackCustom", meta, d.meta||{}); } catch(e){}
+    try { if (CL && ga) clarity("event", ga); } catch(e){}
   };
   // Clicks a WhatsApp / redes (funciona también con los botones que se arman después)
   document.addEventListener("click", e => {
