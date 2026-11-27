@@ -458,7 +458,7 @@ window.STOCK = [
     descripcion: "Jean oxford negro elastizado de tiro alto, con cinco bolsillos. Talles 38 y 44." },
   { codigo: "RC207", nombre: "Jean Wide Leg Negro", categoria: "Pantalones", precio: 48000, talles: ["38", "40", "42", "46"], nuevo: true, foto: "RC207.jpg",
     descripcion: "Jean wide leg negro de tiro alto, pierna ancha y cinco bolsillos. Talles 38, 40, 42 y 46." },
-  { codigo: "RC208", nombre: "Pantalón Jogger Verde", categoria: "Pantalones", precio: 49500, talles: ["42"], nuevo: true, foto: "RC208.jpg",
+  { codigo: "RC208", nombre: "Pantalón Jogger Verde", categoria: "Pantalones", precio: 49500, talles: ["42"], agotado: true, nuevo: true, foto: "RC208.jpg",
     descripcion: "Pantalón recto de gabardina verde salvia con cintura elastizada y cordón, bolsillos grandes y ruedo doblado. Talle 42." },
   { codigo: "RC209", nombre: "Jean Oxford Chocolate", categoria: "Pantalones", precio: 64000, talles: ["36"], nuevo: true, foto: "RC209.jpg",
     descripcion: "Jean oxford chocolate de tiro alto con cinco bolsillos y pespuntes en los bolsillos traseros. Talle 36." },
