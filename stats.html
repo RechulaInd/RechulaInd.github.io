@@ -41,10 +41,11 @@ const slug=s=>String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().re
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const STOCK=(window.STOCK||[]), BY={}; STOCK.forEach(p=>BY[p.codigo]=p);
 let total=0,done=0; const prog=()=>{ $("prog").style.width=(total?done/total*100:0)+"%"; $("st").textContent= done<total?"cargando "+done+"/"+total+"…":"actualizado "+new Date().toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit"}); };
-const cache={};
-async function get1(k){ for(let i=0;i<4;i++){ try{ const r=await fetch(API+k.slice(0,60)); if(r.status===404) return 0; if(r.ok){ const j=await r.json(); return j.value||0; } }catch(e){} await new Promise(r=>setTimeout(r,600*(i+1))); } return 0; }
-async function getMany(keys){ keys=keys.filter(k=>!(k in cache)); total+=keys.length; prog(); let i=0;
-  await Promise.all(Array.from({length:6},async()=>{ while(i<keys.length){ const k=keys[i++]; cache[k]=await get1(k); done++; prog(); } })); }
+const WORDS=["jean","jeans","short","shorts","vestido","remera","remeron","pollera","falda","top","body","blusa","camisa","chaleco","campera","musculosa","baby","tee","oxford","wide","leg","mom","recto","baggy","cuero","encaje","lino","negro","negra","blanco","blanca","beige","crudo","rosa","celeste","azul","rojo","verde","chocolate","marron","bordado","tejido","animal","print","leopardo","corset","crop","bermuda","skort","conjunto","mono","enterito","bikini","malla","sweater","buzo","saco","blazer","kimono","camisaco","pantalon","puntilla","volados","flores","rayas","lunares","morley","gabardina","sastrero","largo","corto","midi","mini"];
+let cache={}; try{ cache=JSON.parse(localStorage.getItem('rc-stats')||'{}'); }catch(e){} const fresh={}; const save=()=>{ try{ localStorage.setItem('rc-stats',JSON.stringify(cache)); }catch(e){} };
+async function get1(k){ for(let i=0;i<8;i++){ try{ const r=await fetch(API+k.slice(0,60)); if(r.status===404) return 0; if(r.ok){ const j=await r.json(); return j.value||0; } }catch(e){} await new Promise(r=>setTimeout(r,1200*(i+1))); } return cache[k]||0; }
+async function getMany(keys, render){ keys=keys.filter(k=>!(k in fresh)); total+=keys.length; prog(); if(render) render(); let i=0;
+  await Promise.all(Array.from({length:3},async()=>{ while(i<keys.length){ const k=keys[i++]; cache[k]=await get1(k); fresh[k]=1; done++; prog(); if(done%25===0){ save(); if(render) render(); } } })); save(); if(render) render(); }
 const v=k=>cache[k]||0;
 const bars=(el,list)=>{ list=list.filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]); if(!list.length){ $(el).innerHTML='<div class="muted">Todavía sin datos.</div>'; return; }
   const m=list[0][1]; $(el).innerHTML=list.slice(0,15).map(([l,n])=>'<div class="row"><div class="lab" title="'+esc(l)+'">'+esc(l)+'</div><div class="bar"><i style="width:'+(n/m*100)+'%"></i></div><div class="num">'+n+'</div></div>').join(""); };
@@ -52,29 +53,27 @@ const prodRow=(p,main,extra)=>'<div class="prod"><img src="fotos/'+esc(p.foto)+'
 (async()=>{
   const days=[]; for(let i=13;i>=0;i--){ const d=new Date(Date.now()-3*36e5-i*864e5).toISOString().slice(0,10); days.push(d); }
   const O=["instagram","tiktok","whatsapp","facebook","google","directo","otros"];
-  await getMany(["x_visitas","x_busquedas","x_bolsa","x_pedidos","x_whatsapp","x_instagram","x_tiktok","x_grupo","q__otras","q__sinres","dv_movil","dv_pc"].concat(days.map(d=>"d_"+d.replace(/-/g,"")),O.map(o=>"o_"+o)));
-  $("kpis").innerHTML=[["Visitas","x_visitas"],["Búsquedas","x_busquedas"],["Agregados a la bolsa","x_bolsa"],["Pedidos por WhatsApp","x_pedidos"],["Consultas WhatsApp","x_whatsapp"],["Clicks a Instagram","x_instagram"],["Clicks a TikTok","x_tiktok"],["Se unieron al grupo","x_grupo"]].map(([l,k])=>'<div class="kpi"><b>'+v(k)+'</b><span>'+l+'</span></div>').join("");
-  const dm=Math.max(1,...days.map(d=>v("d_"+d.replace(/-/g,""))));
-  $("days").innerHTML=days.map(d=>{const n=v("d_"+d.replace(/-/g,""));return '<div><b>'+(n||"")+'</b><i style="height:'+(n/dm*95)+'%"></i>'+d.slice(8)+'/'+d.slice(5,7)+'</div>';}).join("");
-  bars("orig",O.map(o=>[o[0].toUpperCase()+o.slice(1),v("o_"+o)])); bars("dev",[["Celular",v("dv_movil")],["Computadora",v("dv_pc")]]);
-  // Talles y categorías
+  const r1=()=>{
+    $("kpis").innerHTML=[["Visitas","x_visitas"],["Búsquedas","x_busquedas"],["Agregados a la bolsa","x_bolsa"],["Pedidos por WhatsApp","x_pedidos"],["Consultas WhatsApp","x_whatsapp"],["Clicks a Instagram","x_instagram"],["Clicks a TikTok","x_tiktok"],["Se unieron al grupo","x_grupo"]].map(([l,k])=>'<div class="kpi"><b>'+v(k)+'</b><span>'+l+'</span></div>').join("");
+    const dm=Math.max(1,...days.map(d=>v("d_"+d.replace(/-/g,""))));
+    $("days").innerHTML=days.map(d=>{const n=v("d_"+d.replace(/-/g,""));return '<div><b>'+(n||"")+'</b><i style="height:'+(n/dm*95)+'%"></i>'+d.slice(8)+'/'+d.slice(5,7)+'</div>';}).join("");
+    bars("orig",O.map(o=>[o[0].toUpperCase()+o.slice(1),v("o_"+o)])); bars("dev",[["Celular",v("dv_movil")],["Computadora",v("dv_pc")]]); };
   const sizes=new Set(["XS","S","M","L","XL","XXL"]); STOCK.forEach(p=>(p.talles||[]).forEach(t=>{ if(t!=="A consultar") sizes.add(t); }));
   const cats=[...new Set(STOCK.map(p=>p.categoria))];
-  await getMany([...sizes].map(t=>"t_"+slug(t)).concat(cats.map(c=>"c_"+slug(c))));
-  bars("tal",[...sizes].map(t=>[t,v("t_"+slug(t))])); bars("cat",cats.map(c=>[c,v("c_"+slug(c))]));
-  // Prendas
+  const r2=()=>{ bars("tal",[...sizes].map(t=>[t,v("t_"+slug(t))])); bars("cat",cats.map(c=>[c,v("c_"+slug(c))])); };
+  const V=new Set(); STOCK.forEach(p=>[p.categoria].concat(p.variantes||[]).join(" ").split(/\s+/).forEach(w=>{w=slug(w); if(w.length>=3) V.add(w);})); WORDS.forEach(w=>V.add(slug(w)));
+  const r3=()=>{ bars("bus",[...V].map(w=>[w.replace(/_/g," "),v("q_"+w)])); $("bus").insertAdjacentHTML("beforeend",'<div class="muted" style="margin-top:10px">Otras búsquedas (palabras que no están en la lista): <b>'+v("q__otras")+'</b> · Búsquedas sin resultados: <b>'+v("q__sinres")+'</b></div>'); };
   const vis=STOCK.filter(p=>!p.oculto);
-  await getMany(vis.map(p=>"v_"+p.codigo));
-  const seen=vis.filter(p=>v("v_"+p.codigo)>0).sort((a,b)=>v("v_"+b.codigo)-v("v_"+a.codigo));
-  $("topv").innerHTML=seen.length?seen.slice(0,20).map(p=>prodRow(p,'<b>'+v("v_"+p.codigo)+'</b> vistas',p.categoria+(p.agotado?" · agotada":""))).join(""):'<div class="muted">Todavía sin datos.</div>';
-  await getMany(seen.flatMap(p=>["b_"+p.codigo,"p_"+p.codigo]));
-  const ped=seen.filter(p=>v("p_"+p.codigo)+v("b_"+p.codigo)>0).sort((a,b)=>(v("p_"+b.codigo)*2+v("b_"+b.codigo))-(v("p_"+a.codigo)*2+v("b_"+a.codigo)));
-  $("topp").innerHTML=ped.length?ped.slice(0,15).map(p=>prodRow(p,'<b>'+v("p_"+p.codigo)+'</b> pedido · '+v("b_"+p.codigo)+' bolsa',v("v_"+p.codigo)+' vistas')).join(""):'<div class="muted">Todavía sin datos.</div>';
-  // Búsquedas
-  const V=new Set(); STOCK.forEach(p=>[p.nombre,p.categoria].concat(p.variantes||[]).join(" ").split(/\s+/).forEach(w=>{w=slug(w); if(w.length>=3) V.add(w);})); ["jean","jeans","short","shorts","vestido","remera","remeron","pollera","falda","top","body","blusa","camisa","chaleco","campera","musculosa","baby","tee","oxford","wide","leg","mom","recto","baggy","cuero","encaje","lino","negro","negra","blanco","blanca","beige","crudo","rosa","celeste","azul","rojo","verde","chocolate","marron","bordado","tejido","animal","print","leopardo","corset","crop","bermuda","skort","conjunto","mono","enterito","bikini","malla","sweater","buzo","saco","blazer","kimono","camisaco","pantalon","puntilla","volados","flores","rayas","lunares","morley","gabardina","sastrero","largo","corto","midi","mini"].forEach(w=>V.add(slug(w)));
-  await getMany([...V].map(w=>"q_"+w));
-  const words=[...V].map(w=>[w.replace(/_/g," "),v("q_"+w)]);
-  bars("bus",words); $("bus").insertAdjacentHTML("beforeend",'<div class="muted" style="margin-top:10px">Otras búsquedas (palabras que no están en ninguna prenda): <b>'+v("q__otras")+'</b> · Búsquedas sin resultados: <b>'+v("q__sinres")+'</b></div>');
+  const r4=()=>{ const seen=vis.filter(p=>v("v_"+p.codigo)>0).sort((a,b)=>v("v_"+b.codigo)-v("v_"+a.codigo));
+    $("topv").innerHTML=seen.length?seen.slice(0,20).map(p=>prodRow(p,'<b>'+v("v_"+p.codigo)+'</b> vistas',p.categoria+(p.agotado?" · agotada":""))).join(""):'<div class="muted">Todavía sin datos.</div>';
+    const ped=seen.filter(p=>v("p_"+p.codigo)+v("b_"+p.codigo)>0).sort((a,b)=>(v("p_"+b.codigo)*2+v("b_"+b.codigo))-(v("p_"+a.codigo)*2+v("b_"+a.codigo)));
+    $("topp").innerHTML=ped.length?ped.slice(0,15).map(p=>prodRow(p,'<b>'+v("p_"+p.codigo)+'</b> pedido · '+v("b_"+p.codigo)+' bolsa',v("v_"+p.codigo)+' vistas')).join(""):'<div class="muted">Todavía sin datos.</div>'; };
+  r1(); r2(); r3(); r4();
+  await getMany(["x_visitas","x_busquedas","x_bolsa","x_pedidos","x_whatsapp","x_instagram","x_tiktok","x_grupo","dv_movil","dv_pc"].concat(days.map(d=>"d_"+d.replace(/-/g,"")),O.map(o=>"o_"+o)), r1);
+  await getMany([...sizes].map(t=>"t_"+slug(t)).concat(cats.map(c=>"c_"+slug(c))), r2);
+  await getMany([...V].map(w=>"q_"+w).concat(["q__otras","q__sinres"]), r3);
+  await getMany(vis.map(p=>"v_"+p.codigo), r4);
+  await getMany(vis.filter(p=>v("v_"+p.codigo)>0).flatMap(p=>["b_"+p.codigo,"p_"+p.codigo]), r4);
   prog();
 })();
 })();
